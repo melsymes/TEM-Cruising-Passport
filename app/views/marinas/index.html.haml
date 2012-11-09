@@ -1,0 +1,43 @@
+%h1 Listing marinas
+.span20
+  =form_tag marinas_path, :method => 'get' do
+    =text_field_tag :search, params[:search]
+    =submit_tag "search", :name => nil
+
+
+  %table.table.table-condensed
+    %thead
+      %table
+      %tr
+        %th Name
+        %th Address
+        %th Address1
+        %th Town
+        %th County
+        %th Country
+        %th Postcode
+
+        %br
+    %tbody
+
+      - @marinas.each do |marina|
+        %tr
+          %td= link_to marina.name, marina
+          %td= marina.address
+          %td= marina.address1
+          %td= marina.town
+          %td= marina.county
+          %td= marina.country
+          %td= marina.postcode
+          %td= link_to 'Show', marina
+
+          %td= link_to "connect", pending_marinas_path(marina), :class => 'btn btn-mini'
+          - if current_user.has_role? :admin
+            %td= link_to 'Edit', edit_marina_path(marina)
+            %td= link_to 'Destroy', marina, method: :delete, data: { confirm: 'Are you sure?' }
+          %br
+
+
+
+  %br
+  = link_to 'New Marina', new_marina_path

@@ -1,5 +1,8 @@
 class HomeController < ApplicationController
   def index
-    @users = User.all
+    if !current_user.nil?
+      @user = current_user unless current_user.nil?
+      @marina = @user.marina unless @user.marina.nil?
+    end
   end
 end
