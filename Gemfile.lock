@@ -66,6 +66,7 @@ GEM
       mail (~> 2.2)
     erubis (2.7.0)
     eventmachine (1.0.0)
+    excon (0.16.7)
     execjs (1.4.0)
       multi_json (~> 1.0)
     factory_girl (4.1.0)
@@ -80,6 +81,12 @@ GEM
       activesupport (>= 3.1, < 4.1)
       haml (~> 3.1)
       railties (>= 3.1, < 4.1)
+    heroku-api (0.3.6)
+      excon (~> 0.16.7)
+    heroku_san (4.0.0)
+      activesupport
+      heroku-api (>= 0.1.2)
+      rake
     hike (1.2.1)
     hpricot (0.8.6)
     i18n (0.6.1)
@@ -194,6 +201,7 @@ DEPENDENCIES
   factory_girl_rails (>= 4.1.0)
   haml (>= 3.1.7)
   haml-rails (>= 0.3.5)
+  heroku_san
   hpricot (>= 0.8.6)
   jquery-rails
   rails (= 3.2.8)
