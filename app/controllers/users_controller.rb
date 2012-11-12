@@ -27,17 +27,25 @@ class UsersController < ApplicationController
     @marina.pending_users.delete(@user)
     @marina.active_managers << @user
     @user.marina_state= "VALIDATED-MANAGER"
+    @user.save
+    @marina.save
     redirect_to marina_path(@marina), :notice => "Manager and marina are now connected."
   end
 
   def expire_manager
       authorize! :update, @user, :message => 'Not authorized as an administrator.'
       @user = User.find(params[:id])
+      puts @user
+
+
       @marina = @user.marina
+      puts @marina
       @marina.active_managers.delete(@user)
       @marina.expired_managers << @user
-      @user.marina_state= "VALIDATED-MANAGER"
-      redirect_to users_path, :notice => "Manager and marina are now connected."
+      @user.marina_state= "EXPIRED-MANAGER"
+      @user.save
+      @marina.save
+      redirect_to marina_path(@marina), :notice => "Manager and marina are now connected."
    end
 
   def revalidate_manager
@@ -47,7 +55,9 @@ class UsersController < ApplicationController
       @marina.expired_managers.delete(@user)
       @marina.active_managers << @user
       @user.marina_state= "VALIDATED-MANAGER"
-      redirect_to users_path, :notice => "Manager and marina are now connected."
+      @user.save
+      @marina.save
+      redirect_to marina_path(@marina), :notice => "Manager and marina are now connected."
   end
 
   def remove_expired_manager
@@ -56,7 +66,9 @@ class UsersController < ApplicationController
       @marina = @user.marina
       @marina.expired_managers.delete(@user)
       @user.marina_state= "REMOVED-MANAGER"
-      redirect_to users_path, :notice => "Manager has been removed."
+      @user.save
+      @marina.save
+      redirect_to marina_path(@marina), :notice => "Manager has been removed."
   end
 
   def validate_bertholder
@@ -66,7 +78,9 @@ class UsersController < ApplicationController
      @marina.pending_users.delete(@user)
      @marina.active_users << @user
      @user.marina_state= "VALIDATED-BERTHOLDER"
-     redirect_to users_path, :notice => "Bertholder and marina are now connected."
+     @user.save
+     @marina.save
+     redirect_to marina_path(@marina), :notice => "Bertholder and marina are now connected."
   end
 
   def expire_bertholder
@@ -74,9 +88,12 @@ class UsersController < ApplicationController
      @user = User.find(params[:id])
      @marina = @user.marina
      @marina.active_users.delete(@user)
+     UserNotifier.expired_user(@user).deliver
      @marina.expired_users << @user
      @user.marina_state= "EXPIRED-BERTHOLDER"
-     redirect_to users_path, :notice => "Bertholder is now expired."
+     @user.save
+     @marina.save
+     redirect_to marina_path(@marina), :notice => "Bertholder is now expired."
   end
 
   def revalidate_bertholder
@@ -86,7 +103,9 @@ class UsersController < ApplicationController
      @marina.expired_users.delete(@user)
      @marina.active_users << @user
      @user.marina_state= "VALIDATED-BERTHOLDER"
-     redirect_to users_path, :notice => "Bertholder is now re-validated."
+     @user.save
+     @marina.save
+     redirect_to marina_path(@marina), :notice => "Bertholder is now re-validated."
   end
 
   def remove_expired_bertholder
@@ -95,7 +114,9 @@ class UsersController < ApplicationController
      @marina = @user.marina
      @marina.expired_users.delete(@user)
      @user.marina_state= "REMOVED-BERTHOLDER"
-     redirect_to users_path, :notice => "Bertholder is now removed."
+     @user.save
+     @marina.save
+     redirect_to marina_path(@marina), :notice => "Bertholder is now removed."
   end
 
 

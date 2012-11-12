@@ -12,10 +12,10 @@ Myapp10::Application.routes.draw do
       get :expire_manager, :path =>  "/expire_manager/:id"
       get :revalidate_manager, :path => "/revalidate_manager/:id"
       get :remove_expired_manager, :path =>  "/remove_expired_manager/:id"
-      get :validate_user, :path => "/validate_user/:id"
-      get :expire_user, :path =>  "/expire_user/:id"
-      get :revalidate_user, :path => "/revalidate_user/:id"
-      get :remove_expired_user, :path =>  "/remove_expired_user/:id"
+      get :validate_bertholder, :path => "/validate_bertholder/:id"
+      get :expire_bertholder, :path =>  "/expire_bertholder/:id"
+      get :revalidate_bertholder, :path => "/revalidate_bertholder/:id"
+      get :remove_expired_bertholder, :path =>  "/remove_expired_bertholder/:id"
 
     end
 
