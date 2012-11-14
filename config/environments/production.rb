@@ -81,7 +81,7 @@ Myapp10::Application.configure do
 
   config.action_mailer.smtp_settings = {
     :address   => "smtp.mandrillapp.com",
-    :domain    => "myapp10-staging.herokuapp.com"
+    :domain    => "myapp10-staging.herokuapp.com",
     :port      => 587,
     :user_name => 'thewaypoint',
     :password  => '4526889d-079d-41ee-ba4b-c4331cd0e409'
