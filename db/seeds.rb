@@ -19,7 +19,7 @@ user2.confirm!
 user3 = User.create! :name => 'boatowner User', :email => 'user3@example.com', :password => 'please', :password_confirmation => 'please'
 user3.confirm!
 
-user4 = User.create! :name => 'James Steward', :email => 'James@thewaypoint.com', :password => 'james', :password_confirmation => 'james'
+user4 = User.create! :name => 'James Steward', :email => 'James@thewaypoint.com', :password => 'james01', :password_confirmation => 'james01'
 user4.confirm!
 
 
