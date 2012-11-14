@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    authorize! :index, @user, :message => 'Not authorized as an administrator.'
+    authorize! :manage, @user, :message => 'Not authorized as an administrator.'
     @users = User.all
   end
 
@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   end
 
   def validate_manager
-    authorize! :update, @user, :message => 'Not authorized as an administrator.'
+    authorize! :update, @user, :message => 'Not authorized as an manager.'
     @user = User.find(params[:id])
     @marina = @user.marina
     @marina.pending_users.delete(@user)
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
   end
 
   def expire_manager
-      authorize! :update, @user, :message => 'Not authorized as an administrator.'
+      authorize! :update, @user, :message => 'Not authorized as an manager.'
       @user = User.find(params[:id])
       puts @user
 
@@ -49,7 +49,7 @@ class UsersController < ApplicationController
    end
 
   def revalidate_manager
-      authorize! :update, @user, :message => 'Not authorized as an administrator.'
+      authorize! :update, @user, :message => 'Not authorized as an manager.'
       @user = User.find(params[:id])
       @marina = @user.marina
       @marina.expired_managers.delete(@user)
@@ -61,7 +61,7 @@ class UsersController < ApplicationController
   end
 
   def remove_expired_manager
-      authorize! :update, @user, :message => 'Not authorized as an administrator.'
+      authorize! :update, @user, :message => 'Not authorized as an manager.'
       @user = User.find(params[:id])
       @marina = @user.marina
       @marina.expired_managers.delete(@user)
@@ -121,7 +121,7 @@ class UsersController < ApplicationController
 
 
   def destroy
-    authorize! :destroy, @user, :message => 'Not authorized as an administrator.'
+    authorize! :destroy, @user, :message => 'Not authorized as an manager.'
     user = User.find(params[:id])
     unless user == current_user
       user.destroy

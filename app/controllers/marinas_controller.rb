@@ -34,7 +34,7 @@ class MarinasController < ApplicationController
   # GET /marinas/1.json
   def show
     @marina = Marina.find(params[:id])
-
+    @user = current_user
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @marina }

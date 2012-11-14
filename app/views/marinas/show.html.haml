@@ -22,13 +22,24 @@
   %b Postcode:
   = @marina.postcode
 
-= render "pending"
-= render "active_managers"
-= render 'active'
-= render 'expired'
-= render 'expired_manager'
 
+- if @user.marina == @marina #/user is manager of current marina
+  has same marina
+  - if @user.has_role? :manager # user is a manager
+    is manager
+    = render "pending"
+    = render "active_managers"
+    = render 'active'
+    = render 'expired'
+    = render 'expired_manager'
 
+- if @user.has_role? :admin # user is admin
+  is admin
+  = render "pending"
+  = render "active_managers"
+  = render 'active'
+  = render 'expired'
+  = render 'expired_manager'
 
 
 %br

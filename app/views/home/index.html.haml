@@ -9,7 +9,7 @@
     = @user.marina_state unless @user.nil?
   %p
     Your current marina is
-    = @marina.name unless @marina.nil?
+    = link_to( @marina.name, marina_path(@marina)) unless @marina.nil?
 
 
 

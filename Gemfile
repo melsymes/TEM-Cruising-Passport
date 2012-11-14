@@ -13,7 +13,7 @@ end
 
 gem "activerecord-postgresql-adapter"
 gem 'pg'
-#gem 'heroku'
+gem 'heroku'
 
 gem 'jquery-rails'
 gem "thin", ">= 1.5.0"
