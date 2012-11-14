@@ -26,6 +26,7 @@ class UsersController < ApplicationController
     @marina = @user.marina
     @marina.pending_users.delete(@user)
     @marina.active_managers << @user
+    UserNotifier.manager_accepted(@user).deliver
     @user.marina_state= "VALIDATED-MANAGER"
     @user.save
     @marina.save
@@ -45,7 +46,8 @@ class UsersController < ApplicationController
       @user.marina_state= "EXPIRED-MANAGER"
       @user.save
       @marina.save
-      redirect_to marina_path(@marina), :notice => "Manager and marina are now connected."
+      UserNotifier.expired_manager(@user).deliver
+      redirect_to marina_path(@marina), :notice => "Manager is now expired."
    end
 
   def revalidate_manager
@@ -55,6 +57,7 @@ class UsersController < ApplicationController
       @marina.expired_managers.delete(@user)
       @marina.active_managers << @user
       @user.marina_state= "VALIDATED-MANAGER"
+      UserNotifier.manager_accepted(@user).deliver
       @user.save
       @marina.save
       redirect_to marina_path(@marina), :notice => "Manager and marina are now connected."
@@ -78,9 +81,10 @@ class UsersController < ApplicationController
      @marina.pending_users.delete(@user)
      @marina.active_users << @user
      @user.marina_state= "VALIDATED-BERTHOLDER"
+     UserNotifier.accepted(@user).deliver
      @user.save
      @marina.save
-     redirect_to marina_path(@marina), :notice => "Bertholder and marina are now connected."
+     redirect_to marina_path(@marina), :notice => "Bertholder and marina are now connected. a notification email has been sent"
   end
 
   def expire_bertholder
@@ -91,9 +95,10 @@ class UsersController < ApplicationController
      UserNotifier.expired_user(@user).deliver
      @marina.expired_users << @user
      @user.marina_state= "EXPIRED-BERTHOLDER"
+     UserNotifier.expired_user(@user).deliver
      @user.save
      @marina.save
-     redirect_to marina_path(@marina), :notice => "Bertholder is now expired."
+     redirect_to marina_path(@marina), :notice => "Bertholder is now expired. a notification has been sent"
   end
 
   def revalidate_bertholder
@@ -103,9 +108,10 @@ class UsersController < ApplicationController
      @marina.expired_users.delete(@user)
      @marina.active_users << @user
      @user.marina_state= "VALIDATED-BERTHOLDER"
+     UserNotifier.accepted(@user).deliver
      @user.save
      @marina.save
-     redirect_to marina_path(@marina), :notice => "Bertholder is now re-validated."
+     redirect_to marina_path(@marina), :notice => "Bertholder is now re-validated. a notification has been sent"
   end
 
   def remove_expired_bertholder
