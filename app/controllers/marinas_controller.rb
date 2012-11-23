@@ -22,6 +22,24 @@ class MarinasController < ApplicationController
     @user.marina = @marina
     @marina.save
     @user.save
+    if @marina.count_managers == 0
+      @admins = User.with_role :admin
+      puts "in_pending"
+      @admins.each do |admin|
+        puts "in_admin"
+        puts admin.name
+        UserNotifier.new_inital_user(admin).deliver
+      end
+    else
+      @managers = @marina.active_managers
+      puts "in managers"
+      @managers.each do |manager|
+        UserNotifier.new_user(manager).deliver
+      end
+
+    #if @marina.count_managers == 0 do
+
+    end
 
 
     respond_to do |format|

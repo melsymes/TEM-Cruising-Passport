@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   rolify
 
+
   has_one :marina, :class_name => 'Marina'
 
   # Include default devise modules. Others available are:

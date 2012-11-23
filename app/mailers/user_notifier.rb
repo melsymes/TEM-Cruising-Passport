@@ -67,4 +67,20 @@ class UserNotifier < ActionMailer::Base
 
     mail to: "to@example.org"
   end
+
+
+  def new_inital_user(user)
+    @user = user
+    @greeting = "Hi"
+
+    mail to: @user.email, subject: 'New inital user'
+  end
+
+  def new_user(user)
+    @user = user
+    @greeting = "Hi"
+
+    mail to: @user.email, subject: 'New user'
+  end
+
 end
