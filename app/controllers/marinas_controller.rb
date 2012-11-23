@@ -20,8 +20,8 @@ class MarinasController < ApplicationController
     @marina.pending_users << @user
     @user.marina_state = "PENDING"
     @user.marina = @marina
-    @marina.save
-    @user.save
+    @marina.save!
+    @user.save!
     if @marina.count_managers == 0
       @admins = User.with_role :admin
       puts "in_pending"

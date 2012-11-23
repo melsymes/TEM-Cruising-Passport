@@ -77,6 +77,7 @@ class UsersController < ApplicationController
   def validate_bertholder
      authorize! :update, @user, :message => 'Not authorized as an manager.'
      @user = User.find(params[:id])
+     puts @user.marina
      @marina = @user.marina
      @marina.pending_users.delete(@user)
      @marina.active_users << @user
