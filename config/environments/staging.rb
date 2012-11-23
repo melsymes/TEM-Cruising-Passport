@@ -14,7 +14,7 @@ Myapp10::Application.configure do
   config.action_controller.perform_caching = false
 
   # ActionMailer Config
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'http://myapp10-staging.herokuapp.com/' }
   config.action_mailer.delivery_method = :smtp
   # change to true to allow email to be sent during development
   config.action_mailer.perform_deliveries = false
@@ -34,8 +34,9 @@ Myapp10::Application.configure do
   config.action_mailer.smtp_settings = {
     :address   => "smtp.mandrillapp.com",
     :port      => 587,
-    :user_name => ENV["thewaypoint"],
-    :password  => ENV["4526889d-079d-41ee-ba4b-c4331cd0e409"]
+    :domain    => "myapp10-staging.herokuapp.com",
+    :user_name => 'thewaypoint',
+    :password  => '4526889d-079d-41ee-ba4b-c4331cd0e409'
   }
 
 

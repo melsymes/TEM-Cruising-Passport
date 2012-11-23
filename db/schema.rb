@@ -11,7 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121108213712) do
+ActiveRecord::Schema.define(:version => 20121109170133) do
+
+  create_table "marinas", :force => true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "address1"
+    t.string   "town"
+    t.string   "county"
+    t.string   "country"
+    t.string   "postcode"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "passport_code"
+    t.string   "nation"
+    t.string   "passport"
+    t.string   "apassportcode"
+    t.integer  "user_id"
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"
@@ -23,6 +40,18 @@ ActiveRecord::Schema.define(:version => 20121108213712) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], :name => "index_roles_on_name"
+
+  create_table "slugs", :force => true do |t|
+    t.string   "name"
+    t.integer  "sluggable_id"
+    t.integer  "sequence",                     :default => 1, :null => false
+    t.string   "sluggable_type", :limit => 40
+    t.string   "scope"
+    t.datetime "created_at"
+  end
+
+  add_index "slugs", ["name", "sluggable_type", "sequence", "scope"], :name => "index_slugs_on_n_s_s_and_s", :unique => true
+  add_index "slugs", ["sluggable_id"], :name => "index_slugs_on_sluggable_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                                :default => "", :null => false
@@ -48,6 +77,15 @@ ActiveRecord::Schema.define(:version => 20121108213712) do
     t.integer  "invitation_limit"
     t.integer  "invited_by_id"
     t.string   "invited_by_type"
+    t.integer  "pending_manager"
+    t.integer  "pending_user"
+    t.integer  "active_user"
+    t.integer  "active_manager"
+    t.integer  "expired_manager"
+    t.integer  "expired_user"
+    t.string   "passport_code"
+    t.string   "marina_state"
+    t.integer  "marina"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

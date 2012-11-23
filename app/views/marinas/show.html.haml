@@ -1,0 +1,48 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @marina.name
+%p
+  %b Address:
+  = @marina.address
+%p
+  %b Address1:
+  = @marina.address1
+%p
+  %b Town:
+  = @marina.town
+%p
+  %b County:
+  = @marina.county
+%p
+  %b Country:
+  = @marina.country
+%p
+  %b Postcode:
+  = @marina.postcode
+
+
+- if @user.marina == @marina #/user is manager of current marina
+  has same marina
+  - if @user.has_role? :manager # user is a manager
+    is manager
+    = render "pending"
+    = render "active_managers"
+    = render 'active'
+    = render 'expired'
+    = render 'expired_manager'
+
+- if @user.has_role? :admin # user is admin
+  is admin
+  = render "pending"
+  = render "active_managers"
+  = render 'active'
+  = render 'expired'
+  = render 'expired_manager'
+
+
+%br
+  = link_to 'Edit', edit_marina_path(@marina)
+  \|
+  = link_to 'Back', marinas_path

@@ -1,0 +1,21 @@
+%h3 Expired Bertholders
+
+
+.span8
+%table.table.table-condensed
+  %thead
+    %tr
+      %th Username
+      %th Email
+      %th Registered
+      %th Role
+      %th
+  %tbody
+    - @marina.expired_users.each do |user|
+      %tr
+        %td= link_to user.name, user
+        %td= user.email
+        %td= user.created_at.to_date
+        %td= user.roles.first.name.titleize unless user.roles.first.nil?
+        %td= link_to 'revalidate Bertholder', revalidate_bertholder_users_path(user)
+        %td= link_to 'Remove bertholder', remove_expired_bertholder_users_path(user)

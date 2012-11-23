@@ -1,4 +1,16 @@
 %h3 Home
-- @users.each do |user|
+
+- if user_signed_in?
   %p
-    User: #{link_to user.name, user}
+    Your passport code is
+    = @user.passport_code unless @user.nil?
+  %p
+    Your current state is
+    = @user.marina_state unless @user.nil?
+  %p
+    Your current marina is
+    = link_to( @marina.name, marina_path(@marina)) unless @marina.nil?
+
+
+
+%h5 Welcome to the TEM Passport Application

@@ -1,0 +1,2 @@
+module MarinasHelper
+end

@@ -61,7 +61,7 @@ Myapp10::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = { :host => 'example.com' }
+  config.action_mailer.default_url_options = { :host => 'myapp10-staging.herokuapp.com/' }
   # ActionMailer Config
   # Setup for production - deliveries, no errors raised
   config.action_mailer.delivery_method = :smtp
@@ -69,14 +69,22 @@ Myapp10::Application.configure do
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
 
+  #config.action_mailer.smtp_settings = {
+  #  address: "smtp.gmail.com",
+  #  port: 587,
+  #  domain: "example.com",
+  #  authentication: "plain",
+  #  enable_starttls_auto: true,
+  #  user_name: ENV["GMAIL_USERNAME"],
+  #  password: ENV["GMAIL_PASSWORD"]
+  #}
+
   config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: "example.com",
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: ENV["GMAIL_USERNAME"],
-    password: ENV["GMAIL_PASSWORD"]
+    :address   => "smtp.mandrillapp.com",
+    :domain    => "myapp10-staging.herokuapp.com",
+    :port      => 587,
+    :user_name => 'thewaypoint',
+    :password  => '4526889d-079d-41ee-ba4b-c4331cd0e409'
   }
 
 
