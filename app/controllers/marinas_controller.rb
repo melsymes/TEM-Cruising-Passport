@@ -20,8 +20,8 @@ class MarinasController < ApplicationController
     @marina.pending_users << @user
     @user.marina_state = "PENDING"
     @user.marina = @marina
-    @marina.save
-    @user.save
+    @marina.save!
+    @user.save!
     if @marina.count_managers == 0
       @admins = User.with_role :admin
       puts "in_pending"
@@ -47,6 +47,27 @@ class MarinasController < ApplicationController
       format.json { render json: @marina }
     end
   end
+
+  # Create a linked user
+  def create_user
+    @marina = current_user.marina
+    anemail = params[:user_email]
+
+    #puts params{:user_email}
+    #User.invite!(:email => params{:user_email})
+    new_user = User.create! :email => anemail.to_s, :password => 'password', :password_confirmation => 'password'
+    new_user.confirm!
+
+    #new_user = User.find_by_email(params{:user_email})
+    puts 'in create user'
+    @marina.pending_users << new_user
+    new_user.marina_state = "PENDING"
+    new_user.marina = @marina
+    @marina.save!
+    new_user.save!
+    redirect_to @marina
+  end
+
 
   # GET /marinas/1
   # GET /marinas/1.json
