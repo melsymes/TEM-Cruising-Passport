@@ -48,6 +48,27 @@ class MarinasController < ApplicationController
     end
   end
 
+  # Create a linked user
+  def create_user
+    @marina = current_user.marina
+    anemail = params[:user_email]
+
+    #puts params{:user_email}
+    #User.invite!(:email => params{:user_email})
+    new_user = User.create! :email => anemail.to_s, :password => 'password', :password_confirmation => 'password'
+    new_user.confirm!
+
+    #new_user = User.find_by_email(params{:user_email})
+    puts 'in create user'
+    @marina.pending_users << new_user
+    new_user.marina_state = "PENDING"
+    new_user.marina = @marina
+    @marina.save!
+    new_user.save!
+    redirect_to @marina
+  end
+
+
   # GET /marinas/1
   # GET /marinas/1.json
   def show

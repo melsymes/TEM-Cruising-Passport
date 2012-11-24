@@ -23,10 +23,15 @@
   = @marina.postcode
 
 
+
+
 - if @user.marina == @marina #/user is manager of current marina
   has same marina
   - if @user.has_role? :manager # user is a manager
     is manager
+    =form_tag create_user_marinas_path do
+      =text_field_tag :user_email, params[:user_email]
+      =submit_tag "Invite"
     = render "pending"
     = render "active_managers"
     = render 'active'
@@ -35,6 +40,9 @@
 
 - if @user.has_role? :admin # user is admin
   is admin
+  =form_tag create_user_marinas_path do
+    =text_field_tag :user_email, params[:user_email]
+    =submit_tag "Invite"
   = render "pending"
   = render "active_managers"
   = render 'active'

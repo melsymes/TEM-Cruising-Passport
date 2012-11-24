@@ -26,6 +26,7 @@ Myapp10::Application.routes.draw do
         post :auto_complete_name
         get :search
         get :pending, :path => "/pending/:id"
+        post :create_user
       end
 
 
