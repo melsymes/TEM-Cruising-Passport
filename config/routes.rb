@@ -8,6 +8,7 @@ Myapp10::Application.routes.draw do
   devise_for :users
   resources :users do
     collection do
+      get :search
       get :validate_manager, :path => "/validate_manager/:id"
       get :expire_manager, :path =>  "/expire_manager/:id"
       get :revalidate_manager, :path => "/revalidate_manager/:id"

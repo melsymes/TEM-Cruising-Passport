@@ -32,3 +32,6 @@ gem "cancan", ">= 1.6.8"
 gem "rolify", ">= 3.2.0"
 gem "simple_form", ">= 2.0.4"
 gem "friendly_id", "~> 3.1"
+gem "ya2yaml", "~> 0.31"
+gem 'localeapp'
+gem 'sexp_processor', '~> 4.1'
