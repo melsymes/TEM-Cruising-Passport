@@ -66,6 +66,17 @@ class MarinasController < ApplicationController
     @marina.save!
     new_user.save!
     redirect_to @marina
+    # check this ---
+    respond_to do |format|
+      if @marina.update_attributes(params[:marina])
+        format.html { redirect_to @marina, notice: 'User was successfully updated.' }
+        #format.json { head :no_content }
+      else
+        #format.html { render action: "edit" }
+        #format.json { render json: @marina.errors, status: :unprocessable_entity }
+      end
+    end
+
   end
 
 

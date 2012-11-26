@@ -137,4 +137,12 @@ class UsersController < ApplicationController
       redirect_to users_path, :notice => "Can't delete yourself."
     end
   end
+
+  def search
+    authorize! :update, @user, :message => 'Not authorized as an manager.'
+    @users = User.search(params[:search])
+    #redirect_to root_path
+  end
+
+
 end

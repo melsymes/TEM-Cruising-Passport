@@ -44,4 +44,21 @@ class User < ActiveRecord::Base
 
   end
 
+
+  def self.search(search)
+    if search
+      if search =~ /@/
+        find_all_by_email(search)
+      else
+        keywords = search.split(/ +/).map { |k| "%#{k}%" }
+        where = Array.new(keywords.count, '(name LIKE ? OR passport_code LIKE ? OR passport_code LIKE ?)').join(' AND ')
+        all(:conditions => [where, *keywords.zip(keywords, keywords).flatten])
+      end
+      #0find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+      #find(:all ) - don't find all - only on search
+    end
+
+
+  end
+
 end
