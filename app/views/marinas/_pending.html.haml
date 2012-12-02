@@ -6,7 +6,6 @@
       %th Username
       %th Email
       %th Registered
-      %th Role
       %th Bertholder
       %th Manager
   %tbody
@@ -15,7 +14,6 @@
         %td= link_to user.name, user
         %td= user.email
         %td= user.created_at.to_date
-        %td= user.roles.first.name.titleize unless user.roles.first.nil?
         %td= link_to 'Validate Bertholder', validate_bertholder_users_path(user)
         %td= link_to 'Validate Manager', validate_manager_users_path(user), :data => { :confirm => "Are you sure?" }
 

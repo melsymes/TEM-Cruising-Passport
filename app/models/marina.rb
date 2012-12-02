@@ -30,4 +30,10 @@ class Marina < ActiveRecord::Base
     self.active_managers.count
   end
 
+  def connect_pending(user)
+    self.pending_users << user
+    #user.marina = self
+
+  end
+
 end
