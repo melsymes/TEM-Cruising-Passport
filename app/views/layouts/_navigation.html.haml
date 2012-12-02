@@ -20,8 +20,8 @@
         Welcome
         %strong
           = current_user.name
-        %strong
-          = current_user.marina
+          \|
+          = current_user.marina.name
 
     %li
       = link_to 'Logout', destroy_user_session_path, :method=>'delete'
