@@ -50,32 +50,37 @@ class MarinasController < ApplicationController
 
   # Create a linked user
   def create_user
-    @marina = current_user.marina
+    @marina ||= current_user.marina  #  try this
     anemail = params[:user_email]
 
-    #puts params{:user_email}
-    #User.invite!(:email => params{:user_email})
-    new_user = User.create! :email => anemail.to_s, :password => 'password', :password_confirmation => 'password'
-    new_user.confirm!
-
-    #new_user = User.find_by_email(params{:user_email})
-    puts 'in create user'
-    @marina.pending_users << new_user
-    new_user.marina_state = "PENDING"
-    new_user.marina = @marina
-    @marina.save!
-    new_user.save!
-    redirect_to @marina
-    # check this ---
-    respond_to do |format|
-      if @marina.update_attributes(params[:marina])
-        format.html { redirect_to @marina, notice: 'User was successfully updated.' }
-        #format.json { head :no_content }
-      else
-        #format.html { render action: "edit" }
-        #format.json { render json: @marina.errors, status: :unprocessable_entity }
-      end
+    # Do a check for email
+    if anemail =~ /@/
+    #      puts 'bad'
+      new_user = User.create! :email => anemail.to_s, :password => 'password', :password_confirmation => 'password'
+      new_user.confirm!
+      @marina.pending_users<< new_user
+      new_user.marina_state = "PENDING"
+      @marina.save!
+      new_user.save!
+      redirect_to @marina, notice: 'User created and notified'
+    else
+      redirect_to @marina, :alert => 'User was not created - probably bad email.'
+   #3     end
     end
+
+
+
+
+    # check this ---
+    #respond_to do |format|
+    #  if !new_user.nil?
+    #3    format.html { redirect_to @marina, notice: 'User was successfully created - notification was sent.' }
+    #    #format.json { head :no_content }
+    #  else
+    #    format.html { redirect_to @marina, notice: 'User was not created.' }
+    #    #format.json { render json: @marina.errors, status: :unprocessable_entity }
+    #  end
+    #3end
 
   end
 

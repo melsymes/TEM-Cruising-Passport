@@ -16,8 +16,6 @@
     %p
       = link_to( "invite user", new_user_invitation_path )
     %p
-      = link_to( "edit user", user_invitation_path)
-    %p
       SEARCH USERS
     =form_tag search_users_path, :method => 'get' do
       =text_field_tag :search, params[:search]
