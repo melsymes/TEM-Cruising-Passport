@@ -79,6 +79,7 @@ class UsersController < ApplicationController
      @user = User.find(params[:id])
      puts @user.marina
      @marina = @user.marina
+     puts @marina
      @marina.pending_users.delete(@user)
      @marina.active_users << @user
      @user.marina_state= "VALIDATED-BERTHOLDER"
