@@ -13,6 +13,7 @@
       %nav.navbar-inner
         .container
           = render 'layouts/navigation'
+
     #main{:role => "main"}
       .container
         .content
@@ -20,6 +21,14 @@
             .span12
               = render 'layouts/messages'
               = yield
+
           %footer
       / ! end of .container
+      %br
     / ! end of #main
+    %footer.navbar.navbar-static-bottom
+      %nav.navbar-inner
+        .container
+          .span12
+            = render 'layouts/footer'
+
