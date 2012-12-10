@@ -4,3 +4,8 @@ en:
     required:
       html: <abbr title="required">*</abbr>
   subject: Manager accepted
+  layouts: Login
+  navigation:
+    Welcome: ! 'Welcome
+
+'

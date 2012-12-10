@@ -3,12 +3,12 @@
 %ul.nav
   - if !user_signed_in?
     %li
-      = link_to 'Login', new_user_session_path
+      = link_to 'login', new_user_session_path
     %li
-      = link_to 'Sign up', new_user_registration_path
+      = link_to 'signup', new_user_registration_path
   - else
     %li
-      = link_to 'Edit account', edit_user_registration_path
+      = link_to 'edit', edit_user_registration_path
     %li
       = link_to 'Marinas', marinas_path
     - if current_user.has_role? :admin
@@ -23,7 +23,7 @@
           \|
           = current_user.marina.name unless current_user.marina.nil?
 
-    %li
+    %li{:align => "right"}
       = link_to 'Logout', destroy_user_session_path, :method=>'delete'
 
 

@@ -11,7 +11,7 @@
     Your current marina is
     = link_to( @marina.name, marina_path(@marina)) unless @marina.nil?
 
-  - if current_user.has_role? :admin
+  - if current_user.has_role? :manager or :admin
     MANAGER - INVITE USER
     %p
       = link_to( "invite user", new_user_invitation_path )
