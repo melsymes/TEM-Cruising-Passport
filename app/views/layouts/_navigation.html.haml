@@ -3,17 +3,17 @@
 %ul.nav
   - if !user_signed_in?
     %li
-      = link_to 'login', new_user_session_path
+      = link_to (t 'layouts.navigation.login'), new_user_session_path
     %li
-      = link_to 'signup', new_user_registration_path
+      = link_to (t 'layouts.navigation.sign_up'), new_user_registration_path
   - else
     %li
-      = link_to 'edit', edit_user_registration_path
+      = link_to (t 'layouts.navigation.edit')  , edit_user_registration_path
     %li
-      = link_to 'Marinas', marinas_path
+      = link_to (t 'layouts.navigation.marinas'), marinas_path
     - if current_user.has_role? :admin
       %li{:text_align => "right"}
-        = link_to 'Admin', users_path
+        = link_to (t 'layouts.navigation.admin_list'), users_path
 
     %li{:text_align => "right"}
       %a{:text_align => "right"}
@@ -23,7 +23,8 @@
           \|
           = current_user.marina.name unless current_user.marina.nil?
 
-    %li{:align => "right"}
-      = link_to 'Logout', destroy_user_session_path, :method=>'delete'
+    %li.pull-right{:float => 'right'}
+      =#{:align => "right"}
+      = link_to (t 'layouts.navigation.logout'), destroy_user_session_path, :method=>'delete'
 
 

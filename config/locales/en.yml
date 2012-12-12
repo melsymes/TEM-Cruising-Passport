@@ -4,8 +4,13 @@ en:
     required:
       html: <abbr title="required">*</abbr>
   subject: Manager accepted
-  layouts: Login
-  navigation:
-    Welcome: ! 'Welcome
-
-'
+  layouts:
+    navigation:
+      edit: Edit
+      home: TEM Passport
+      logout: Logout
+      marinas: Marinas
+      welcome: Welcome
+      login: Login
+      sign_up: Sign up
+      admin_list: Admin's list
