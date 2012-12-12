@@ -1,25 +1,31 @@
 %h3 Home
 
 - if user_signed_in?
-  %p
-    Your passport code is
-    = @user.passport_code unless @user.nil?
-  %p
-    Your current state is
-    = @user.marina_state unless @user.nil?
-  %p
-    Your current marina is
-    = link_to( @marina.name, marina_path(@marina)) unless @marina.nil?
+
 
   - if current_user.has_role? :manager or :admin
-    MANAGER - INVITE USER
-    %p
-      = link_to( "invite user", new_user_invitation_path )
-    %p
+
+    %p.container.span2
+
       SEARCH USERS
     =form_tag search_users_path, :method => 'get' do
       =text_field_tag :search, params[:search]
       =submit_tag "search"
+    %br
+      MANAGER - INVITE USER
+      %p
+        = link_to( "invite user", new_user_invitation_path )
+
+  - else
+    %p
+      Your passport code is
+      = @user.passport_code unless @user.nil?
+    %p
+      Your current state is
+      = @user.marina_state unless @user.nil?
+    %p
+      Your current marina is
+      = link_to( @marina.name, marina_path(@marina)) unless @marina.nil?
 
 
 
