@@ -3,7 +3,7 @@
 - if user_signed_in?
 
 
-  - if current_user.has_role? :manager or :admin
+  - if (current_user.has_role? :manager) or (current_user.has_role? :admin)
 
     %p.container.span2
 
@@ -16,16 +16,29 @@
       %p
         = link_to( "invite user", new_user_invitation_path )
 
+    %br
+      = @user.roles.each { |r| r.name}
+
   - else
     %p
-      Your passport code is
-      = @user.passport_code unless @user.nil?
+      - if @user.boat_name.nil?
+        Get started -  Fill in your boat name:
+        =link_to 'Finish registration', edit_user_registration_path
+      - else
+        = @user.boat_name
+        is now registered
     %p
-      Your current state is
-      = @user.marina_state unless @user.nil?
-    %p
-      Your current marina is
-      = link_to( @marina.name, marina_path(@marina)) unless @marina.nil?
+      - if @user.marina_state.nil?
+        Get started -  connect to your marina:
+        = link_to 'Connect to your marina', marinas_path
+      - else
+        Your current status is:
+        = @user.marina_state
+        %p
+          Your passport code is:
+          = @user.passport_code unless @user.nil?
+
+
 
 
 
