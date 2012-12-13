@@ -35,3 +35,4 @@ gem "friendly_id", "~> 3.1"
 gem "ya2yaml", "~> 0.31"
 gem 'localeapp'
 gem 'sexp_processor', '~> 4.1'
+gem "country_select", "~> 1.0.1"

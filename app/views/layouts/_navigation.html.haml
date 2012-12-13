@@ -1,30 +1,26 @@
-= link_to "TEM-Passport", root_path, :class => 'brand'
+= link_to "TEM", root_path, :class => 'brand'
 
 %ul.nav
   - if !user_signed_in?
-    %li
+    %ul.span1.center.p
       = link_to (t 'layouts.navigation.login'), new_user_session_path
-    %li
+    %ul.span1.center
       = link_to (t 'layouts.navigation.sign_up'), new_user_registration_path
   - else
-    %li
+    %ul.span1.center
       = link_to (t 'layouts.navigation.edit')  , edit_user_registration_path
-    %li
+    %ul.span1.center
       = link_to (t 'layouts.navigation.marinas'), marinas_path
     - if current_user.has_role? :admin
-      %li{:text_align => "right"}
+      %ul.span1.center
         = link_to (t 'layouts.navigation.admin_list'), users_path
 
-    %li{:text_align => "right"}
-      %a{:text_align => "right"}
-        Welcome
-        %strong
-          = current_user.name
-          \|
-          = current_user.marina.name unless current_user.marina.nil?
-
-    %li.pull-right{:float => 'right'}
-      =#{:align => "right"}
+    %ul.span6.pull-right
+      Welcome
+      %strong
+        = link_to current_user.name, current_user
+        \|
+        = link_to current_user.marina.name, current_user.marina   unless current_user.marina.nil?
+    %ul.span1.pull-right
       = link_to (t 'layouts.navigation.logout'), destroy_user_session_path, :method=>'delete'
-
 

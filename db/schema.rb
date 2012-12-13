@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121109170133) do
+ActiveRecord::Schema.define(:version => 20121213210942) do
 
   create_table "marinas", :force => true do |t|
     t.string   "name"
@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(:version => 20121109170133) do
     t.string   "passport_code"
     t.string   "marina_state"
     t.integer  "marina"
+    t.string   "boat_name"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
