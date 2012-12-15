@@ -54,10 +54,13 @@ class MarinasController < ApplicationController
     #@marina = Marina.find(params[:id])
     #@marina = current_user.marina  #  try this
     anemail = params[:user_email]
-    current_user.marina.create_user(anemail)
 
-    redirect_to current_user.marina, notice: 'User created and notified'
-
+    if anemail =~ /@/
+      current_user.marina.create_user(anemail)
+      redirect_to current_user.marina, notice: 'User created and notified'
+    else
+      redirect_to @marina, :alert => 'User was not created - probably bad email.'
+    end
   end
 
 
