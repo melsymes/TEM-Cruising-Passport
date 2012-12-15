@@ -1,7 +1,7 @@
 class Marina < ActiveRecord::Base
 
 
-  has_many :pending_managers, :class_name => 'User', :foreign_key => 'pending_user'
+  #has_many :pending_managers, :class_name => 'User', :foreign_key => 'pending_user'
   has_many :pending_users, :class_name => 'User', :foreign_key => 'pending_user'
   has_many :active_managers, :class_name => 'User', :foreign_key => 'active_manager'
   has_many :active_users, :class_name => 'User', :foreign_key => 'active_user'
