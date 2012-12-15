@@ -23,11 +23,14 @@ class UsersController < ApplicationController
   def validate_manager
     authorize! :update, @user, :message => 'Not authorized as an manager.'
     @user = User.find(params[:id])
-    @marina = @user.marina
+    @marina ||= current_user.marina
     @marina.pending_users.delete(@user)
     @marina.active_managers << @user
+    #@user.marina ||= @marina
+    #current_user.marina ||= @marina
     UserNotifier.manager_accepted(@user).deliver
     @user.marina_state= "VALIDATED-MANAGER"
+    @user.add_role :manager
     @user.save
     @marina.save
     redirect_to marina_path(@marina), :notice => "Manager and marina are now connected."
@@ -44,6 +47,7 @@ class UsersController < ApplicationController
       @marina.active_managers.delete(@user)
       @marina.expired_managers << @user
       @user.marina_state= "EXPIRED-MANAGER"
+      @user.has_no_role(:manager)
       @user.save
       @marina.save
       UserNotifier.expired_manager(@user).deliver
@@ -77,7 +81,9 @@ class UsersController < ApplicationController
   def validate_bertholder
      authorize! :update, @user, :message => 'Not authorized as an manager.'
      @user = User.find(params[:id])
+     puts @user
      puts @user.marina
+
      @marina = @user.marina
      puts @marina
      @marina.pending_users.delete(@user)

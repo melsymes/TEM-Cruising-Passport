@@ -1,6 +1,6 @@
 %h3 User
 %p
-  User: #{@user.name if @user.name }
+  User: #{@user.name unless @user.name.nil? }
 %p
   Email: #{@user.email if @user.email}
 %p
@@ -9,4 +9,10 @@
   User state:  #{@user.marina_state if @user.marina_state}
 %p
   Boat name: #{@user.boat_name if @user.boat_name}
+%p
+  Current Marina: #{link_to(@user.marina.name, @user.marina) unless @user.marina.name.nil?}
+%p
+  - if current_user.has_role? :admin
+    User role:  #{@user.roles.first.name.titleize unless @user.roles.first.nil?}
+
 

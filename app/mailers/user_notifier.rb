@@ -83,4 +83,11 @@ class UserNotifier < ActionMailer::Base
     mail to: @user.email, subject: 'New user'
   end
 
+  def user_pending_notification(user)
+    @user = user
+    @marina = @user.marina
+    mail to: @user.email, subject: t('email.user_pending_notification.subject')
+  end
+
+
 end

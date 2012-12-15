@@ -14,3 +14,26 @@ en:
       login: Login
       sign_up: Sign up
       admin_list: Admin
+  errors:
+    messages:
+      pending: Your application has been sent to the marina and is currently pending their approval
+  email:
+    user_pending_notification:
+      footer: 
+      greeting: Hi %{name}
+      introduction: Thank you for connecting with %{marina_name}.  We have been notified and one of our managers will validate your account shortly.
+      post_introduction: Sent by Transeurope Marinas on behalf of %{marina_name}
+      subject: Connect request sent
+    transeurope_marinas_footer: ! 'Best Wishes,
+
+
+      The TransEurope Team
+
+      http://www.transeuropemarinas.com
+
+      http://www.cruisingpassport.com
+
+      If you received this message in error and do not have a cruising passport account, you can simply ignore it or let us know at support@transeuropemarinas.com and we''ll investigate.'
+  home:
+    passport_pending: Your passport code will be available when  your marina has validated your application.
+    passport: ! 'Your passport code is:'

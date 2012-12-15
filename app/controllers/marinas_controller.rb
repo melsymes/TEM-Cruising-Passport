@@ -23,6 +23,7 @@ class MarinasController < ApplicationController
     @marina.save!
     @user.save!
     if @marina.count_managers == 0
+      # email all admins if there are no manager
       @admins = User.with_role :admin
       puts "in_pending"
       @admins.each do |admin|
@@ -31,56 +32,31 @@ class MarinasController < ApplicationController
         UserNotifier.new_inital_user(admin).deliver
       end
     else
+      # email all managers fro the appropriate user
       @managers = @marina.active_managers
       puts "in managers"
       @managers.each do |manager|
-        UserNotifier.new_user(manager).deliver
+        UserNotifier.new_user_to_manager(manager).deliver
       end
-
-    #if @marina.count_managers == 0 do
-
     end
+    # email user of pending status
+    UserNotifier.user_pending_notification(@user).deliver
 
 
     respond_to do |format|
-      format.html #pending.html.erb
+      format.html { redirect_to @marina, notice: t('errors.messages.pending') }
       format.json { render json: @marina }
     end
   end
 
   # Create a linked user
   def create_user
-    @marina ||= current_user.marina  #  try this
+    #@marina = Marina.find(params[:id])
+    #@marina = current_user.marina  #  try this
     anemail = params[:user_email]
+    current_user.marina.create_user(anemail)
 
-    # Do a check for email
-    if anemail =~ /@/
-    #      puts 'bad'
-      new_user = User.create! :email => anemail.to_s, :password => 'password', :password_confirmation => 'password'
-      new_user.confirm!
-      @marina.pending_users<< new_user
-      new_user.marina_state = "PENDING"
-      @marina.save!
-      new_user.save!
-      redirect_to @marina, notice: 'User created and notified'
-    else
-      redirect_to @marina, :alert => 'User was not created - probably bad email.'
-   #3     end
-    end
-
-
-
-
-    # check this ---
-    #respond_to do |format|
-    #  if !new_user.nil?
-    #3    format.html { redirect_to @marina, notice: 'User was successfully created - notification was sent.' }
-    #    #format.json { head :no_content }
-    #  else
-    #    format.html { redirect_to @marina, notice: 'User was not created.' }
-    #    #format.json { render json: @marina.errors, status: :unprocessable_entity }
-    #  end
-    #3end
+    redirect_to current_user.marina, notice: 'User created and notified'
 
   end
 

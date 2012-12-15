@@ -18,6 +18,7 @@
 
     %br
       = @user.roles.each { |r| r.name}
+      = @user.marina
 
   - else
     %p
@@ -35,8 +36,11 @@
         Your current status is:
         = @user.marina_state
         %p
-          Your passport code is:
-          = @user.passport_code unless @user.nil?
+          - if @user.marina_state == 'PENDING'
+            = t('home.passport_pending')
+          - else
+            = t('home.passport')
+            = @user.passport_code unless @user.nil?
 
 
 
