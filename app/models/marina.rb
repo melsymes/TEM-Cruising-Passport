@@ -2,6 +2,7 @@ class Marina < ActiveRecord::Base
 
 
   #has_many :pending_managers, :class_name => 'User', :foreign_key => 'pending_user'
+  has_many :users, :inverse_of => :marina
   has_many :pending_users, :class_name => 'User', :foreign_key => 'pending_user'
   has_many :active_managers, :class_name => 'User', :foreign_key => 'active_manager'
   has_many :active_users, :class_name => 'User', :foreign_key => 'active_user'
@@ -44,9 +45,9 @@ class Marina < ActiveRecord::Base
       self.pending_users<< new_user
       new_user.marina_state = "PENDING"
       #why!
-      #current_user.marina = @marina
-      self.save!
-      new_user.save!
+      self.users << new_user
+      #self.save!
+      #new_user.save!
   end
   end
 

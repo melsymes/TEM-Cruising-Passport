@@ -17,5 +17,5 @@
         %td= user.email
         %td= user.created_at.to_date
         %td= user.roles.first.name.titleize unless user.roles.first.nil?
-        %td= link_to 'revalidate Bertholder', revalidate_bertholder_users_path(user)
-        %td= link_to 'Remove bertholder', remove_expired_bertholder_users_path(user)
+        %td= link_to 'revalidate Bertholder', revalidate_bertholder_users_path(user, :marina => @marina)
+        %td= link_to 'Remove bertholder', remove_expired_bertholder_users_path(user, :marina => @marina)

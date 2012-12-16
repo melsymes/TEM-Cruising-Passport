@@ -14,8 +14,8 @@
         %td= link_to user.name, user
         %td= user.email
         %td= user.created_at.to_date
-        %td= link_to 'Validate Bertholder', validate_bertholder_users_path(user)
-        %td= link_to 'Validate Manager', validate_manager_users_path(user), :data => { :confirm => "Are you sure?" }
+        %td= link_to 'Validate Bertholder', validate_bertholder_users_path(user, :marina => @marina)
+        %td= link_to 'Validate Manager', validate_manager_users_path(user, :marina => @marina), :data => { :confirm => "Are you sure?" }
 
 
   %br

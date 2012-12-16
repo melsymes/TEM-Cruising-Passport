@@ -2,7 +2,9 @@ class User < ActiveRecord::Base
   rolify
 
 
-  has_one :marina, :class_name => 'Marina'
+  belongs_to :marina, :inverse_of => :users
+  #belongs_to :pending_marina, :inverse_of => :pending_user, :class_name => "Marina"
+  #belongs_to :active_manager_marina, :inverse_of => :active_manager, :class_name => "Marina"
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,

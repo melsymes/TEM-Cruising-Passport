@@ -22,22 +22,19 @@
 
 
 
-
-- if @user.marina == @marina #/user is manager of current marina
-  -# has same marina
-  - if (@user.has_role? :admin) or (@user.has_role? :manager) # user is a admin or manager
+- if !@manager.nil?
+  - if (@manager.has_role? :admin) or (@manager.has_role? :manager) # user is a admin or manager
     =form_tag create_user_marinas_path do
       =text_field_tag :user_email, params[:user_email]
       =submit_tag "Invite"
-    = render "pending"
-    = render "active_managers"
+    = render 'pending'
+    = render 'active_managers'
     = render 'active'
     = render 'expired'
     = render 'expired_manager'
 
 
-
 %br
   = link_to 'Edit', edit_marina_path(@marina)
   \|
-  = link_to 'Back', marinas_path
+  = link_to 'Back', marinas_path(@marina)

@@ -3,7 +3,7 @@ en:
   simple_form:
     required:
       html: <abbr title="required">*</abbr>
-  subject: Manager accepted
+  subject: Accepted
   layouts:
     navigation:
       edit: Edit

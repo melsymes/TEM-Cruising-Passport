@@ -20,6 +20,7 @@
       %strong
         = link_to current_user.name, current_user
         \|
+        -#= link_to current_user.pending_marina.name, current_user.pending_marina   unless pending_marina.pending_marina.nil?
         = link_to current_user.marina.name, current_user.marina   unless current_user.marina.nil?
     %ul.span1.pull-right
       = link_to (t 'layouts.navigation.logout'), destroy_user_session_path, :method=>'delete'

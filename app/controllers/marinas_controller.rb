@@ -19,7 +19,8 @@ class MarinasController < ApplicationController
     puts 'in connect'
     @marina.pending_users << @user
     @user.marina_state = "PENDING"
-    @user.marina = @marina
+    @marina.users << @user
+
     @marina.save!
     @user.save!
     if @marina.count_managers == 0
@@ -35,8 +36,11 @@ class MarinasController < ApplicationController
       # email all managers fro the appropriate user
       @managers = @marina.active_managers
       puts "in managers"
-      @managers.each do |manager|
-        UserNotifier.new_user_to_manager(manager).deliver
+      if !@managers.count == 0
+        @managers.each do |manager|
+          UserNotifier.new_user_to_manager(manager).deliver unless manager.nil?
+
+        end
       end
     end
     # email user of pending status
@@ -52,12 +56,12 @@ class MarinasController < ApplicationController
   # Create a linked user
   def create_user
     #@marina = Marina.find(params[:id])
-    #@marina = current_user.marina  #  try this
+    @marina = current_user.marina  #  try this
     anemail = params[:user_email]
 
     if anemail =~ /@/
-      current_user.marina.create_user(anemail)
-      redirect_to current_user.marina, notice: 'User created and notified'
+      @marina.create_user(anemail)
+      redirect_to @marina, notice: 'User created and notified'
     else
       redirect_to @marina, :alert => 'User was not created - probably bad email.'
     end
@@ -68,7 +72,11 @@ class MarinasController < ApplicationController
   # GET /marinas/1.json
   def show
     @marina = Marina.find(params[:id])
-    @user = current_user
+    @marina.active_managers.each do |manager|
+      if manager == current_user
+        @manager = current_user
+      end
+    end
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @marina }
