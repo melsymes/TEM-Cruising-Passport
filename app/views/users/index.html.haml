@@ -34,7 +34,7 @@
                 %td
                   %a.btn.btn-mini{"data-toggle" => "modal", :href => "#role-options-#{user.id}", :type => "button"} Change role
                   = render user
-                %td= link_to "Validate user", validate_manager_users_path(user), :class => 'btn bt-mini'
+                %td= link_to "Validate user", validate_manager_users_path(user, :marina => user.marina), :data => { :confirm => "Are you sure?" }, :class => 'btn bt-mini'
                 %td= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user
 
 
@@ -58,6 +58,5 @@
             %td
               %a.btn.btn-mini{"data-toggle" => "modal", :href => "#role-options-#{user.id}", :type => "button"} Change name
               = render user
-            %td= link_to "Validate user", validate_manager_users_path(user), :class => 'btn bt-mini'
             %td= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user
 

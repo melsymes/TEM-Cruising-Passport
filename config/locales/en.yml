@@ -3,7 +3,7 @@ en:
   simple_form:
     required:
       html: <abbr title="required">*</abbr>
-  subject: Accepted
+  subject: Manager accepted
   layouts:
     navigation:
       edit: Edit
@@ -37,3 +37,16 @@ en:
   home:
     passport_pending: Your passport code will be available when  your marina has validated your application.
     passport: ! 'Your passport code is:'
+  user:
+    show:
+      boat_name: ! 'Boat name: '
+      connect_to_your_marina: Connect to your marina
+      current_marina_status: ! 'Current marina status:'
+      marina_get_started: ! 'Get started - connect to your marina:'
+      marina_state: ! 'Your current state is:'
+      passport_code: ! 'Your passport code is:'
+      user_email: ! 'Email: '
+      user_header: My account details
+      user_name: ! 'Name:'
+      name: ! 'Name:'
+      current_marina_state: 

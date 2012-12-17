@@ -1,16 +1,27 @@
-%h3 User
+%h3
+  =t('user.show.user_header')
 %p
-  User: #{@user.name unless @user.name.nil? }
+  =t('user.show.user_name')
+  = @user.name unless @user.name.nil?
 %p
-  Email: #{@user.email if @user.email}
-%p
-  Passport code: #{@user.passport_code if @user.passport_code}
-%p
-  User state:  #{@user.marina_state if @user.marina_state}
+  =t('user.show.user_email')
+  =@user.email if @user.email
 %p
   Boat name: #{@user.boat_name if @user.boat_name}
 %p
-  Current Marina: #{link_to(@user.marina.name, @user.marina) unless @user.marina.name.nil?}
+  - if @user.marina_state.nil?
+    =t('user.show.marina_get_stated')
+    = link_to t('user.show.connect_to_your_marina'), marinas_path
+  - else
+    =t('user.show.current_marina_status')
+    = @user.marina_state
+    %p
+      - if @user.marina_state == 'PENDING'
+        = t('home.passport_pending')
+      - else
+        = t('home.passport')
+        = @user.passport_code unless @user.nil?
+
 %p
   - if current_user.has_role? :admin
     User role:  #{@user.roles.first.name.titleize unless @user.roles.first.nil?}
