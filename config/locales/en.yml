@@ -17,6 +17,9 @@ en:
   errors:
     messages:
       pending: Your application has been sent to the marina and is currently pending their approval
+      remove_pending: Bertholder and marina have been removed. a notification email has been sent.
+    confirm:
+      are_you_sure: Are you sure?
   email:
     user_pending_notification:
       footer: 
@@ -34,6 +37,8 @@ en:
       http://www.cruisingpassport.com
 
       If you received this message in error and do not have a cruising passport account, you can simply ignore it or let us know at support@transeuropemarinas.com and we''ll investigate.'
+    user_remove_pending:
+      subject: USER removed - sorry
   home:
     passport_pending: Your passport code will be available when  your marina has validated your application.
     passport: ! 'Your passport code is:'
@@ -46,7 +51,12 @@ en:
       marina_state: ! 'Your current state is:'
       passport_code: ! 'Your passport code is:'
       user_email: ! 'Email: '
-      user_header: My account details
+      user_header: My posh account details
       user_name: ! 'Name:'
       name: ! 'Name:'
       current_marina_state: 
+    search:
+      advise_on_non_found: This is loads of very usefull advise on how to deal with no matching users found.
+  marinas:
+    pending:
+      remove: 

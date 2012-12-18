@@ -46,6 +46,15 @@ class UserNotifier < ActionMailer::Base
     mail to: @user.email, subject: 'USER EXPIRED'
   end
 
+
+  def remove_pending(user)
+    @user = user
+    @greeting = "Hi"
+
+    mail to: @user.email, subject: t('email.user_remove_pending.subject')
+  end
+
+
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #

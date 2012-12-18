@@ -17,7 +17,7 @@ Myapp10::Application.routes.draw do
       get :expire_bertholder, :path =>  "/expire_bertholder/:id"
       get :revalidate_bertholder, :path => "/revalidate_bertholder/:id"
       get :remove_expired_bertholder, :path =>  "/remove_expired_bertholder/:id"
-
+      get :remove_pending, :path => "/remove_pending/:id"
     end
 
   end

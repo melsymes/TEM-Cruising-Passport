@@ -86,6 +86,28 @@ class UsersController < ApplicationController
       @marina.save
       redirect_to marina_path(@marina), :notice => "Manager has been removed."
   end
+  #
+  # Berth holders validation routes
+  #
+
+  def remove_pending
+    authorize! :update, @user, :message => 'Not authorized as an manager.'
+
+    @user = User.find(params[:id])
+    @marina = Marina.find(params[:marina])
+    @marina.pending_users.delete(@user)
+
+    @user.marina_state= ""
+    UserNotifier.remove_pending(@user).deliver
+    @user.save
+    @marina.save
+    redirect_to marina_path(@marina), :notice => t('errors.messages.remove_pending')
+    #"Bertholder and marina are now connected. a notification email has been sent"
+
+
+
+  end
+
 
   def validate_bertholder
      authorize! :update, @user, :message => 'Not authorized as an manager.'

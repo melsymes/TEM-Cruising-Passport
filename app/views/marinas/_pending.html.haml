@@ -7,7 +7,8 @@
       %th Email
       %th Registered
       %th Bertholder
-      %th Manager
+      %th Manager?
+      %th Remove user
   %tbody
     - @marina.pending_users.each do |user|
       %tr
@@ -15,7 +16,8 @@
         %td= user.email
         %td= user.created_at.to_date
         %td= link_to 'Validate Bertholder', validate_bertholder_users_path(user, :marina => @marina)
-        %td= link_to 'Validate Manager', validate_manager_users_path(user, :marina => @marina), :data => { :confirm => "Are you sure?" }
+        %td= link_to 'Validate Manager', validate_manager_users_path(user, :marina => @marina), :data => { :confirm => t('errors.confirm.are_you_sure')}
+        %td= link_to 'remove user', remove_pending_users_path(user, :marina => @marina), :data => { :confirm => t('errors.confirm.are_you_sure')}
 
 
   %br

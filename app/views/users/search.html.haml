@@ -6,29 +6,31 @@
 
 
 
-.span8
-%table.table.table-condensed
-  %thead
-    %tr
-      %th Name
-      %th passport_code
-      %th email
-      %th Boat name
-      %th marina state
-      %th
-
-
-
-  %tbody
-    - if !@users.nil?
-      - @users.each do |user|
+- if !@users.nil?
+  - if @users.count > 0
+    .span8
+    %table.table.table-condensed
+      %thead
         %tr
-          %td= link_to user.name, user
-          %td= user.passport_code
-          %td= user.email
-          %td= user.boat_name
-          %td= user.marina_state
+          %th Name
+          %th passport_code
+          %th email
+          %th Boat name
+          %th marina state
+          %th
 
+
+
+      %tbody
+        - @users.each do |user|
+          %tr
+            %td= link_to user.name, user
+            %td= user.passport_code
+            %td= user.email
+            %td= user.boat_name
+            %td= user.marina_state
+  - else
+    = t('user.search.advise_on_non_found')
 
 
 
