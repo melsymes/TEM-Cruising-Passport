@@ -36,3 +36,5 @@ gem "ya2yaml", "~> 0.31"
 gem 'localeapp'
 gem 'sexp_processor', '~> 4.1'
 gem "country_select", "~> 1.0.1"
+gem "twitter-bootstrap-rails", "~> 2.0rc0"
+
