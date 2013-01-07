@@ -42,8 +42,47 @@
             = t('home.passport')
             = @user.passport_code unless @user.nil?
 
-
-
+- if !user_signed_in?
+  #hero
+    .container
+      / starts carousel
+      .row.animated.fadeInDown
+        .span12
+          #myCarousel.carousel.slide
+            / carousel items
+            .carousel-inner
+              / slide
+              .active.item.slide1
+                .row
+                  .span6
+                    / <img src="img/slide1.png" alt="slide1" />
+                    = image_tag('slide1.png')
+                  .span4
+                    %h1
+                      Responsive and Clean TEM application Theme
+                    %p
+                      There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look.
+                    %a.btn.btn-success.btn-large{:href => "https://wrapbootstrap.com/theme/measure-responsive-business-theme-WB0D95984"}
+                      Join a TEM Marina Now!
+              / slide
+              .item.slide2
+                .row
+                  .span4.animated.fadeInUpBig
+                    %h1 Fully responsive TEM blog for your mobile
+                    %p
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi ut aliquip ex ea commodo consequat.
+                    %a.btn.btn-success.btn-large{:href => "blog.html"}
+                      Watch it now!
+                  .span6.animated.fadeInDownBig
+                    = image_tag('slide2.png')
+                    /%img{:alt => "slide2", :src => "img/slide2.png"}/
+              / slide
+              .item.slide3.animated.fadeInUpBig
+                = image_tag('slide3.png')
+                /%img{:alt => "slide3", :src => "img/slide3.png"}/
+            / Carousel nav
+            %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
+            %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›
 
 
 %h5 Welcome to the TEM Passport Application

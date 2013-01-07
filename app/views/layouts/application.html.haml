@@ -7,13 +7,22 @@
         = stylesheet_link_tag "application", :media => "all"
         = javascript_include_tag "application"
         = csrf_meta_tags
-        = yield(:head)
-  %body{:class => "#{controller_name} #{action_name}"}
+      /  / Bootstrap
+      %link{:href => "css/bootstrap.css", :rel => "stylesheet"}
+        %link{:href => "css/theme.css", :rel => "stylesheet", :type => "text/css"}
+          %link{:href => "css/animate.css", :rel => "stylesheet", :type => "text/css"}
+            %link{:href => "http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic", :rel => "stylesheet", :type => "text/css"}
+              = yield(:head)
+
+  /%body  {:class => "#{controller_name} #{action_name}"}
+  %body
+    %a.scrolltop{:href => "#"}
+      %span up
     %header.navbar.navbar-fixed-top
       %nav.navbar-inner
         .container
-          .span14
-            = render 'layouts/navigation'
+          /.span14
+          = render 'layouts/navigation'
 
     #main{:role => "main"}
       .container

@@ -1,0 +1,27 @@
+= link_to "TEM", root_path, :class => 'brand'
+
+%ul.nav
+  - if !user_signed_in?
+    %ul.span1.center.p
+      = link_to (t 'layouts.navigation.login'), new_user_session_path
+    %ul.span1.center
+      = link_to (t 'layouts.navigation.sign_up'), new_user_registration_path
+  - else
+    %ul.span1.center
+      = link_to (t 'layouts.navigation.edit')  , edit_user_registration_path
+    %ul.span1.center
+      = link_to (t 'layouts.navigation.marinas'), marinas_path
+    - if current_user.has_role? :admin
+      %ul.span1.center
+        = link_to (t 'layouts.navigation.admin_list'), users_path
+
+    %ul.span6.pull-right
+      Welcome
+      %strong
+        = link_to current_user.name, current_user
+        \|
+        -#= link_to current_user.pending_marina.name, current_user.pending_marina   unless pending_marina.pending_marina.nil?
+        = link_to current_user.marina.name, current_user.marina   unless current_user.marina.nil?
+    %ul.span1.pull-right
+      = link_to (t 'layouts.navigation.logout'), destroy_user_session_path, :method=>'delete'
+
