@@ -23,6 +23,9 @@ Myapp10::Application.configure do
   # From heroku
   config.assets.initialize_on_precompile = false
 
+  # http://stackoverflow.com/questions/12624376/getting-my-images-in-css-to-work-on-rails-and-asset-pipeline-with-upgraded-app-o
+  config.assets.precompile += ['static_pages.css']
+
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 
