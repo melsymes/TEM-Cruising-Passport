@@ -68,7 +68,7 @@ body {
     background-image: linear-gradient(top, rgba(7,55,115, 1.5), rgba(6,40,83, 3.5)), url(../white_leather.png);
      this works on
     */
-    background: url("../white_leather.png") 0 0 repeat;
+    background: url("../Blue_leather.png") 0 0 repeat;
 }
 .navbar .brand {
     font-size: 26px;
