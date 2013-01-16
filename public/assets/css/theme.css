@@ -57,7 +57,16 @@ body {
     filter: none;
     padding: 7px 0 8px 0;
     /*background: none repeat scroll 0 0 #242b35;*/
-    background: url("../img/nav_bg.jpg") 0 0 repeat-x;
+    background: url("../Blue_leather.png") 0 0 repeat;
+    /*
+    background-color: #073773;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(7,55,115, 1.5)), color-stop(100%, rgba(7,55,115, 3.5))), url(../white_leather.png),;
+    background-image: -webkit-linear-gradient(top, rgba(7,55,115, 1.5), rgba(6,40,83, 3.5)), url(../white_leather.png);
+    background-image: -moz-linear-gradient(top, rgba(7,55,115, 1.5), rgba(6,40,83, 3.5)), url(../white_leather.png);
+    background-image: -ms-linear-gradient(top, rgba(7,55,115, 1.5), rgba(6,40,83, 3.5)), url(../white_leather.png);
+    background-image: -o-linear-gradient(top, rgba(7,55,115, 1.5), rgba(6,40,83, 3.5)), url(../white_leather.png);
+    background-image: linear-gradient(top, rgba(7,55,115, 1.5), rgba(6,40,83, 3.5)), url(../white_leather.png);
+    */
 }
 .navbar .brand {
     font-size: 26px;

@@ -56,7 +56,19 @@ body {
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     filter: none;
     padding: 7px 0 8px 0;
-    background: url('http://apps.thewaypoint.com/wp-content/uploads/2013/01/TEMCPlogosmall.png') 0 0 repeat;
+    /*
+     background: url("http://bestsailingapps.com/wp-content/uploads/2012/12/placeholder2.png") 0 0 repeat;
+     background: url("../white_leather.png") 0 0 repeat;   works on public/assets
+         background-color: #073773;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(7,55,115, 1.5)), color-stop(100%, rgba(7,55,115, 3.5))), url(../white_leather.png),;
+    background-image: -webkit-linear-gradient(top, rgba(7,55,115, 1.5), rgba(6,40,83, 3.5)), url(../white_leather.png);
+    background-image: -moz-linear-gradient(top, rgba(7,55,115, 1.5), rgba(6,40,83, 3.5)), url(../white_leather.png);
+    background-image: -ms-linear-gradient(top, rgba(7,55,115, 1.5), rgba(6,40,83, 3.5)), url(../white_leather.png);
+    background-image: -o-linear-gradient(top, rgba(7,55,115, 1.5), rgba(6,40,83, 3.5)), url(../white_leather.png);
+    background-image: linear-gradient(top, rgba(7,55,115, 1.5), rgba(6,40,83, 3.5)), url(../white_leather.png);
+     this works on
+    */
+    background: url("../white_leather.png") 0 0 repeat;
 }
 .navbar .brand {
     font-size: 26px;
