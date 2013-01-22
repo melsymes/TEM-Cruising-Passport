@@ -49,8 +49,8 @@ pic_blog.png: pic_blog-1e0c8d1d1415f6ce6fbee0e7b61ff9ad.png
 pic_blog/index.png: pic_blog-1e0c8d1d1415f6ce6fbee0e7b61ff9ad.png
 slide1.png: slide1-d18b15897a50937d922a44fa88a76844.png
 slide1/index.png: slide1-d18b15897a50937d922a44fa88a76844.png
-slide2.png: slide2-3897b445e190f6af25d450a15eeb18bf.png
-slide2/index.png: slide2-3897b445e190f6af25d450a15eeb18bf.png
+slide2-tem.png: slide2-tem-8c982f8bb3129654b56af3056b27ae79.png
+slide2-tem/index.png: slide2-tem-8c982f8bb3129654b56af3056b27ae79.png
 slide3.png: slide3-6785d94da01958be2af0decd7c34a03f.png
 slide3/index.png: slide3-6785d94da01958be2af0decd7c34a03f.png
 social_icons.png: social_icons-afed25e8b18f073b605a1faddaff46ae.png
@@ -63,8 +63,8 @@ white_leather.png: white_leather-34eef2a6d327a6abb971a56b6639ee12.png
 white_leather/index.png: white_leather-34eef2a6d327a6abb971a56b6639ee12.png
 application.js: application-865d54363c333f3f3650948b5ddb9a97.js
 application/index.js: application-865d54363c333f3f3650948b5ddb9a97.js
-application.css: application-3122625f869d89c50e478d714b5df72c.css
-application/index.css: application-3122625f869d89c50e478d714b5df72c.css
+application.css: application-b7b577379e2835d05cb17b19c54851f3.css
+application/index.css: application-b7b577379e2835d05cb17b19c54851f3.css
 fontawesome-webfont.eot: fontawesome-webfont-d1a87f253d164f9455111cf8108b946d.eot
 fontawesome-webfont/index.eot: fontawesome-webfont-d1a87f253d164f9455111cf8108b946d.eot
 fontawesome-webfont.svg: fontawesome-webfont-c3f3594758768fbb43eae746d18b3b50.svg
