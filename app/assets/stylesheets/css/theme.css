@@ -3,7 +3,7 @@ html {
 }
 body {
 	position: relative;
-	padding-top: 69px;
+	padding-top: 130px;
 	background: #DDDCE2 url(../img/content_bg.jpg) repeat left top;
 	-webkit-font-smoothing: antialiased;
 	font-family: 'Lato', sans-serif !important;
@@ -68,7 +68,7 @@ body {
     background-image: linear-gradient(top, rgba(7,55,115, 1.5), rgba(6,40,83, 3.5)), url(../white_leather.png);
      this works on
     */
-    background: url("../Blue_leather.png") 0 0 repeat;
+    background: url("Blue_leather.png") 0 0 repeat;
 }
 .navbar .brand {
     font-size: 26px;

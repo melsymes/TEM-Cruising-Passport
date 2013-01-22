@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
-gem 'rails', '3.2.8'
+gem "rails", "~> 3.2.11"
+#gem 'rails', '3.2.8' -> currently showing
+#gem 'rails', '3.2.9'
 #gem 'sqlite3'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -35,6 +37,7 @@ gem "rolify", ">= 3.2.0"
 gem "simple_form", ">= 2.0.4"
 gem "friendly_id", "~> 3.1"
 gem "ya2yaml", "~> 0.31"
+#gem "localeapp", "~> 0.6.9"
 gem 'localeapp'
 gem 'sexp_processor', '~> 4.1'
 gem "country_select", "~> 1.0.1"

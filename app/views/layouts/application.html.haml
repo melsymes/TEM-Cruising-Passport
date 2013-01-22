@@ -13,6 +13,8 @@
   /%body  {:class => "#{controller_name} #{action_name}"}
   %body
     = render 'layouts/navigation'
+    /%br
+    /  %br
 
     #main{:role => "main"}
       .container
@@ -22,7 +24,7 @@
               = render 'layouts/messages'
               = yield
 
-          %footer
+      %footer
       / ! end of .container
       %br
     / ! end of #main
