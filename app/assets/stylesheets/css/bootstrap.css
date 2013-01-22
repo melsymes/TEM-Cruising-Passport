@@ -150,11 +150,11 @@ body {
   background-color: #ffffff;
 }
 a {
-  color: #0088cc;
+  color: #a27744;
   text-decoration: none;
 }
 a:hover {
-  color: #005580;
+  color: #073773;
   text-decoration: underline;
 }
 .img-rounded {
@@ -2123,15 +2123,15 @@ input[type="button"].btn-block {
 
 
 .btn-success {
-  background-color: #5bb75b;
+  background-color: #a27744;
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-image: -moz-linear-gradient(top, #8fb450, #648a43);
-  background-image: -ms-linear-gradient(top, #8fb450, #648a43);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#8fb450), to(#648a43));
-  background-image: -webkit-linear-gradient(top, #8fb450, #648a43);
-  background-image: -o-linear-gradient(top, #8fb450, #648a43);
-  background-image: linear-gradient(top, #8fb450, #648a43);
+  background-image: -moz-linear-gradient(top, #a27744, #86592a);
+  background-image: -ms-linear-gradient(top, #a27744, #86592a);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a27744), to(#86592a));
+  background-image: -webkit-linear-gradient(top, #a27744, #86592a);
+  background-image: -o-linear-gradient(top, #a27744, #86592a);
+  background-image: linear-gradient(top, #a27744, #86592a);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#'8fb450, endColorstr='#'648a43, GradientType=0);
   border-color: #51a351 #51a351 #387038;
@@ -2143,13 +2143,13 @@ input[type="button"].btn-block {
 .btn-success.active,
 .btn-success.disabled,
 .btn-success[disabled] {
-  background-color: #648a43;
+  background-color: #86592a;
   color: #fff;
 }
 
 .btn-success:active,
 .btn-success.active {
-  background-color: #408140 \9;
+  background-color: #86592a \9;
 }
 
 .btn-info {

@@ -57,22 +57,23 @@
                     = image_tag('slide1.png')
                   .span4
                     %h1
-                      Responsive and Clean TEM application Theme
+                      = t('home.slider1_header')
                     %p
-                      There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look.
+                      = t('home.slider1_para')
                     %a.btn.btn-success.btn-large{:href => "https://wrapbootstrap.com/theme/measure-responsive-business-theme-WB0D95984"}
-                      Join a TEM Marina Now!
+                      = t('home.slider1_button')
               / slide
               .item.slide2
                 .row
                   .span4.animated.fadeInUpBig
-                    %h1 Fully responsive TEM blog for your mobile
+                    %h1
+                      = t('home.download_app')
                     %p
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi ut aliquip ex ea commodo consequat.
+                      = t('home.download_app_text')
                     %a.btn.btn-success.btn-large{:href => "blog.html"}
-                      Watch it now!
+                      = t('home.download_app_button')
                   .span6.animated.fadeInDownBig
-                    = image_tag('slide2.png')
+                    = image_tag('slide2-tem.png')
                     /%img{:alt => "slide2", :src => "img/slide2.png"}/
               / slide
               .item.slide3.animated.fadeInUpBig
