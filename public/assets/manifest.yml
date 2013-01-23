@@ -1,6 +1,10 @@
 ---
 iPhone-5-3D-view-MockUp.jpg: iPhone-5-3D-view-MockUp-3d2694744e7e90e7432e45eea0a1f4bb.jpg
 iPhone-5-3D-view-MockUp/index.jpg: iPhone-5-3D-view-MockUp-3d2694744e7e90e7432e45eea0a1f4bb.jpg
+TEMCP-tem.png: TEMCP-tem-7a030837f31d6e2ec593f455638404fc.png
+TEMCP-tem/index.png: TEMCP-tem-7a030837f31d6e2ec593f455638404fc.png
+TEMCPAFULL-tem.png: TEMCPAFULL-tem-d041d8c0f69b34fce218460629810094.png
+TEMCPAFULL-tem/index.png: TEMCPAFULL-tem-d041d8c0f69b34fce218460629810094.png
 about.png: about-ea47a4d41840ea5c7722d15303d5cd75.png
 about/index.png: about-ea47a4d41840ea5c7722d15303d5cd75.png
 blog_post.jpg: blog_post-5e03b721ef35e76f01a7bac239a38642.jpg
@@ -19,6 +23,8 @@ contact_icons.png: contact_icons-5480b39438d76cd2b6be0633d7062cdd.png
 contact_icons/index.png: contact_icons-5480b39438d76cd2b6be0633d7062cdd.png
 content_bg.jpg: content_bg-9e0b6acdd99dee47e76762b252421cf9.jpg
 content_bg/index.jpg: content_bg-9e0b6acdd99dee47e76762b252421cf9.jpg
+exclusive_paper.png: exclusive_paper-265402214622e45841ad4afb87713b15.png
+exclusive_paper/index.png: exclusive_paper-265402214622e45841ad4afb87713b15.png
 feature1.jpg: feature1-302d17e3868ba7ede595346579617956.jpg
 feature1/index.jpg: feature1-302d17e3868ba7ede595346579617956.jpg
 feature2.jpg: feature2-6cf74a7c9f18a66227ed33eb927ef499.jpg
@@ -35,6 +41,8 @@ glyphicons-halflings.png: glyphicons-halflings-2851b489e8c39f8fad44fc10efb99c3e.
 glyphicons-halflings/index.png: glyphicons-halflings-2851b489e8c39f8fad44fc10efb99c3e.png
 i_face.png: i_face-4506dcafe14e2bc392c6373c7fcb4de2.png
 i_face/index.png: i_face-4506dcafe14e2bc392c6373c7fcb4de2.png
+icons-tem.png: icons-tem-69c8a8a74e3e64f456a938a6bea39441.png
+icons-tem/index.png: icons-tem-69c8a8a74e3e64f456a938a6bea39441.png
 icons.png: icons-59c37d303b4246ecba605606a0981d18.png
 icons/index.png: icons-59c37d303b4246ecba605606a0981d18.png
 logo.png: logo-cadffaabfc4c58e112a2138104c0fd41.png
@@ -47,12 +55,14 @@ pic1.jpg: pic1-8d15a4b368b988c29dc7df430c0b7f73.jpg
 pic1/index.jpg: pic1-8d15a4b368b988c29dc7df430c0b7f73.jpg
 pic_blog.png: pic_blog-1e0c8d1d1415f6ce6fbee0e7b61ff9ad.png
 pic_blog/index.png: pic_blog-1e0c8d1d1415f6ce6fbee0e7b61ff9ad.png
+slide1-TEM.png: slide1-TEM-e36bc3c66ec3597e4ab034ef5b15e644.png
+slide1-TEM/index.png: slide1-TEM-e36bc3c66ec3597e4ab034ef5b15e644.png
 slide1.png: slide1-d18b15897a50937d922a44fa88a76844.png
 slide1/index.png: slide1-d18b15897a50937d922a44fa88a76844.png
 slide2-tem.png: slide2-tem-8c982f8bb3129654b56af3056b27ae79.png
 slide2-tem/index.png: slide2-tem-8c982f8bb3129654b56af3056b27ae79.png
-slide3.png: slide3-6785d94da01958be2af0decd7c34a03f.png
-slide3/index.png: slide3-6785d94da01958be2af0decd7c34a03f.png
+slide3-tem.png: slide3-tem-55db7d44fdb0ddd282ffd74f7939ed88.png
+slide3-tem/index.png: slide3-tem-55db7d44fdb0ddd282ffd74f7939ed88.png
 social_icons.png: social_icons-afed25e8b18f073b605a1faddaff46ae.png
 social_icons/index.png: social_icons-afed25e8b18f073b605a1faddaff46ae.png
 thumb_gallery.jpg: thumb_gallery-3eca68da404fb04505f0171fa0b2af72.jpg
@@ -63,8 +73,8 @@ white_leather.png: white_leather-34eef2a6d327a6abb971a56b6639ee12.png
 white_leather/index.png: white_leather-34eef2a6d327a6abb971a56b6639ee12.png
 application.js: application-865d54363c333f3f3650948b5ddb9a97.js
 application/index.js: application-865d54363c333f3f3650948b5ddb9a97.js
-application.css: application-b7b577379e2835d05cb17b19c54851f3.css
-application/index.css: application-b7b577379e2835d05cb17b19c54851f3.css
+application.css: application-ee4a87ef9a6f002ac7d32b946beb8389.css
+application/index.css: application-ee4a87ef9a6f002ac7d32b946beb8389.css
 fontawesome-webfont.eot: fontawesome-webfont-d1a87f253d164f9455111cf8108b946d.eot
 fontawesome-webfont/index.eot: fontawesome-webfont-d1a87f253d164f9455111cf8108b946d.eot
 fontawesome-webfont.svg: fontawesome-webfont-c3f3594758768fbb43eae746d18b3b50.svg
