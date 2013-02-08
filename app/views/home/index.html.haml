@@ -3,16 +3,20 @@
 
   - if (current_user.has_role? :manager) or (current_user.has_role? :admin)
 
-    %p.container.span2
+    %p.container.span12
+      %h2
+        = t('home.signed_in_home_title')
+      = t('home.signed_in_text')
 
-      SEARCH USERS
-    =form_tag search_users_path, :method => 'get' do
-      =text_field_tag :search, params[:search]
-      =submit_tag "search"
-    %br
-      MANAGER - INVITE USER
-      %p
-        = link_to( "invite user", new_user_invitation_path )
+    %p.container.span2
+      = t('home.search_users')
+      =form_tag search_users_path, :method => 'get' do
+        =text_field_tag :search, params[:search]
+        =submit_tag "search"
+      %br
+        =t('home.signed_in.invite_to_join')
+        %p
+          = link_to( "invite user", new_user_invitation_path )
 
     /%br
     /  = @user.roles.each { |r| r.name}
@@ -39,6 +43,9 @@
           - else
             = t('home.passport')
             = @user.passport_code unless @user.nil?
+
+%a.scrolltop{:href => "#"}
+  %span up
 
 - if !user_signed_in?
   #hero
@@ -82,4 +89,62 @@
             / Carousel nav
             %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
             %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›
+
+/ features
+#features
+  .container
+    / header
+    %h2.section_header
+      %hr.left.visible-desktop
+        %span
+
+          = t('home.features.title')
+        %hr.right.visible-desktop
+    / feature list
+    .row
+      .span4.feature
+        /%img.thumb{:alt => "feature1", :src => "feature1.jpg"}/
+        = image_tag('feature1.jpg', :class => 'thumb')
+        %h3
+          %i.i_cloud
+          = t('home.features.f1_title')
+        %p.description
+          = t('home.features.f1_body')
+        %a.btn.btn-default{:href => "#"} more
+      .span4.feature
+        = image_tag('feature2.jpg', class: 'thumb')
+        %h3
+          %i.i_chart
+          = t('home.features.f2_title')
+        %p.description
+          = t('home.features.f2_body')
+        %a.btn.btn-default{:href => "#"} more
+      .span4.feature
+        = image_tag('feature3.jpg', class: 'thumb')
+        %h3
+          %i.i_movil
+          = t('home.features.f3_title')
+        %p.description
+          = t('home.features.f3_body')
+        %a.btn.btn-default{:href => "#"} more
+
+/ starts testimonial
+#testimonials
+  .container
+    .controls
+      %hr
+    .phrases_wrapper
+      .phrase
+        .row
+          .span7
+            %p.testimony
+              = t('home.testimonials.body')
+              %span "
+          .span3.offset1
+            .pic
+              = image_tag('pic1.jpg', class: 'img-circle')
+              %span.name
+                = t('home.testimonials.name')
+              %span.position
+                = t('home.testimonials.position')
 
