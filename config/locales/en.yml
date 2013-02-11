@@ -54,17 +54,13 @@ en:
     signed_in:
       invite_to_join: Sent someone an invitation to join the TEM cruising passport.
     features:
-      title: Features
+      title: Features (staging)
       f1_body: There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-      f1_title: Responsive clean theme
+      f1_title: Staging
       f2_body: ! "There are many variations of passages of Lorem Ipsum available, but the \nmajority have suffered alteration in some form, by injected humour, or randomised \nwords which don't look even slightly believable."
       f2_title: Responsive clean theme
       f3_body: There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
       f3_title: Responsive clean theme
-    feature:
-      f1:
-        body: 
-      f1_body: 
     testimonials:
       body: There are many variations of passages words which don't look even slightly passage of anything embarrassing hidden in the middle.
       name: Alejandra Galvan Castillo
