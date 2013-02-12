@@ -3,6 +3,12 @@ en:
   simple_form:
     required:
       html: <abbr title="required">*</abbr>
+      mark: ! '*'
+      text: required
+    error_notification:
+      default_message: ! 'Please review the problems below:'
+    'no': 'No'
+    'yes': 'Yes'
   subject: Manager accepted
   layouts:
     navigation:
@@ -18,6 +24,13 @@ en:
     messages:
       pending: Your application has been sent to the marina and is currently pending their approval
       remove_pending: Bertholder and marina have been removed. a notification email has been sent.
+      already_confirmed: was already confirmed, please try signing in
+      expired: has expired, please request a new one
+      not_found: not found
+      not_locked: was not locked
+      not_saved:
+        one: ! '1 error prohibited this %{resource} from being saved:'
+        other: ! '%{count} errors prohibited this %{resource} from being saved:'
     confirm:
       are_you_sure: Are you sure?
   email:
@@ -54,16 +67,16 @@ en:
     signed_in:
       invite_to_join: Sent someone an invitation to join the TEM cruising passport.
     features:
-      title: Features (staging)
+      title: FEATURES
       f1_body: There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-      f1_title: Staging
+      f1_title: Staging theme - a very responsive title
       f2_body: ! "There are many variations of passages of Lorem Ipsum available, but the \nmajority have suffered alteration in some form, by injected humour, or randomised \nwords which don't look even slightly believable."
-      f2_title: Responsive clean theme
+      f2_title: Responsive clean theme for Transeurope Marinas
       f3_body: There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
       f3_title: Responsive clean theme
     testimonials:
       body: There are many variations of passages words which don't look even slightly passage of anything embarrassing hidden in the middle.
-      name: Alejandra Galvan Castillo
+      name: Melanie Symes
       position: Bootstrap wizard
   user:
     show:
@@ -83,3 +96,61 @@ en:
   marinas:
     pending:
       remove: 
+  devise:
+    confirmations:
+      confirmed: Your account was successfully confirmed. You are now signed in.
+      send_instructions: You will receive an email with instructions about how to confirm your account in a few minutes.
+      send_paranoid_instructions: If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes.
+    failure:
+      already_authenticated: You are already signed in.
+      inactive: Your account was not activated yet.
+      invalid: Invalid email or password.
+      invalid_token: Invalid authentication token.
+      locked: Your account is locked.
+      timeout: Your session expired, please sign in again to continue.
+      unauthenticated: You need to sign in or sign up before continuing.
+      unconfirmed: You have to confirm your account before continuing.
+    invitations:
+      edit:
+        header: Set your password
+        submit_button: Set my password
+      invitation_token_invalid: The invitation token provided is not valid!
+      new:
+        header: Send invitation
+        submit_button: Send an invitation
+      no_invitations_remaining: No invitations remaining
+      send_instructions: An invitation email has been sent to %{email}.
+      updated: Your password was set successfully. You are now signed in.
+    mailer:
+      confirmation_instructions:
+        subject: Confirmation instructions
+      invitation_instructions:
+        subject: Invitation instructions
+      reset_password_instructions:
+        subject: Reset password instructions
+      unlock_instructions:
+        subject: Unlock Instructions
+    omniauth_callbacks:
+      failure: Could not authenticate you from %{kind} because "%{reason}".
+      success: Successfully authenticated from %{kind} account.
+    passwords:
+      no_token: You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided.
+      send_instructions: You will receive an email with instructions about how to reset your password in a few minutes.
+      send_paranoid_instructions: If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes.
+      updated: Your password was changed successfully. You are now signed in.
+      updated_not_active: Your password was changed successfully.
+    registrations:
+      destroyed: Bye! Your account was successfully cancelled. We hope to see you again soon.
+      signed_up: Welcome! You have signed up successfully.
+      signed_up_but_inactive: You have signed up successfully. However, we could not sign you in because your account is not yet activated.
+      signed_up_but_locked: You have signed up successfully. However, we could not sign you in because your account is locked.
+      signed_up_but_unconfirmed: A message with a confirmation link has been sent to your email address. Please open the link to activate your account.
+      update_needs_confirmation: You updated your account successfully, but we need to verify your new email address. Please check your email and click on the confirm link to finalize confirming your new email address.
+      updated: You updated your account successfully.
+    sessions:
+      signed_in: Signed in successfully.
+      signed_out: Signed out successfully.
+    unlocks:
+      send_instructions: You will receive an email with instructions about how to unlock your account in a few minutes.
+      send_paranoid_instructions: If your account exists, you will receive an email with instructions about how to unlock it in a few minutes.
+      unlocked: Your account has been unlocked successfully. Please sign in to continue.
