@@ -67,17 +67,17 @@ en:
     signed_in:
       invite_to_join: Sent someone an invitation to join the TEM cruising passport.
     features:
-      title: FEATURES
-      f1_body: There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-      f1_title: Staging theme - a very responsive title
+      title: How to get your Cruising Passport
+      f1_body: Become a berth holder at any of the 54 TransEurope Marina spread across Europe.
+      f1_title: Berth with us
       f2_body: ! "There are many variations of passages of Lorem Ipsum available, but the \nmajority have suffered alteration in some form, by injected humour, or randomised \nwords which don't look even slightly believable."
-      f2_title: Responsive clean theme for Transeurope Marinas
+      f2_title: Sign up for Free
       f3_body: There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-      f3_title: Responsive clean theme
+      f3_title: Download the App
     testimonials:
-      body: There are many variations of passages words which don't look even slightly passage of anything embarrassing hidden in the middle.
+      body: We hope you enjoy the easy-of-use and convenience of our new Cruising Passport App, we hope to see you soon in one of our 54 friendly marinas.
       name: Melanie Symes
-      position: Bootstrap wizard
+      position: TransEurope Marinas Chairperson
   user:
     show:
       boat_name: ! 'Boat name:'

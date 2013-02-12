@@ -1,4 +1,5 @@
 !!!
+
 %html
   %head
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
@@ -28,10 +29,13 @@
       / ! end of .container
       %br
     / ! end of #main
-    %footer.navbar.navbar-static-bottom
-      %nav.navbar-inner
-        .container
-          .center
-            .span12
-              = render 'layouts/footer'
+    %footer.navbar-inner
+      //.navbar.navbar-static-bottom
+      //%nav.navbar-inner
+      .container
+        .center
+          .span12
+
+
+            = render 'layouts/footer'
 
