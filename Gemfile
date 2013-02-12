@@ -18,7 +18,7 @@ end
 gem "activerecord-postgresql-adapter"
 gem 'pg'
 gem 'heroku'
-
+gem "psych", "~> 1.3.4"
 gem 'jquery-rails'
 gem "thin", ">= 1.5.0"
 gem "haml", ">= 3.1.7"
