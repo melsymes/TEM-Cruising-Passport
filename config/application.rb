@@ -69,6 +69,11 @@ module Myapp10
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    config.assets.paths << "#{Rails.root}/app/assets/stylesheets/css"
+    config.assets.paths << "#{Rails.root}/app/assets/img"
+
+    # Heroku requires this to be false
+    config.assets.initialize_on_precompile=false
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'

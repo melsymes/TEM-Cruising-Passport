@@ -8,6 +8,7 @@ Myapp10::Application.routes.draw do
   devise_for :users
   resources :users do
     collection do
+      get :search
       get :validate_manager, :path => "/validate_manager/:id"
       get :expire_manager, :path =>  "/expire_manager/:id"
       get :revalidate_manager, :path => "/revalidate_manager/:id"
@@ -16,7 +17,7 @@ Myapp10::Application.routes.draw do
       get :expire_bertholder, :path =>  "/expire_bertholder/:id"
       get :revalidate_bertholder, :path => "/revalidate_bertholder/:id"
       get :remove_expired_bertholder, :path =>  "/remove_expired_bertholder/:id"
-
+      get :remove_pending, :path => "/remove_pending/:id"
     end
 
   end
@@ -26,6 +27,7 @@ Myapp10::Application.routes.draw do
         post :auto_complete_name
         get :search
         get :pending, :path => "/pending/:id"
+        post :create_user
       end
 
 
