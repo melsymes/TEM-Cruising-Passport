@@ -1,32 +1,49 @@
+%br
+%br
+%h3
+  = t('marinas.show.title')
+%br
+%br
+= raw t('marinas.show.intro_para')
+%br
+%br
+
 %p
-  %b Name:
+  %b= t('marinas.form.name_label')
   = @marina.name
 %p
-  %b Address:
+  %b= t('marinas.form.address_label')
   = @marina.address
 %p
-  %b Address1:
+  %b= t('marinas.form.street_label')
   = @marina.address1
 %p
-  %b Town:
+  %b= t('marinas.form.town_label')
   = @marina.town
 %p
-  %b County:
+  %b= t('marinas.form.counry_label')
   = @marina.county
 %p
-  %b Country:
+  %b= t('marinas.form.country_label')
   = @marina.country
 %p
-  %b Postcode:
+  %b= t('marinas.form.postcode_label')
   = @marina.postcode
 
 
 
 - if !@manager.nil?
-  - if (@manager.has_role? :admin) or (@manager.has_role? :manager) # user is a admin or manager
+  - if (@manager.has_role? :admin) or (@manager.has_role? :manager)
+    %br
+    %h4
+      = raw t('marinas.show.title_to_managers_pane')
+    %br
+    = raw t('marinas.show.intro_to_managers_pane')
+    %br
+    %br
     =form_tag create_user_marinas_path do
       =text_field_tag :user_email, params[:user_email]
-      =submit_tag "Invite"
+      =submit_tag t('marinas.show.invite')
     = render 'pending'
     = render 'active_managers'
     = render 'active'
@@ -35,6 +52,6 @@
 
 
 %br
-  = link_to 'Edit', edit_marina_path(@marina)
+  = link_to t('marinas.show.edit_label'), edit_marina_path(@marina)
   \|
-  = link_to 'Back', marinas_path(@marina)
+  = link_to t('marinas.show.back_label'), marinas_path(@marina)

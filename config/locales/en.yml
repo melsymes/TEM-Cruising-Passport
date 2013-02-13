@@ -78,6 +78,11 @@ en:
       body: We hope you enjoy the easy-of-use and convenience of our new Cruising Passport App, we hope to see you soon in one of our 54 friendly marinas.
       name: Melanie Symes
       position: TransEurope Marinas Chairperson
+    footer:
+      contact_us: 
+      main: 
+      title_main: 
+      title_sub: 
   user:
     show:
       boat_name: ! 'Boat name:'
@@ -96,6 +101,76 @@ en:
   marinas:
     pending:
       remove: 
+    management:
+      action: Action
+      active_berth_holders: Current Active Berth Holders
+      email: Email
+      expire_date: Expiry Date
+      registered_date: Registered Date
+      role: Role
+      username: Name
+      active_managers: Current Active Managers
+      expire_manager: Expire manager
+      action_alternative: Alternative action
+      expired_berth_holders: Expired berth holders
+      expired_managers: Expired managers
+      is_berth_holder: is a berth holder?
+      is_manager: is a manager?
+      pending_berth_holders: Pending berth holders
+      remove_user: Remove boatowner
+    index:
+      address: Address
+      connect_button_label: Connect
+      connect_button_title: Connect
+      country: Country
+      county: County
+      create_new_marina: Create new marina
+      destroy_button_label: ! 'Remove '
+      destroy_button_title: Remove marina
+      edit_button_label: Edit
+      edit_button_title: Edit
+      intro_para: ! 'A list of marinas in Transeurope Marinas Group, if you are a berth holder please connect with your marina.
+
+        <br>
+
+        Add this line
+
+        <br><br>
+
+'
+      listing_marinas_title: List of Marinas
+      name: Name
+      search_label: Search
+      show_button_label: Show
+      show_button_title: Show
+      town: Town
+    form:
+      address_label: ! 'Address:'
+      counry_label: ! 'County:'
+      country_label: ! 'Country:'
+      create_label: ! 'Create:'
+      name_label: ! 'Name:'
+      postcode_label: ! 'Postcode:'
+      street_label: ! 'Street:'
+      town_label: ! 'Town:'
+    new:
+      back_label: 
+      intro_para: 
+      label: 
+    show:
+      back_label: Back
+      edit_label: Edit
+      intro_para: This is the details of the show
+      invite: Invite user
+      title: Marina details
+      intro_to_managers_page: 
+      intro_to_managers_pane: Managers can review and accept potential bertholders or add managers and manage your berth holders.
+      title_to_managers_pane: Manager's Admin Pane
+    Back: 
+    edit:
+      back: Back
+      show: Show
+      title: Edit your Marina Profile
   devise:
     confirmations:
       confirmed: Your account was successfully confirmed. You are now signed in.
@@ -154,3 +229,4 @@ en:
       send_instructions: You will receive an email with instructions about how to unlock your account in a few minutes.
       send_paranoid_instructions: If your account exists, you will receive an email with instructions about how to unlock it in a few minutes.
       unlocked: Your account has been unlocked successfully. Please sign in to continue.
+  ma: 

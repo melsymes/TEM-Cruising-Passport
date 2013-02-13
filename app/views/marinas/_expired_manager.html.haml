@@ -1,15 +1,18 @@
-%h3 Expired Managers
+%h3
+  =t('marinas.management.expired_managers')
 
 
 .span8
 %table.table.table-condensed
   %thead
     %tr
-      %th Username
-      %th Email
-      %th Registered
-      %th Role
-      %th
+      %th= t('marinas.management.username')
+      %th= t('marinas.management.email')
+      %th= t('marinas.management.registered_date')
+      %th= t('marinas.management.role')
+      %th= t('marinas.management.expire_date')
+      %th= t('marinas.management.action')
+      %th= t('marinas.management.action_alternative')
   %tbody
     - @marina.expired_managers.each do |user|
       %tr
@@ -17,5 +20,5 @@
         %td= user.email
         %td= user.created_at.to_date
         %td= user.roles.first.name.titleize unless user.roles.first.nil?
-        %td= link_to 'Revalidate Manager', revalidate_manager_users_path(user, :marina => @marina)
-        %td= link_to 'Remove Manager', remove_expired_manager_users_path(user, :marina => @marina)
+        %td= link_to t('marinas.management.re_validate_manager'), revalidate_manager_users_path(user, :marina => @marina)
+        %td= link_to t('marinas.management.remove_manager'), remove_expired_manager_users_path(user, :marina => @marina)
