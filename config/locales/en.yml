@@ -1,5 +1,232 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  hello: Hello world
+  simple_form:
+    required:
+      html: <abbr title="required">*</abbr>
+      mark: ! '*'
+      text: required
+    error_notification:
+      default_message: ! 'Please review the problems below:'
+    'no': 'No'
+    'yes': 'Yes'
+  subject: Manager accepted
+  layouts:
+    navigation:
+      edit: Edit
+      home: TEM Passport
+      logout: Logout
+      marinas: Marinas
+      welcome: Welcome
+      login: Login
+      sign_up: Sign up
+      admin_list: Admin
+  errors:
+    messages:
+      pending: Your application has been sent to the marina and is currently pending their approval
+      remove_pending: Bertholder and marina have been removed. a notification email has been sent.
+      already_confirmed: was already confirmed, please try signing in
+      expired: has expired, please request a new one
+      not_found: not found
+      not_locked: was not locked
+      not_saved:
+        one: ! '1 error prohibited this %{resource} from being saved:'
+        other: ! '%{count} errors prohibited this %{resource} from being saved:'
+    confirm:
+      are_you_sure: Are you sure?
+  email:
+    user_pending_notification:
+      footer: 
+      greeting: Hi %{name}
+      introduction: Thank you for connecting with %{marina_name}.  We have been notified and one of our managers will validate your account shortly.
+      post_introduction: Sent by Transeurope Marinas on behalf of %{marina_name}
+      subject: Connect request sent
+    transeurope_marinas_footer: ! 'Best Wishes,
+
+
+      The TransEurope Team
+
+      http://www.transeuropemarinas.com
+
+      http://www.cruisingpassport.com
+
+      If you received this message in error and do not have a cruising passport account, you can simply ignore it or let us know at support@transeuropemarinas.com and we''ll investigate.'
+    user_remove_pending:
+      subject: USER removed - sorry
+  home:
+    passport_pending: Your passport code will be available when  your marina has validated your application.
+    passport: Your passport code is -
+    slider1_button: Get your Free Cruising Passport!
+    slider1_header: Cruising throughout Europe just got Easier
+    slider1_para: Now you can visit all your favourite TransEurope Marinas, with our simple to use, lifetime Cruising Passport Code. Sign Up for free and make the most of Europes largest Marina group.
+    download_app: Download our free Cruising Passport App Today
+    download_app_text: Manage your Code, access information about all 54 of our friendly and helpful members, check the Tides and keep an eye on the Weather.
+    download_app_button: Download for Free!
+    search_users: Search users
+    signed_in_home_title: Welcome to your passport app
+    signed_in_text: You are signed in as an admin or manager, you can search user in the search window below.
+    signed_in:
+      invite_to_join: Sent someone an invitation to join the TEM cruising passport.
+    features:
+      title: How to get your Cruising Passport
+      f1_body: Become a berth holder at any of the 54 TransEurope Marina spread across Europe.
+      f1_title: Berth with us
+      f2_body: ! "There are many variations of passages of Lorem Ipsum available, but the \nmajority have suffered alteration in some form, by injected humour, or randomised \nwords which don't look even slightly believable."
+      f2_title: Sign up for Free
+      f3_body: There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+      f3_title: Download the App
+    testimonials:
+      body: We hope you enjoy the easy-of-use and convenience of our new Cruising Passport App, we hope to see you soon in one of our 54 friendly marinas.
+      name: Melanie Symes
+      position: TransEurope Marinas Chairperson
+    footer:
+      contact_us: 
+      main: 
+      title_main: 
+      title_sub: 
+  user:
+    show:
+      boat_name: ! 'Boat name:'
+      connect_to_your_marina: Connect to your marina
+      current_marina_status: ! 'Current marina status:'
+      marina_get_started: ! 'Get started - connect to your marina:'
+      marina_state: ! 'Your current state is:'
+      passport_code: ! 'Your passport code is:'
+      user_email: ! 'Email: '
+      user_header: My posh account details
+      user_name: ! 'Name:'
+      name: ! 'Name:'
+      current_marina_state: 
+    search:
+      advise_on_non_found: This is loads of very usefull advise on how to deal with no matching users found.
+  marinas:
+    pending:
+      remove: 
+    management:
+      action: Action
+      active_berth_holders: Current Active Berth Holders
+      email: Email
+      expire_date: Expiry Date
+      registered_date: Registered Date
+      role: Role
+      username: Name
+      active_managers: Current Active Managers
+      expire_manager: Expire manager
+      action_alternative: Alternative action
+      expired_berth_holders: Expired berth holders
+      expired_managers: Expired managers
+      is_berth_holder: is a berth holder?
+      is_manager: is a manager?
+      pending_berth_holders: Pending berth holders
+      remove_user: Remove boatowner
+    index:
+      address: Address
+      connect_button_label: Connect
+      connect_button_title: Connect
+      country: Country
+      county: County
+      create_new_marina: Create new marina
+      destroy_button_label: ! 'Remove '
+      destroy_button_title: Remove marina
+      edit_button_label: Edit
+      edit_button_title: Edit
+      intro_para: ! 'A list of marinas in Transeurope Marinas Group, if you are a berth holder please connect with your marina.
+
+        <br>
+
+        Add this line
+
+        <br><br>
+
+'
+      listing_marinas_title: List of Marinas
+      name: Name
+      search_label: Search
+      show_button_label: Show
+      show_button_title: Show
+      town: Town
+    form:
+      address_label: ! 'Address:'
+      counry_label: ! 'County:'
+      country_label: ! 'Country:'
+      create_label: ! 'Create:'
+      name_label: ! 'Name:'
+      postcode_label: ! 'Postcode:'
+      street_label: ! 'Street:'
+      town_label: ! 'Town:'
+    new:
+      back_label: 
+      intro_para: 
+      label: 
+    show:
+      back_label: Back
+      edit_label: Edit
+      intro_para: This is the details of the show
+      invite: Invite user
+      title: Marina details
+      intro_to_managers_page: 
+      intro_to_managers_pane: Managers can review and accept potential bertholders or add managers and manage your berth holders.
+      title_to_managers_pane: Manager's Admin Pane
+    Back: 
+    edit:
+      back: Back
+      show: Show
+      title: Edit your Marina Profile
+  devise:
+    confirmations:
+      confirmed: Your account was successfully confirmed. You are now signed in.
+      send_instructions: You will receive an email with instructions about how to confirm your account in a few minutes.
+      send_paranoid_instructions: If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes.
+    failure:
+      already_authenticated: You are already signed in.
+      inactive: Your account was not activated yet.
+      invalid: Invalid email or password.
+      invalid_token: Invalid authentication token.
+      locked: Your account is locked.
+      timeout: Your session expired, please sign in again to continue.
+      unauthenticated: You need to sign in or sign up before continuing.
+      unconfirmed: You have to confirm your account before continuing.
+    invitations:
+      edit:
+        header: Set your password
+        submit_button: Set my password
+      invitation_token_invalid: The invitation token provided is not valid!
+      new:
+        header: Send invitation
+        submit_button: Send an invitation
+      no_invitations_remaining: No invitations remaining
+      send_instructions: An invitation email has been sent to %{email}.
+      updated: Your password was set successfully. You are now signed in.
+    mailer:
+      confirmation_instructions:
+        subject: Confirmation instructions
+      invitation_instructions:
+        subject: Invitation instructions
+      reset_password_instructions:
+        subject: Reset password instructions
+      unlock_instructions:
+        subject: Unlock Instructions
+    omniauth_callbacks:
+      failure: Could not authenticate you from %{kind} because "%{reason}".
+      success: Successfully authenticated from %{kind} account.
+    passwords:
+      no_token: You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided.
+      send_instructions: You will receive an email with instructions about how to reset your password in a few minutes.
+      send_paranoid_instructions: If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes.
+      updated: Your password was changed successfully. You are now signed in.
+      updated_not_active: Your password was changed successfully.
+    registrations:
+      destroyed: Bye! Your account was successfully cancelled. We hope to see you again soon.
+      signed_up: Welcome! You have signed up successfully.
+      signed_up_but_inactive: You have signed up successfully. However, we could not sign you in because your account is not yet activated.
+      signed_up_but_locked: You have signed up successfully. However, we could not sign you in because your account is locked.
+      signed_up_but_unconfirmed: A message with a confirmation link has been sent to your email address. Please open the link to activate your account.
+      update_needs_confirmation: You updated your account successfully, but we need to verify your new email address. Please check your email and click on the confirm link to finalize confirming your new email address.
+      updated: You updated your account successfully.
+    sessions:
+      signed_in: Signed in successfully.
+      signed_out: Signed out successfully.
+    unlocks:
+      send_instructions: You will receive an email with instructions about how to unlock your account in a few minutes.
+      send_paranoid_instructions: If your account exists, you will receive an email with instructions about how to unlock it in a few minutes.
+      unlocked: Your account has been unlocked successfully. Please sign in to continue.
+  ma: 

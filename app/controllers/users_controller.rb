@@ -23,11 +23,15 @@ class UsersController < ApplicationController
   def validate_manager
     authorize! :update, @user, :message => 'Not authorized as an manager.'
     @user = User.find(params[:id])
-    @marina = @user.marina
+    @marina = Marina.find(params[:marina])
+
     @marina.pending_users.delete(@user)
     @marina.active_managers << @user
+    @marina.users << @user
+
     UserNotifier.manager_accepted(@user).deliver
     @user.marina_state= "VALIDATED-MANAGER"
+    @user.add_role :manager
     @user.save
     @marina.save
     redirect_to marina_path(@marina), :notice => "Manager and marina are now connected."
@@ -35,15 +39,16 @@ class UsersController < ApplicationController
 
   def expire_manager
       authorize! :update, @user, :message => 'Not authorized as an manager.'
+
       @user = User.find(params[:id])
-      puts @user
+      @marina = Marina.find(params[:marina])
 
-
-      @marina = @user.marina
-      puts @marina
       @marina.active_managers.delete(@user)
       @marina.expired_managers << @user
+      @marina.users.delete(@user)
+
       @user.marina_state= "EXPIRED-MANAGER"
+      @user.has_no_role(:manager)
       @user.save
       @marina.save
       UserNotifier.expired_manager(@user).deliver
@@ -53,9 +58,12 @@ class UsersController < ApplicationController
   def revalidate_manager
       authorize! :update, @user, :message => 'Not authorized as an manager.'
       @user = User.find(params[:id])
-      @marina = @user.marina
+      @marina = Marina.find(params[:marina])
+
       @marina.expired_managers.delete(@user)
       @marina.active_managers << @user
+      @marina.users << @user
+
       @user.marina_state= "VALIDATED-MANAGER"
       UserNotifier.manager_accepted(@user).deliver
       @user.save
@@ -65,21 +73,52 @@ class UsersController < ApplicationController
 
   def remove_expired_manager
       authorize! :update, @user, :message => 'Not authorized as an manager.'
+
       @user = User.find(params[:id])
-      @marina = @user.marina
+      @marina = Marina.find(params[:marina])
+
       @marina.expired_managers.delete(@user)
+      #@marina.users.delete(@user)
+      #@marina.users << @user
+
       @user.marina_state= "REMOVED-MANAGER"
       @user.save
       @marina.save
       redirect_to marina_path(@marina), :notice => "Manager has been removed."
   end
+  #
+  # Berth holders validation routes
+  #
+
+  def remove_pending
+    authorize! :update, @user, :message => 'Not authorized as an manager.'
+
+    @user = User.find(params[:id])
+    @marina = Marina.find(params[:marina])
+    @marina.pending_users.delete(@user)
+
+    @user.marina_state= ""
+    UserNotifier.remove_pending(@user).deliver
+    @user.save
+    @marina.save
+    redirect_to marina_path(@marina), :notice => t('errors.messages.remove_pending')
+    #"Bertholder and marina are now connected. a notification email has been sent"
+
+
+
+  end
+
 
   def validate_bertholder
      authorize! :update, @user, :message => 'Not authorized as an manager.'
+
      @user = User.find(params[:id])
-     @marina = @user.marina
+     @marina = Marina.find(params[:marina])
+
      @marina.pending_users.delete(@user)
      @marina.active_users << @user
+     @marina.users << @user
+
      @user.marina_state= "VALIDATED-BERTHOLDER"
      UserNotifier.accepted(@user).deliver
      @user.save
@@ -89,11 +128,16 @@ class UsersController < ApplicationController
 
   def expire_bertholder
      authorize! :update, @user, :message => 'Not authorized as an manager.'
+
      @user = User.find(params[:id])
-     @marina = @user.marina
+     @marina = Marina.find(params[:marina])
+
      @marina.active_users.delete(@user)
-     UserNotifier.expired_user(@user).deliver
      @marina.expired_users << @user
+     @marina.users.delete(@user)
+     #@marina.users << @user
+
+
      @user.marina_state= "EXPIRED-BERTHOLDER"
      UserNotifier.expired_user(@user).deliver
      @user.save
@@ -103,10 +147,15 @@ class UsersController < ApplicationController
 
   def revalidate_bertholder
      authorize! :update, @user, :message => 'Not authorized as an manager.'
+
      @user = User.find(params[:id])
-     @marina = @user.marina
+     @marina = Marina.find(params[:marina])
+
      @marina.expired_users.delete(@user)
      @marina.active_users << @user
+     #@marina.users.delete(@user)
+     @marina.users << @user
+
      @user.marina_state= "VALIDATED-BERTHOLDER"
      UserNotifier.accepted(@user).deliver
      @user.save
@@ -116,9 +165,14 @@ class UsersController < ApplicationController
 
   def remove_expired_bertholder
      authorize! :update, @user, :message => 'Not authorized as an manager.'
+
      @user = User.find(params[:id])
-     @marina = @user.marina
+     @marina = Marina.find(params[:marina])
+
      @marina.expired_users.delete(@user)
+     #@marina.users.delete(@user)
+     #@marina.users << @user
+
      @user.marina_state= "REMOVED-BERTHOLDER"
      @user.save
      @marina.save
@@ -136,4 +190,12 @@ class UsersController < ApplicationController
       redirect_to users_path, :notice => "Can't delete yourself."
     end
   end
+
+  def search
+    authorize! :update, @user, :message => 'Not authorized as an manager.'
+    @users = User.search(params[:search])
+    #redirect_to root_path
+  end
+
+
 end

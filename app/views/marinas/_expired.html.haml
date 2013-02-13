@@ -1,15 +1,15 @@
-%h3 Expired Bertholders
-
-
+%h3= t('marinas.management.expired_berth_holders')
 .span8
 %table.table.table-condensed
   %thead
     %tr
-      %th Username
-      %th Email
-      %th Registered
-      %th Role
-      %th
+      %th= t('marinas.management.username')
+      %th= t('marinas.management.email')
+      %th= t('marinas.management.registered_date')
+      %th= t('marinas.management.role')
+      %th= t('marinas.management.expire_date')
+      %th= t('marinas.management.action')
+      %th= t('marinas.management.action_alternative')
   %tbody
     - @marina.expired_users.each do |user|
       %tr
@@ -17,5 +17,6 @@
         %td= user.email
         %td= user.created_at.to_date
         %td= user.roles.first.name.titleize unless user.roles.first.nil?
-        %td= link_to 'revalidate Bertholder', revalidate_bertholder_users_path(user)
-        %td= link_to 'Remove bertholder', remove_expired_bertholder_users_path(user)
+        %td // add expiry date
+        %td= link_to t('marinas.management.re_validate_berth_holder'), revalidate_bertholder_users_path(user, :marina => @marina)
+        %td= link_to t('marinas.management.remove_berth_holder'), remove_expired_bertholder_users_path(user, :marina => @marina)

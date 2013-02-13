@@ -1,0 +1,33 @@
+<div class="navbar navbar-fixed-top">
+     <div class="navbar-inner">
+       <div class="container">
+   		<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+         	</a>
+         	<a class="brand scroller" data-section="body" href=<%= root_path %>>
+               <%= link_to(image_tag('logo_tem.png', class: 'brand scroller'), root_path) %>
+               <%#img src="/assets/logo.png" alt="Transeurope Marinas Cruising Passport" /%>
+           </a>
+	  	<div class="nav-collapse collapse">
+               <ul class="nav pull-right">
+                 <%- if user_signed_in? %>
+                   <li><%= link_to (t 'layouts.navigation.edit')  , edit_user_registration_path %></li>
+                   <li><%= link_to (t 'layouts.navigation.marinas'), marinas_path %></li>
+                   <%- if current_user.has_role? :admin %>
+                     <li><%= link_to (t 'layouts.navigation.admin_list'), users_path %></li>
+                   <%- end %>
+
+                   <li><a>    WELCOME:</a></li><li><%= link_to current_user.name, current_user %></a></li>
+                   <li><%= link_to current_user.marina.name, current_user.marina   unless current_user.marina.nil? %></li>
+                   <li><%= link_to (t 'layouts.navigation.logout'), destroy_user_session_path, :method=>'delete', :class => 'btn-header' %></li>
+                 <%- else %>
+                   <li><%= link_to (t 'layouts.navigation.sign_up'), new_user_registration_path, :class => 'btn-header' %> </li>
+                   <li><%= link_to (t 'layouts.navigation.login'), new_user_session_path, :class => 'btn-header' %></a></li>
+                 <%- end %>
+               </ul>
+        </div>
+       </div>
+     </div>
+   </div>

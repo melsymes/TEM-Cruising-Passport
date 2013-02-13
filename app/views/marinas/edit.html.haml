@@ -1,7 +1,9 @@
-%h1 Editing marina
+%br
+%br
+%h3= t('marinas.edit.title')
 
 = render 'form'
 
-= link_to 'Show', @marina
+= link_to t('marinas.edit.show'), @marina
 \|
-= link_to 'Back', marinas_path
+= link_to t('marinas.edit.back'), marinas_path
