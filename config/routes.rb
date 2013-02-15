@@ -1,6 +1,12 @@
 Myapp10::Application.routes.draw do
-  resources :marinas
 
+
+
+
+
+scope '(:locale)', :locale => /en|es-ES|fr-FR/ do
+
+  resources :marinas
   authenticated :user do
     root :to => 'home#index'
   end
@@ -32,6 +38,6 @@ Myapp10::Application.routes.draw do
 
 
   end
-
+end
 
 end

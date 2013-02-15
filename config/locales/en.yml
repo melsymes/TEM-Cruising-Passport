@@ -68,7 +68,7 @@ en:
       invite_to_join: Sent someone an invitation to join the TEM cruising passport.
     features:
       title: How to get your Cruising Passport
-      f1_body: Become a berth holder at any of the 54 TransEurope Marina spread across Europe.
+      f1_body: Become a berth holder at any of the 54 TransEurope Marinas spread across Europe.
       f1_title: Berth with us
       f2_body: ! "There are many variations of passages of Lorem Ipsum available, but the \nmajority have suffered alteration in some form, by injected humour, or randomised \nwords which don't look even slightly believable."
       f2_title: Sign up for Free
@@ -98,6 +98,7 @@ en:
       current_marina_state: 
     search:
       advise_on_non_found: This is loads of very usefull advise on how to deal with no matching users found.
+    signed_in: 
   marinas:
     pending:
       remove: 
