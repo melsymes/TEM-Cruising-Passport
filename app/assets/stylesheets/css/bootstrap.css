@@ -7,6 +7,12 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
+
+.locale {
+ float: right;
+ margin: -0.25em 0.1em;
+}
+
 .clearfix {
   *zoom: 1;
 }

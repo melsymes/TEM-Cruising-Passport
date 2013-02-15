@@ -10,7 +10,7 @@
 #     - <Heroku config:var name>: <Heroku config:var value>
 #
 production: 
-  app: myapp10 
+  app: tem
   stack: cedar
   tag: production/*
   config:
@@ -19,7 +19,7 @@ production:
 
 staging:
   stack: cedar
-  app: myapp10-staging
+  app: tem-staging
   config: &default
     BUNDLE_WITHOUT: "development:test"
   addons:
