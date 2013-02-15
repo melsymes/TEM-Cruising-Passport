@@ -11,6 +11,10 @@
                <%#img src="/assets/logo.png" alt="Transeurope Marinas Cruising Passport" /%>
            </a>
 	  	<div class="nav-collapse collapse">
+            <%= form_tag root_path, class: 'locale' do %>
+            <%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), onchange: 'this.form.submit()' %>
+            <%= submit_tag 'submit' %>
+            <%= javascript_tag "$('.locale input').hide()" %> <% end %>
                <ul class="nav pull-right">
                  <%- if user_signed_in? %>
                    <li><%= link_to (t 'layouts.navigation.edit')  , edit_user_registration_path %></li>
@@ -27,7 +31,9 @@
                    <li><%= link_to (t 'layouts.navigation.login'), new_user_session_path, :class => 'btn-header' %></a></li>
                  <%- end %>
                </ul>
-        </div>
+
+
+         </div>
        </div>
      </div>
    </div>
