@@ -103,22 +103,23 @@ fr-FR:
       invite_to_join: 
     signed_in_home_title: 
     signed_in_text: 
-    slider1_button: 
-    slider1_header: 
-    slider1_para: 
+    slider1_button: Obtenez votre Passeport Cruising gratuit!
+    slider1_header: Croisière à travers l'Europe est maintenant plus facile
+    slider1_para: Maintenant,  vous pouvez visiter tous vos Marinas TransEurope préférés, avec notre simple à utiliser, Code Passeport durée de vie de croisière. Inscrivez-vous gratuitement et profitez des Europes Marina groupe le plus important.
     testimonials:
       body: 
       name: 
       position: 
+    search_users_label: 
   layouts:
     navigation:
       admin_list: 
       edit: 
       home: 
-      login: 
+      login: Login
       logout: 
       marinas: 
-      sign_up: 
+      sign_up: Signer
       welcome: 
   ma: 
   marinas:

@@ -56,7 +56,7 @@ en:
     passport_pending: Your passport code will be available when  your marina has validated your application.
     passport: Your passport code is -
     slider1_button: Get your Free Cruising Passport!
-    slider1_header: Cruising throughout Europe just got Easier
+    slider1_header: Cruising throughout Europe just got easier
     slider1_para: Now you can visit all your favourite TransEurope Marinas, with our simple to use, lifetime Cruising Passport Code. Sign Up for free and make the most of Europes largest Marina group.
     download_app: Download our free Cruising Passport App Today
     download_app_text: Manage your Code, access information about all 54 of our friendly and helpful members, check the Tides and keep an eye on the Weather.
@@ -83,6 +83,7 @@ en:
       main: 
       title_main: 
       title_sub: 
+    search_users_label: 
   user:
     show:
       boat_name: ! 'Boat name:'

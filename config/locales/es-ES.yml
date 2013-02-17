@@ -103,22 +103,23 @@ es-ES:
       invite_to_join: 
     signed_in_home_title: 
     signed_in_text: 
-    slider1_button: 
-    slider1_header: 
-    slider1_para: 
+    slider1_button: Obtenga su Pasaporte Cruising Gratis!
+    slider1_header: Cruising en Europa ahora es más fácil
+    slider1_para: Ahora  se puede visitar todos los Puertos Transeurope favoritas, con nuestro sencillo de utilizar, toda la vida de crucero Código Passport. Regístrate gratis y sacar el máximo partido de grupo más grande de Europa Marina.
     testimonials:
       body: 
       name: 
       position: 
+    search_users_label: 
   layouts:
     navigation:
       admin_list: 
       edit: 
       home: 
-      login: 
+      login: Login
       logout: 
       marinas: 
-      sign_up: 
+      sign_up: Contratar
       welcome: 
   ma: 
   marinas:
