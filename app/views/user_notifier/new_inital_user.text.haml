@@ -1,9 +1,9 @@
-UserNotifier#new_inital_user
-
-= @greeting + ", find me in app/views/user_notifier/new_inital_user.text.haml"
-
-New user has connected to a marina with no manager - this email goes to admin to change the role of that user to
-manager and validate that user -
-
-All further new users who connect to this marina will be sent to the marina manager
-
+UserNotifier#new_initial_user
+%p
+  = t('email.new_initial_user.greeting', :name => @user.name)
+%p
+  = t('email.new_initial_user.introduction', :marina_name => @marina.name)
+%p
+  = t('email.new_initial_user.post_introduction', :marina_name => @marina.name)
+%p
+  = t('email.transeurope_marinas_footer')

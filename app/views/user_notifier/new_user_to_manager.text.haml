@@ -1,7 +1,10 @@
-UserNotifier#new_inital_user
-
-= @greeting + ", find me in app/views/user_notifier/new_inital_user.text.haml"
-
-New user has connected to a marina and sent to all managers for verification
-
+UserNotifier#new_user_to_manager
+%p
+  = t('email.new_user_to_manager.greeting', :name => @user.name)
+%p
+  = t('email.new_user_to_manager.introduction', :marina_name => @marina.name)
+%p
+  = t('email.new_user_to_manager.post_introduction', :marina_name => @marina.name)
+%p
+  = t('email.transeurope_marinas_footer')
 

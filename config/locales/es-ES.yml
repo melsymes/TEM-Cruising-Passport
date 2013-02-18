@@ -192,9 +192,9 @@ es-ES:
       default_message: 
     'no': 
     required:
-      html: 
-      mark: 
-      text: 
+      html: <abbr title="required">*</abbr>
+      mark: ! '*'
+      text: required
     'yes': 
   subject: 
   user:
@@ -213,3 +213,25 @@ es-ES:
       user_header: 
       user_name: 
     signed_in: 
+    charge_role: 
+    email: 
+    manager_count: 
+    marina_name: 
+    name: 
+    registered_date: 
+    role: 
+    username: 
+    registered: 
+    boat_name: 
+    marina_state: 
+    passport_code: 
+  admin:
+    user_list:
+      intro: 
+      title: 
+      are_you_sure: 
+      full_list_intro: 
+      full_list_title: 
+  manager:
+    search:
+      title: 

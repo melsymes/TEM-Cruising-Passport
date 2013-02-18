@@ -79,11 +79,11 @@ en:
       name: Melanie Symes
       position: TransEurope Marinas Chairperson
     footer:
-      contact_us: 
-      main: 
+      contact_us: Contact us
+      main: main blog post text
       title_main: 
       title_sub: 
-    search_users_label: 
+    search_users_label: Search the TEM database
   user:
     show:
       boat_name: ! 'Boat name:'
@@ -93,13 +93,25 @@ en:
       marina_state: ! 'Your current state is:'
       passport_code: ! 'Your passport code is:'
       user_email: ! 'Email: '
-      user_header: My posh account details
+      user_header: My account details
       user_name: ! 'Name:'
       name: ! 'Name:'
-      current_marina_state: 
+      current_marina_state: Current Marina State
     search:
       advise_on_non_found: This is loads of very usefull advise on how to deal with no matching users found.
-    signed_in: 
+    signed_in: Signed in
+    charge_role: Change role?
+    email: Email
+    manager_count: Manager count
+    marina_name: Marina name
+    name: Name
+    registered_date: Registered date
+    role: Role
+    username: Username
+    registered: Registered Date
+    boat_name: Boat name
+    marina_state: Marina State
+    passport_code: Passport code
   marinas:
     pending:
       remove: 
@@ -232,3 +244,15 @@ en:
       send_paranoid_instructions: If your account exists, you will receive an email with instructions about how to unlock it in a few minutes.
       unlocked: Your account has been unlocked successfully. Please sign in to continue.
   ma: 
+  admin:
+    user_list:
+      intro: ! 'Only users applying for marinas with no managers will show here - it is likely that these are managers applying for a management account.
+
+'
+      title: Admin User List
+      are_you_sure: Are you sure?
+      full_list_intro: Below are listed all the users.
+      full_list_title: List of all users
+  manager:
+    search:
+      title: Search results for berth holders

@@ -16,7 +16,7 @@
               <%= submit_tag 'submit' %>
               <%= javascript_tag "$('.locale input').hide()" %>
             <% end %>
-               <ul class="nav pull-right">
+               <ul class="nav">
                  <%- if user_signed_in? %>
                    <li><%= link_to (t 'layouts.navigation.edit')  , edit_user_registration_path %></li>
                    <li><%= link_to (t 'layouts.navigation.marinas'), marinas_path %></li>
@@ -24,7 +24,7 @@
                      <li><%= link_to (t 'layouts.navigation.admin_list'), users_path %></li>
                    <%- end %>
 
-                   <li><a>    WELCOME:</a></li><li><%= link_to current_user.name, current_user %></a></li>
+                   <li><%= link_to current_user.name, current_user %></li>
                    <li><%= link_to current_user.marina.name, current_user.marina   unless current_user.marina.nil? %></li>
                    <li><%= link_to (t 'layouts.navigation.logout'), destroy_user_session_path, :method=>'delete', :class => 'btn-header' %></li>
                  <%- else %>

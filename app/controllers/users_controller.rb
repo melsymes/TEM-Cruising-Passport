@@ -23,7 +23,8 @@ class UsersController < ApplicationController
   def validate_manager
     authorize! :update, @user, :message => 'Not authorized as an manager.'
     @user = User.find(params[:id])
-    @marina = Marina.find(params[:marina])
+    @marina = @user.marina
+    #Marina.find(params[:marina])
 
     @marina.pending_users.delete(@user)
     @marina.active_managers << @user

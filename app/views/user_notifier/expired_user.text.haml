@@ -1,16 +1,11 @@
 UserNotifier#expired_user
-
-= @greeting + ", find me in app/views/user_notifier/expired_user.text.haml"
-
-%br
-= "Hi "+ @user.name
-%br
-Your membership of the TEM passport has expired.
-%br
-%br
-Kind regards
-%br
-%br
-The TEM Management team
+%p
+  = t('email.expired_user.greeting', :name => @user.name)
+%p
+  = t('email.expired_user.introduction', :marina_name => @marina.name)
+%p
+  = t('email.expired_user.post_introduction', :marina_name => @marina.name)
+%p
+  = t('email.transeurope_marinas_footer')
 
 

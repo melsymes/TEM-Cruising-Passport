@@ -1,3 +1,9 @@
 UserNotifier#manager_accepted
-
-= @greeting + ", find me in app/views/user_notifier/manager_accepted.text.haml"
+%p
+  = t('email.manager_accepted.greeting', :name => @user.name)
+%p
+  = t('email.manager_accepted.introduction', :marina_name => @marina.name)
+%p
+  = t('email.manager_accepted.post_introduction', :marina_name => @marina.name)
+%p
+  = t('email.transeurope_marinas_footer')
