@@ -1,8 +1,14 @@
 %h3
-  =t('user.show.user_header')
+  =t('user.show.user_header', name: @user.name)
 %p
-  =t('user.show.user_name')
-  = @user.name unless @user.name.nil?
+  - if current_user.has_role? :admin
+    = simple_form_for @user, :url => { :action => "update" } do |f|
+      = f.input :name
+      = f.input :boat_name
+      = f.button :submit
+  - else
+    =t('user.show.user_name')
+    = @user.name unless @user.name.nil?
 %p
   =t('user.show.user_email')
   =@user.email if @user.email

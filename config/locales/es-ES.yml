@@ -67,6 +67,26 @@ es-ES:
       subject: 
     user_remove_pending:
       subject: 
+    expired_manager:
+      greeting: 
+      subject: 
+    manager_accepted:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
+    new_initial_user:
+      subject: 
+    accepted:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
+    expired_user:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
   errors:
     confirm:
       are_you_sure: 
@@ -78,6 +98,11 @@ es-ES:
       not_saved: 
       pending: 
       remove_pending: 
+      manager_and_marina_now_connected: 
+      not_authorized_as_admin: 
+      not_authorized_as_manager: 
+      admin_validated: 
+      manager_validated: 
   hello: 
   home:
     download_app: Descarga nuestra aplicación gratuita Passport Cruising Hoy
@@ -111,6 +136,8 @@ es-ES:
       name: 
       position: 
     search_users_label: 
+    boat_name_is_now_registered: 
+    get_started_connect_with_marina: 
   layouts:
     navigation:
       admin_list: 
@@ -172,6 +199,14 @@ es-ES:
       remove_user: 
       role: 
       username: 
+      action_remove_user: 
+      validate_berth_holder: 
+      validate_manager: 
+      expire_berth_holder: 
+      re_validate_berth_holder: 
+      remove_berth_holder: 
+      re_validate_manager: 
+      remove_manager: 
     new:
       back_label: 
       intro_para: 
@@ -212,6 +247,7 @@ es-ES:
       user_email: 
       user_header: 
       user_name: 
+      marina_get_stated: 
     signed_in: 
     charge_role: 
     email: 

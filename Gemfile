@@ -31,13 +31,12 @@ gem "email_spec", ">= 1.2.1", :group => :test
 gem "factory_girl_rails", ">= 4.1.0", :group => [:development, :test]
 gem "bootstrap-sass", ">= 2.1.0.1"
 gem "devise", ">= 2.1.2"
-gem "devise_invitable", ">= 1.1.1"
+gem "devise_invitable", "~> 1.1.1"
 gem "cancan", ">= 1.6.8"
 gem "rolify", ">= 3.2.0"
 gem "simple_form", ">= 2.0.4"
 gem "friendly_id", "~> 3.1"
 gem "ya2yaml", "~> 0.31"
-#gem "localeapp", "~> 0.6.9"
 gem 'localeapp'
 gem 'sexp_processor', '~> 4.1'
 gem "country_select", "~> 1.0.1"

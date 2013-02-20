@@ -31,6 +31,11 @@ en:
       not_saved:
         one: ! '1 error prohibited this %{resource} from being saved:'
         other: ! '%{count} errors prohibited this %{resource} from being saved:'
+      manager_and_marina_now_connected: 
+      not_authorized_as_admin: 
+      not_authorized_as_manager: 
+      admin_validated: 
+      manager_validated: 
     confirm:
       are_you_sure: Are you sure?
   email:
@@ -52,6 +57,26 @@ en:
       If you received this message in error and do not have a cruising passport account, you can simply ignore it or let us know at support@transeuropemarinas.com and we''ll investigate.'
     user_remove_pending:
       subject: USER removed - sorry
+    expired_manager:
+      greeting: 
+      subject: 
+    manager_accepted:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
+    new_initial_user:
+      subject: 
+    accepted:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
+    expired_user:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
   home:
     passport_pending: Your passport code will be available when  your marina has validated your application.
     passport: Your passport code is -
@@ -70,9 +95,9 @@ en:
       title: How to get your Cruising Passport
       f1_body: Become a berth holder at any of the 54 TransEurope Marinas spread across Europe.
       f1_title: Berth with us
-      f2_body: ! "There are many variations of passages of Lorem Ipsum available, but the \nmajority have suffered alteration in some form, by injected humour, or randomised \nwords which don't look even slightly believable."
+      f2_body: Copy
       f2_title: Sign up for Free
-      f3_body: There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+      f3_body: Copy
       f3_title: Download the App
     testimonials:
       body: We hope you enjoy the easy-of-use and convenience of our new Cruising Passport App, we hope to see you soon in one of our 54 friendly marinas.
@@ -80,10 +105,12 @@ en:
       position: TransEurope Marinas Chairperson
     footer:
       contact_us: Contact us
-      main: main blog post text
-      title_main: 
-      title_sub: 
+      main: Latest news from TransEurope Marinas
+      title_main: TransEurope Marinas News
+      title_sub: Find out about our most recent member marinas
     search_users_label: Search the TEM database
+    boat_name_is_now_registered: is now registered
+    get_started_connect_with_marina: Get started - connect with your marina
   user:
     show:
       boat_name: ! 'Boat name:'
@@ -93,10 +120,11 @@ en:
       marina_state: ! 'Your current state is:'
       passport_code: ! 'Your passport code is:'
       user_email: ! 'Email: '
-      user_header: My account details
+      user_header: ! '%{name}: account details'
       user_name: ! 'Name:'
       name: ! 'Name:'
       current_marina_state: Current Marina State
+      marina_get_stated: 
     search:
       advise_on_non_found: This is loads of very usefull advise on how to deal with no matching users found.
     signed_in: Signed in
@@ -132,6 +160,14 @@ en:
       is_manager: is a manager?
       pending_berth_holders: Pending berth holders
       remove_user: Remove boatowner
+      action_remove_user: Remove request
+      validate_berth_holder: Validate berth holder
+      validate_manager: Validate new manager account
+      expire_berth_holder: Expire berth holder
+      re_validate_berth_holder: Re-validate berth holder
+      remove_berth_holder: Remove berth holder record
+      re_validate_manager: 
+      remove_manager: 
     index:
       address: Address
       connect_button_label: Connect

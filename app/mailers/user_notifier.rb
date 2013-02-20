@@ -93,6 +93,14 @@ class UserNotifier < ActionMailer::Base
     mail to:  @user.email, subject: t('email.new_initial_user.subject')
   end
 
+  def validate_admin(user)
+    @user = user
+    @greeting = "Hi"
+
+
+    mail to:  @user.email, subject: t('email.validate_admin.subject')
+  end
+
   def new_user(user)
     @user = user
     @greeting = "Hi"

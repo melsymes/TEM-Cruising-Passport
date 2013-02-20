@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    authorize! :manage, @user, :message => 'Not authorized as an administrator.'
+    authorize! :manage, @user, :message => t('errors.messages.not_authorized_as_admin')
     @users = User.all
   end
 
@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   end
   
   def update
-    authorize! :update, @user, :message => 'Not authorized as an administrator.'
+    authorize! :update, @user, :message => t('errors.messages.not_authorized_as_admin')
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user], :as => :admin)
       redirect_to users_path, :notice => "User updated."
@@ -20,8 +20,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def validate_admin
+    authorize! :manage, @user, :message => t('errors.messages.not_authorized_as_admin')
+    @user = User.find(params[:id])
+    @user.add_role( :admin )
+    UserNotifier.validate_admin(@user).deliver
+    redirect_to users_path, :notice => t('errors.messages.admin_validated')
+  end
+
   def validate_manager
-    authorize! :update, @user, :message => 'Not authorized as an manager.'
+    authorize! :update, @user, :message => t('errors.messages.not_authorized_as_manager')
     @user = User.find(params[:id])
     @marina = @user.marina
     #Marina.find(params[:marina])
@@ -35,11 +43,15 @@ class UsersController < ApplicationController
     @user.add_role :manager
     @user.save
     @marina.save
-    redirect_to marina_path(@marina), :notice => "Manager and marina are now connected."
+    if current_user.has_role( :admin )
+      redirect_to users_path, :notice => t('errors.messages.manager_validated')
+    else
+      redirect_to marina_path(@marina), :notice => t('errors.messages.manager_and_marina_now_connected')
+    end
   end
 
   def expire_manager
-      authorize! :update, @user, :message => 'Not authorized as an manager.'
+      authorize! :update, @user, :message => t('errors.messages.not_authorized_as_manager')
 
       @user = User.find(params[:id])
       @marina = Marina.find(params[:marina])
@@ -57,7 +69,7 @@ class UsersController < ApplicationController
    end
 
   def revalidate_manager
-      authorize! :update, @user, :message => 'Not authorized as an manager.'
+      authorize! :update, @user, :message => t('errors.messages.not_authorized_as_manager')
       @user = User.find(params[:id])
       @marina = Marina.find(params[:marina])
 
@@ -73,7 +85,7 @@ class UsersController < ApplicationController
   end
 
   def remove_expired_manager
-      authorize! :update, @user, :message => 'Not authorized as an manager.'
+      authorize! :update, @user, :message => t('errors.messages.not_authorized_as_manager')
 
       @user = User.find(params[:id])
       @marina = Marina.find(params[:marina])
@@ -92,7 +104,7 @@ class UsersController < ApplicationController
   #
 
   def remove_pending
-    authorize! :update, @user, :message => 'Not authorized as an manager.'
+    authorize! :update, @user, :message => t('errors.messages.not_authorized_as_manager')
 
     @user = User.find(params[:id])
     @marina = Marina.find(params[:marina])
@@ -111,7 +123,7 @@ class UsersController < ApplicationController
 
 
   def validate_bertholder
-     authorize! :update, @user, :message => 'Not authorized as an manager.'
+     authorize! :update, @user, :message => t('errors.messages.not_authorized_as_manager')
 
      @user = User.find(params[:id])
      @marina = Marina.find(params[:marina])
@@ -128,7 +140,7 @@ class UsersController < ApplicationController
   end
 
   def expire_bertholder
-     authorize! :update, @user, :message => 'Not authorized as an manager.'
+     authorize! :update, @user, :message => t('errors.messages.not_authorized_as_manager')
 
      @user = User.find(params[:id])
      @marina = Marina.find(params[:marina])
@@ -147,7 +159,7 @@ class UsersController < ApplicationController
   end
 
   def revalidate_bertholder
-     authorize! :update, @user, :message => 'Not authorized as an manager.'
+     authorize! :update, @user, :message => t('errors.messages.not_authorized_as_manager')
 
      @user = User.find(params[:id])
      @marina = Marina.find(params[:marina])
@@ -165,7 +177,7 @@ class UsersController < ApplicationController
   end
 
   def remove_expired_bertholder
-     authorize! :update, @user, :message => 'Not authorized as an manager.'
+     authorize! :update, @user, :message => t('errors.messages.not_authorized_as_manager')
 
      @user = User.find(params[:id])
      @marina = Marina.find(params[:marina])
@@ -182,7 +194,7 @@ class UsersController < ApplicationController
 
 
   def destroy
-    authorize! :destroy, @user, :message => 'Not authorized as an manager.'
+    authorize! :destroy, @user, :message => t('errors.messages.not_authorized_as_manager')
     user = User.find(params[:id])
     unless user == current_user
       user.destroy
@@ -193,7 +205,7 @@ class UsersController < ApplicationController
   end
 
   def search
-    authorize! :update, @user, :message => 'Not authorized as an manager.'
+    authorize! :update, @user, :message => t('errors.messages.not_authorized_as_manager')
     @users = User.search(params[:search])
     #redirect_to root_path
   end
