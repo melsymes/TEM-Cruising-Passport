@@ -26,11 +26,8 @@ class MarinasController < ApplicationController
     if @marina.count_managers == 0
       # email all admins if there are no manager
       @admins = User.with_role :admin
-      puts "in_pending"
       @admins.each do |admin|
-        puts "in_admin"
-        puts admin.name
-        UserNotifier.new_inital_user(admin).deliver
+        UserNotifier.new_initial_user(admin).deliver
       end
     else
       # email all managers fro the appropriate user

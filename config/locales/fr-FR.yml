@@ -67,6 +67,33 @@ fr-FR:
       subject: 
     user_remove_pending:
       subject: 
+    expired_manager:
+      greeting: 
+      subject: 
+      introduction: 
+      post_introduction: 
+    manager_accepted:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
+    new_initial_user:
+      subject: 
+    accepted:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
+    expired_user:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
+    validate_admin:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
   errors:
     confirm:
       are_you_sure: 
@@ -78,6 +105,13 @@ fr-FR:
       not_saved: 
       pending: 
       remove_pending: 
+      manager_and_marina_now_connected: 
+      not_authorized_as_admin: 
+      not_authorized_as_manager: 
+      admin_validated: 
+      manager_validated: 
+      user_updated: 
+      admin_role_removed: 
   hello: 
   home:
     download_app: 
@@ -103,24 +137,27 @@ fr-FR:
       invite_to_join: 
     signed_in_home_title: 
     signed_in_text: 
-    slider1_button: 
-    slider1_header: 
-    slider1_para: 
+    slider1_button: Obtenez votre Passeport Cruising gratuit!
+    slider1_header: Croisière à travers l'Europe est maintenant plus facile
+    slider1_para: Maintenant,  vous pouvez visiter tous vos Marinas TransEurope préférés, avec notre simple à utiliser, Code Passeport durée de vie de croisière. Inscrivez-vous gratuitement et profitez des Europes Marina groupe le plus important.
     testimonials:
       body: 
       name: 
       position: 
+    search_users_label: 
+    boat_name_is_now_registered: 
+    get_started_connect_with_marina: 
+    get_started_boat_name: 
   layouts:
     navigation:
       admin_list: 
       edit: 
       home: 
-      login: 
+      login: Login
       logout: 
       marinas: 
-      sign_up: 
+      sign_up: Signer
       welcome: 
-  ma: 
   marinas:
     Back: 
     edit:
@@ -171,6 +208,14 @@ fr-FR:
       remove_user: 
       role: 
       username: 
+      action_remove_user: 
+      validate_berth_holder: 
+      validate_manager: 
+      expire_berth_holder: 
+      re_validate_berth_holder: 
+      remove_berth_holder: 
+      re_validate_manager: 
+      remove_manager: 
     new:
       back_label: 
       intro_para: 
@@ -211,4 +256,32 @@ fr-FR:
       user_email: 
       user_header: 
       user_name: 
+      marina_get_stated: 
     signed_in: 
+    charge_role: 
+    email: 
+    manager_count: 
+    marina_name: 
+    name: 
+    registered_date: 
+    role: 
+    username: 
+    registered: 
+    boat_name: 
+    marina_state: 
+    passport_code: 
+    role_admin: 
+    add_role_admin: 
+    delete_user_admin: 
+  admin:
+    user_list:
+      intro: 
+      title: 
+      are_you_sure: 
+      full_list_intro: 
+      full_list_title: 
+  manager:
+    search:
+      title: 
+  unauthorized:
+    default: 

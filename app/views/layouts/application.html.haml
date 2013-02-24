@@ -9,12 +9,17 @@
         = javascript_include_tag "application"
         = csrf_meta_tags
         = yield(:head)
+      //%link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}/
 
 
-  %body
-    = render 'layouts/navigation'
+  %body{:class => "#{controller_name} #{action_name}"}
+    %header.navbar.navbar-fixed-top
+      %nav.navbar-inner
+        .container
+          = render 'layouts/navigation'
 
-    #main{:role => "main"}
+    //#main{:role => "main"}
+    %main{:role => "main"}
       .container
         .content
           .row
@@ -32,3 +37,7 @@
           .span12
             = render 'layouts/footer'
 
+  //%script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"}
+  //%script{:src => "js/bootstrap.min.js"}
+  //%script{:src => "http://code.angularjs.org/angular-1.0.1.min.js"}
+  //%script{:src => "js/application.js"}
