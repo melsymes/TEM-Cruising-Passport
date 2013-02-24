@@ -1,4 +1,4 @@
-%h3 Listing users
+%h3= t('manager.search.title')
 
 =form_tag search_users_path, :method => 'get' do
   =text_field_tag :search, params[:search]
@@ -12,11 +12,11 @@
     %table.table.table-condensed
       %thead
         %tr
-          %th Name
-          %th passport_code
-          %th email
-          %th Boat name
-          %th marina state
+          %th= t('user.name')
+          %th= t('user.passport_code')
+          %th= t('user.email')
+          %th= t('user.boat_name')
+          %th= t('user.marina_state')
           %th
 
 

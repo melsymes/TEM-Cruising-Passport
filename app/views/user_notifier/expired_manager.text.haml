@@ -1,3 +1,9 @@
 UserNotifier#expired_manager
-
-= @greeting + ", find me in app/views/user_notifier/expired_manager.text.haml"
+%p
+  = t('email.expired_manager.greeting', :name => @user.name)
+%p
+  = t('email.expired_manager.introduction', :marina_name => @marina.name)
+%p
+  = t('email.expired_manager.post_introduction', :marina_name => @marina.name)
+%p
+  = t('email.transeurope_marinas_footer')

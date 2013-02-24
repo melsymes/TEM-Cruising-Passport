@@ -2,7 +2,7 @@
   = simple_form_for user, :url => user_path(user), :html => {:method => :put, :class => 'form-horizontal' } do |f|
     .modal-header
       %a.close{"data-dismiss" => "modal"} ×
-      %h3 Change name
+      %h3= t('user.change_name')
     .modal-body
       = f.input :name
     .modal-footer
