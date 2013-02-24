@@ -13,19 +13,41 @@
     %thead
       %tr
         %th= t('user.name')
+        %th= t('user.marina_name')
         %th= t('user.email')
         %th= t('user.registered_date')
-        %th= t('user.role')
-        %th
-        %th
-        %th
+        - if current_user.has_role? :admin
+          %th
+            = t('user.role')
+            %br
+            = t('user.role_admin')
+          %th= t('user.delete_user_admin')
+          %th= t('user.add_role_admin')
+        - else
+          = t('user.role')
+
     %tbody
       - @users.each do |user|
         %tr
           %td= link_to user.name, user
+          %td= link_to user.marina.name, user.marina unless user.marina.nil?
           %td= user.email
           %td= user.created_at.to_date
-          %td= user.roles.first.name.titleize unless user.roles.first.nil?
-          %td= user.roles.second.name.titleize unless user.roles.second.nil?
+          %td
+            - if current_user.has_role? :admin
+              - user.roles.each do |role|
+                = link_to(role.name, remove_role_users_path(user, role: role.name))
+                %br
+            - else
+              - user.roles.each do |role|
+                = role.name
+                %br
           %td= link_to("Delete user", user_path(user), :data => { :confirm => t('admin.user_list.are_you_sure') }, :method => :delete, :class => 'btn btn-mini') unless user == current_user
+          %td
+            - if current_user.has_role? :admin
+              - @roles.each do |role|
+                = link_to(role.name, add_role_users_path(user, role: role.name), confirm: t('admin.user_list.are_you_sure') )
+                %br
+
+
 

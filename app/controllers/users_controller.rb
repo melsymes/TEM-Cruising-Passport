@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   def index
     authorize! :manage, @user, :message => t('errors.messages.not_authorized_as_admin')
     @users = User.all
+    @roles = Role.all
   end
 
   def show
@@ -11,21 +12,50 @@ class UsersController < ApplicationController
   end
   
   def update
-    authorize! :update, @user, :message => t('errors.messages.not_authorized_as_admin')
+    authorize! :update, @user, :message => t('errors.messages.not_authorized_as_manager')
     @user = User.find(params[:id])
+    @managers_marina = @current_user.marina
     if @user.update_attributes(params[:user], :as => :admin)
-      redirect_to users_path, :notice => "User updated."
+      if current_user.has_role? :admin
+        redirect_to users_path, :notice => t('errors.messages.user_updated')
+      else
+        redirect_to marina_path(current_user.marina), :notice => t('errors.messages.user_updated')
+      end
     else
-      redirect_to users_path, :alert => "Unable to update user."
+      redirect_to root_path, :alert => t('errors.messages.unable_to_update_user')
     end
   end
 
   def validate_admin
     authorize! :manage, @user, :message => t('errors.messages.not_authorized_as_admin')
     @user = User.find(params[:id])
-    @user.add_role( :admin )
+    @user.add_role( "admin" )
     UserNotifier.validate_admin(@user).deliver
     redirect_to users_path, :notice => t('errors.messages.admin_validated')
+  end
+
+  def add_role
+    authorize! :manage, @user, :message => t('errors.messages.not_authorized_as_admin')
+    @user = User.find(params[:id])
+    @user.add_role( (params[:role]) )
+    UserNotifier.validate_admin(@user).deliver
+    redirect_to users_path, :notice => t('errors.messages.admin_validated')
+  end
+
+  def remove_role
+    authorize! :manage, @user, :message => t('errors.messages.not_authorized_as_admin')
+    @user = User.find(params[:id])
+    @user.remove_role( (params[:role]) )
+    #UserNotifier.validate_admin(@user).deliver
+    redirect_to users_path, :notice => t('errors.messages.admin_validated')
+  end
+
+  def remove_admin
+    authorize! :manage, @user, :message => t('errors.messages.not_authorized_as_admin')
+    @user = User.find(params[:id])
+    @user.remove_role( :admin )
+    #UserNotifier.remove_admin(@user).deliver
+    redirect_to users_path, :notice => t('errors.messages.admin_role_removed')
   end
 
   def validate_manager
@@ -76,7 +106,7 @@ class UsersController < ApplicationController
       @marina.expired_managers.delete(@user)
       @marina.active_managers << @user
       @marina.users << @user
-
+      @user.add_role :manager
       @user.marina_state= "VALIDATED-MANAGER"
       UserNotifier.manager_accepted(@user).deliver
       @user.save

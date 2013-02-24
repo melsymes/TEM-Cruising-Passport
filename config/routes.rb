@@ -25,6 +25,10 @@ scope '(:locale)', :locale => /en|es-ES|fr-FR/ do
       get :revalidate_bertholder, :path => "/revalidate_bertholder/:id"
       get :remove_expired_bertholder, :path =>  "/remove_expired_bertholder/:id"
       get :remove_pending, :path => "/remove_pending/:id"
+      get :remove_admin, :path => "/remove_admin/:id"
+      get :add_role, :path => "/add_role/:id"
+      get :remove_role, :path => "/remove_role/:id"
+
       #get :update, :path => "/update/:id"
     end
 

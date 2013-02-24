@@ -36,6 +36,8 @@ en:
       not_authorized_as_manager: 
       admin_validated: 
       manager_validated: 
+      user_updated: 
+      admin_role_removed: 
     confirm:
       are_you_sure: Are you sure?
   email:
@@ -60,6 +62,8 @@ en:
     expired_manager:
       greeting: 
       subject: 
+      introduction: 
+      post_introduction: 
     manager_accepted:
       greeting: 
       introduction: 
@@ -73,6 +77,11 @@ en:
       post_introduction: 
       subject: 
     expired_user:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
+    validate_admin:
       greeting: 
       introduction: 
       post_introduction: 
@@ -111,6 +120,7 @@ en:
     search_users_label: Search the TEM database
     boat_name_is_now_registered: is now registered
     get_started_connect_with_marina: Get started - connect with your marina
+    get_started_boat_name: 
   user:
     show:
       boat_name: ! 'Boat name:'
@@ -134,12 +144,15 @@ en:
     marina_name: Marina name
     name: Name
     registered_date: Registered date
-    role: Role
+    role: Current role
     username: Username
     registered: Registered Date
     boat_name: Boat name
     marina_state: Marina State
     passport_code: Passport code
+    role_admin: ! 'Click to remove role:'
+    add_role_admin: ! 'Click to add role:'
+    delete_user_admin: Delete user
   marinas:
     pending:
       remove: 
@@ -166,8 +179,8 @@ en:
       expire_berth_holder: Expire berth holder
       re_validate_berth_holder: Re-validate berth holder
       remove_berth_holder: Remove berth holder record
-      re_validate_manager: 
-      remove_manager: 
+      re_validate_manager: Re-validate manager
+      remove_manager: Remove manager from list
     index:
       address: Address
       connect_button_label: Connect
@@ -279,7 +292,6 @@ en:
       send_instructions: You will receive an email with instructions about how to unlock your account in a few minutes.
       send_paranoid_instructions: If your account exists, you will receive an email with instructions about how to unlock it in a few minutes.
       unlocked: Your account has been unlocked successfully. Please sign in to continue.
-  ma: 
   admin:
     user_list:
       intro: ! 'Only users applying for marinas with no managers will show here - it is likely that these are managers applying for a management account.
@@ -292,3 +304,5 @@ en:
   manager:
     search:
       title: Search results for berth holders
+  unauthorized:
+    default: You are not authorized to access this page.

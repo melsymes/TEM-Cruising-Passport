@@ -70,6 +70,8 @@ fr-FR:
     expired_manager:
       greeting: 
       subject: 
+      introduction: 
+      post_introduction: 
     manager_accepted:
       greeting: 
       introduction: 
@@ -83,6 +85,11 @@ fr-FR:
       post_introduction: 
       subject: 
     expired_user:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
+    validate_admin:
       greeting: 
       introduction: 
       post_introduction: 
@@ -103,6 +110,8 @@ fr-FR:
       not_authorized_as_manager: 
       admin_validated: 
       manager_validated: 
+      user_updated: 
+      admin_role_removed: 
   hello: 
   home:
     download_app: 
@@ -138,6 +147,7 @@ fr-FR:
     search_users_label: 
     boat_name_is_now_registered: 
     get_started_connect_with_marina: 
+    get_started_boat_name: 
   layouts:
     navigation:
       admin_list: 
@@ -148,7 +158,6 @@ fr-FR:
       marinas: 
       sign_up: Signer
       welcome: 
-  ma: 
   marinas:
     Back: 
     edit:
@@ -261,6 +270,9 @@ fr-FR:
     boat_name: 
     marina_state: 
     passport_code: 
+    role_admin: 
+    add_role_admin: 
+    delete_user_admin: 
   admin:
     user_list:
       intro: 
@@ -271,3 +283,5 @@ fr-FR:
   manager:
     search:
       title: 
+  unauthorized:
+    default: 
