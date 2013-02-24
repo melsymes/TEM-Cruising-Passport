@@ -19,40 +19,61 @@ class MarinasController < ApplicationController
     puts 'in connect'
     @marina.pending_users << @user
     @user.marina_state = "PENDING"
-    @user.marina = @marina
-    @marina.save
-    @user.save
+    @marina.users << @user
+
+    @marina.save!
+    @user.save!
     if @marina.count_managers == 0
+      # email all admins if there are no manager
       @admins = User.with_role :admin
-      puts "in_pending"
       @admins.each do |admin|
-        puts "in_admin"
-        puts admin.name
-        UserNotifier.new_inital_user(admin).deliver
+        UserNotifier.new_initial_user(admin).deliver
       end
     else
+      # email all managers fro the appropriate user
       @managers = @marina.active_managers
       puts "in managers"
-      @managers.each do |manager|
-        UserNotifier.new_user(manager).deliver
+      if !@managers.count == 0
+        @managers.each do |manager|
+          UserNotifier.new_user_to_manager(manager).deliver unless manager.nil?
+
+        end
       end
-
-    #if @marina.count_managers == 0 do
-
     end
+    # email user of pending status
+    UserNotifier.user_pending_notification(@user).deliver
 
 
     respond_to do |format|
-      format.html #pending.html.erb
+      format.html { redirect_to @marina, notice: t('errors.messages.pending') }
       format.json { render json: @marina }
     end
   end
+
+  # Create a linked user
+  def create_user
+    #@marina = Marina.find(params[:id])
+    @marina = current_user.marina  #  try this
+    anemail = params[:user_email]
+
+    if anemail =~ /@/
+      @marina.create_user(anemail)
+      redirect_to @marina, notice: 'User created and notified'
+    else
+      redirect_to @marina, :alert => 'User was not created - probably bad email.'
+    end
+  end
+
 
   # GET /marinas/1
   # GET /marinas/1.json
   def show
     @marina = Marina.find(params[:id])
-    @user = current_user
+    @marina.active_managers.each do |manager|
+      if manager == current_user
+        @manager = current_user
+      end
+    end
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @marina }

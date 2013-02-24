@@ -1,0 +1,36 @@
+.span12
+  %table.table.table-condensed
+    %thead
+      %tr
+        %th= t('user.marina_name')
+        %th= t('user.manager_count')
+        %th= t('user.username')
+        %th= t('user.email')
+        %th= t('user.registered_date')
+        %th
+        %th
+        %th
+        %th
+    %tbody
+      - @users.each do |user|
+        - if !user.marina.nil?
+          - if user.marina.count_managers == 0
+            %tr
+              %td= link_to user.marina.name, user.marina
+              %td= user.marina.count_managers
+              %td= link_to user.name, user
+              %td= user.email
+              %td= user.created_at.to_date
+              %td
+                - user.roles.each do |role|
+                  = link_to( role.name,  remove_role_users_path(user, role: role.name))
+                  %br
+
+              %td= link_to "Validate manager", validate_manager_users_path(user), :class => 'btn bt-mini'
+              %td= link_to "Validate admin", validate_admin_users_path(user), :class => 'btn bt-mini', :data => { :confirm => "Are you sure?"}
+              %td= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user
+
+
+
+
+

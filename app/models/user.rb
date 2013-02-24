@@ -2,7 +2,9 @@ class User < ActiveRecord::Base
   rolify
 
 
-  has_one :marina, :class_name => 'Marina'
+  belongs_to :marina, :inverse_of => :users
+  #belongs_to :pending_marina, :inverse_of => :pending_user, :class_name => "Marina"
+  #belongs_to :active_manager_marina, :inverse_of => :active_manager, :class_name => "Marina"
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -11,8 +13,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :role_ids, :as => :admin
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me
+  attr_accessible :role_ids, :name, :boat_name, :as => :admin
+  attr_accessible :name, :boat_name, :as => :manager
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :boat_name
 
 
   validates_uniqueness_of :passport_code
@@ -41,6 +44,23 @@ class User < ActiveRecord::Base
       (0...length).map{
       characters[SecureRandom.random_number(characters.size)]
       }.join
+
+  end
+
+
+  def self.search(search)
+    if search
+      if search =~ /@/
+        find_all_by_email(search)
+      else
+        keywords = search.split(/ +/).map { |k| "%#{k}%" }
+        where = Array.new(keywords.count, '(name LIKE ? OR passport_code LIKE ? OR passport_code LIKE ?)').join(' AND ')
+        all(:conditions => [where, *keywords.zip(keywords, keywords).flatten])
+      end
+      #0find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+      #find(:all ) - don't find all - only on search
+    end
+
 
   end
 

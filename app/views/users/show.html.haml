@@ -1,5 +1,40 @@
-%h3 User
+%h3
+  =t('user.show.user_header', name: @user.name)
 %p
-  User: #{@user.name}
+
+  - if (current_user.has_role? :admin or current_user.has_role? :manager)
+    - if current_user != @user
+      = simple_form_for @user, :url => { :action => "update" } do |f|
+        = f.input :name
+        = f.input :boat_name
+        = f.button :submit
+    - else
+      =t('user.show.user_name')
+      = @user.name unless @user.name.nil?
+  - else
+    =t('user.show.user_name')
+    = @user.name unless @user.name.nil?
 %p
-  Email: #{@user.email if @user.email}
+  =t('user.show.user_email')
+  =@user.email if @user.email
+%p
+  Boat name: #{@user.boat_name if @user.boat_name}
+%p
+  - if @user.marina_state.nil?
+    =t('user.show.marina_get_stated')
+    = link_to t('user.show.connect_to_your_marina'), marinas_path
+  - else
+    =t('user.show.current_marina_status')
+    = @user.marina_state
+    %p
+      - if @user.marina_state == 'PENDING'
+        = t('home.passport_pending')
+      - else
+        = t('home.passport')
+        = @user.passport_code unless @user.nil?
+
+%p
+  - if current_user.has_role? :admin
+    User role:  #{@user.roles.first.name.titleize unless @user.roles.first.nil?}
+
+

@@ -1,16 +1,149 @@
-%h3 Home
+%a.scrolltop{:href => "#"}
+  %span up
 
 - if user_signed_in?
-  %p
-    Your passport code is
-    = @user.passport_code unless @user.nil?
-  %p
-    Your current state is
-    = @user.marina_state unless @user.nil?
-  %p
-    Your current marina is
-    = link_to( @marina.name, marina_path(@marina)) unless @marina.nil?
+
+
+  - if (current_user.has_role? :manager) or (current_user.has_role? :admin)
+
+    %p.container.span12
+      %br
+      %br
+      %h2
+        = t('home.signed_in_home_title')
+      = t('home.signed_in_text')
+
+    %p.container.span2
+      = t('home.search_users')
+      =form_tag search_users_path, :method => 'get' do
+        =text_field_tag :search, params[:search]
+        =submit_tag t('home.search_users_label')
+      %br
+        =t('home.signed_in.invite_to_join')
+        %p
+          = link_to( "invite user", new_user_invitation_path )
 
 
 
-%h5 Welcome to the TEM Passport Application
+  - else
+    %p
+      - if @user.boat_name.nil?
+        = t('home.get_started_boat_name')
+        =link_to 'Finish registration', edit_user_registration_path
+      - else
+        = @user.boat_name
+        = t('home.boat_name_is_now_registered')
+    %p
+      - if @user.marina_state.nil?
+        = t('home.get_started_connect_with_marina')
+        = link_to 'Connect to your marina', marinas_path
+      - else
+        = t('home.your_current_status')
+        = @user.marina_state
+        %p
+          - if @user.marina_state == 'PENDING'
+            = t('home.passport_pending')
+          - else
+            = t('home.passport')
+            = @user.passport_code unless @user.nil?
+
+
+
+- if !user_signed_in?
+  #hero
+    .container
+      / starts carousel
+      .row.animated.fadeInDown
+        .span12
+          #myCarousel.carousel.slide
+            / carousel items
+            .carousel-inner
+              / slide
+              .active.item.slide1
+                .row
+                  .span6
+                    = image_tag('slide1-TEM.png')
+                  .span4
+                    %h1
+                      = t('home.slider1_header')
+                    %p
+                      = t('home.slider1_para')
+                    %a.btn.btn-success.btn-large{:href => "http://www.transeuropemarinas.com/"}
+                      = t('home.slider1_button')
+              / slide
+              .item.slide2
+                .row
+                  .span4.animated.fadeInUpBig
+                    %h1
+                      = t('home.download_app')
+                    %p
+                      = t('home.download_app_text')
+                    %a.btn.btn-success.btn-large{:href => "http://www.transeuropemarinas.com/"}
+                      = t('home.download_app_button')
+                  .span6.animated.fadeInDownBig
+                    = image_tag('slide2-tem.png')
+              / slide
+              .item.slide3.animated.fadeInUpBig
+                = image_tag('slide3-tem.png')
+            / Carousel nav
+            %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
+            %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›
+
+  / features
+  #features
+    .container
+      / header
+      %h2.section_header
+        %hr.left.visible-desktop
+          %span
+
+            = t('home.features.title')
+          %hr.right.visible-desktop
+      / feature list
+      .row
+        .span4.feature
+          /%img.thumb{:alt => "feature1", :src => "feature1.jpg"}/
+          = image_tag('Marina.png', :class => 'thumb')
+          %h3
+            %i.i_cloud
+            = t('home.features.f1_title')
+          %p.description
+            = t('home.features.f1_body')
+          %a.btn.btn-default{:href => "#"} more
+        .span4.feature
+          = image_tag('imacscreen.png', class: 'thumb')
+          %h3
+            %i.i_chart
+            = t('home.features.f2_title')
+          %p.description
+            = t('home.features.f2_body')
+          %a.btn.btn-default{:href => "#"} more
+        .span4.feature
+          = image_tag('IphoneSquare.png', class: 'thumb')
+          %h3
+            %i.i_movil
+            = t('home.features.f3_title')
+          %p.description
+            = t('home.features.f3_body')
+          %a.btn.btn-default{:href => "#"} more
+
+  / starts testimonial
+  #testimonials
+    .container
+      .controls
+        %hr
+      .phrases_wrapper
+        .phrase
+          .row
+            .span7
+              %p.testimony
+                = t('home.testimonials.body')
+                %span "
+            .span3.offset1
+              .pic
+                = image_tag('Chairperson.png', class: 'img-circle')
+                %span.name
+                  = t('home.testimonials.name')
+                %span.position
+                  = t('home.testimonials.position')
+

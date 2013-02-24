@@ -2,14 +2,13 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :name
-    = f.input :address
-    = f.input :address1
-    = f.input :town
-    = f.input :county
-    /= f.input :country
-    = f.input :postcode
-    = f.input :nation
+    = f.input :name, label: t('marinas.form.name_label')
+    = f.input :address, label: t('marinas.form.address_label')
+    = f.input :address1, label: t('marinas.form.street_label')
+    = f.input :town, label: t('marinas.form.town_label')
+    = f.input :county, label: t('marinas.form.counry_label')
+    = f.input :country, label: t('marinas.form.country_label')
+    = f.input :postcode, label: t('marinas.form.postcode_label')
 
   .form-actions
-    = f.button :submit
+    = f.button :submit, label: t('marinas.form.create_label')

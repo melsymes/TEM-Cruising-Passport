@@ -1,38 +1,53 @@
-%h3 Users
-
-
+%h3= t('admin.user_list.title')
+%br
+  = t('admin.user_list.intro')
 
 %br
-  Only users applying for marinas with no managers will show here - it is likely that these are managers applying for a management account.
-
+  = render 'initial_users'
 %br
-  /= render 'users/inital_users'
-  .span8
-    %table.table.table-condensed
-      %thead
+  %h4= t('admin.user_list.full_list_title')
+  %br
+  = t('admin.user_list.full_list_intro')
+
+  %table.table.table-condensed
+    %thead
+      %tr
+        %th= t('user.name')
+        %th= t('user.marina_name')
+        %th= t('user.email')
+        %th= t('user.registered_date')
+        - if current_user.has_role? :admin
+          %th
+            = t('user.role')
+            %br
+            = t('user.role_admin')
+          %th= t('user.delete_user_admin')
+          %th= t('user.add_role_admin')
+        - else
+          = t('user.role')
+
+    %tbody
+      - @users.each do |user|
         %tr
-          %th Marina name
-          %th Manager count
-          %th Username
-          %th Email
-          %th Registered
-          %th Role
-          %th
-          %th
-      %tbody
-        - @users.each do |user|
-          - if !user.marina.nil?
-            - if user.marina.count_managers == 0
-              %tr
-                %td= link_to user.marina.name, user.marina
-                %td= user.marina.count_managers
-                %td= link_to user.name, user
-                %td= user.email
-                %td= user.created_at.to_date
-                %td= user.roles.first.name.titleize unless user.roles.first.nil?
-                %td
-                  %a.btn.btn-mini{"data-toggle" => "modal", :href => "#role-options-#{user.id}", :type => "button"} Change role
-                  = render user
-                %td= link_to "Validate user", validate_manager_users_path(user), :class => 'btn bt-mini'
-                %td= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user
+          %td= link_to user.name, user
+          %td= link_to user.marina.name, user.marina unless user.marina.nil?
+          %td= user.email
+          %td= user.created_at.to_date
+          %td
+            - if current_user.has_role? :admin
+              - user.roles.each do |role|
+                = link_to(role.name, remove_role_users_path(user, role: role.name))
+                %br
+            - else
+              - user.roles.each do |role|
+                = role.name
+                %br
+          %td= link_to("Delete user", user_path(user), :data => { :confirm => t('admin.user_list.are_you_sure') }, :method => :delete, :class => 'btn btn-mini') unless user == current_user
+          %td
+            - if current_user.has_role? :admin
+              - @roles.each do |role|
+                = link_to(role.name, add_role_users_path(user, role: role.name), confirm: t('admin.user_list.are_you_sure') )
+                %br
+
+
 

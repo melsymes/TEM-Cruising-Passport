@@ -1,24 +1,21 @@
-%h3 Pending Users
+%h3= t('marinas.management.pending_berth_holders')
 .span8
 %table.table.table-condensed
   %thead
     %tr
-      %th Username
-      %th Email
-      %th Registered
-      %th Role
-      %th Bertholder
-      %th Manager
+      %th= t('marinas.management.username')
+      %th= t('marinas.management.email')
+      %th= t('marinas.management.registered_date')
+      %th= t('marinas.management.is_berth_holder')
+      %th= t('marinas.management.is_manager')
+      %th= t('marinas.management.remove_user')
+
   %tbody
     - @marina.pending_users.each do |user|
       %tr
         %td= link_to user.name, user
         %td= user.email
         %td= user.created_at.to_date
-        %td= user.roles.first.name.titleize unless user.roles.first.nil?
-        %td= link_to 'Validate Bertholder', validate_bertholder_users_path(user)
-        %td= link_to 'Validate Manager', validate_manager_users_path(user), :data => { :confirm => "Are you sure?" }
-
-
-  %br
-  %br
+        %td= link_to t('marinas.management.validate_berth_holder'), validate_bertholder_users_path(user, :marina => @marina)
+        %td= link_to t('marinas.management.validate_manager'), validate_manager_users_path(user, :marina => @marina), :data => { :confirm => t('errors.confirm.are_you_sure')}
+        %td= link_to t('marinas.management.action_remove_user'), remove_pending_users_path(user, :marina => @marina), :data => { :confirm => t('errors.confirm.are_you_sure')}

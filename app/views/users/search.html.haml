@@ -1,0 +1,42 @@
+%h3= t('manager.search.title')
+
+=form_tag search_users_path, :method => 'get' do
+  =text_field_tag :search, params[:search]
+  =submit_tag "search"
+
+
+
+- if !@users.nil?
+  - if @users.count > 0
+    .span8
+    %table.table.table-condensed
+      %thead
+        %tr
+          %th= t('user.name')
+          %th= t('user.passport_code')
+          %th= t('user.email')
+          %th= t('user.boat_name')
+          %th= t('user.marina_state')
+          %th
+
+
+
+      %tbody
+        - @users.each do |user|
+          %tr
+            %td= link_to user.name, user
+            %td= user.passport_code
+            %td= user.email
+            %td= user.boat_name
+            %td= user.marina_state
+  - else
+    = t('user.search.advise_on_non_found')
+
+
+
+
+
+
+
+
+

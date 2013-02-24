@@ -46,6 +46,8 @@ module Myapp10
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    #I18n.default_locale = :en
+
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
@@ -69,6 +71,11 @@ module Myapp10
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    config.assets.paths << "#{Rails.root}/app/assets/stylesheets/css"
+    config.assets.paths << "#{Rails.root}/app/assets/img"
+
+    # Heroku requires this to be false
+    config.assets.initialize_on_precompile=false
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'

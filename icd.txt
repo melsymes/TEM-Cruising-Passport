@@ -1,0 +1,57 @@
+                        marinas GET    /marinas(.:format)                             marinas#index
+                                POST   /marinas(.:format)                             marinas#create
+                     new_marina GET    /marinas/new(.:format)                         marinas#new
+                    edit_marina GET    /marinas/:id/edit(.:format)                    marinas#edit
+                         marina GET    /marinas/:id(.:format)                         marinas#show
+                                PUT    /marinas/:id(.:format)                         marinas#update
+                                DELETE /marinas/:id(.:format)                         marinas#destroy
+                           root        /                                              home#index
+                           root        /                                              home#index
+               new_user_session GET    /users/sign_in(.:format)                       devise/sessions#new
+                   user_session POST   /users/sign_in(.:format)                       devise/sessions#create
+           destroy_user_session DELETE /users/sign_out(.:format)                      devise/sessions#destroy
+                  user_password POST   /users/password(.:format)                      devise/passwords#create
+              new_user_password GET    /users/password/new(.:format)                  devise/passwords#new
+             edit_user_password GET    /users/password/edit(.:format)                 devise/passwords#edit
+                                PUT    /users/password(.:format)                      devise/passwords#update
+       cancel_user_registration GET    /users/cancel(.:format)                        devise_invitable/registrations#cancel
+              user_registration POST   /users(.:format)                               devise_invitable/registrations#create
+          new_user_registration GET    /users/sign_up(.:format)                       devise_invitable/registrations#new
+         edit_user_registration GET    /users/edit(.:format)                          devise_invitable/registrations#edit
+                                PUT    /users(.:format)                               devise_invitable/registrations#update
+                                DELETE /users(.:format)                               devise_invitable/registrations#destroy
+              user_confirmation POST   /users/confirmation(.:format)                  devise/confirmations#create
+          new_user_confirmation GET    /users/confirmation/new(.:format)              devise/confirmations#new
+                                GET    /users/confirmation(.:format)                  devise/confirmations#show
+         accept_user_invitation GET    /users/invitation/accept(.:format)             devise/invitations#edit
+                user_invitation POST   /users/invitation(.:format)                    devise/invitations#create
+            new_user_invitation GET    /users/invitation/new(.:format)                devise/invitations#new
+                                PUT    /users/invitation(.:format)                    devise/invitations#update
+                   search_users GET    /users/search(.:format)                        users#search
+         validate_manager_users GET    /users/validate_manager/:id(.:format)          users#validate_manager
+           expire_manager_users GET    /users/expire_manager/:id(.:format)            users#expire_manager
+       revalidate_manager_users GET    /users/revalidate_manager/:id(.:format)        users#revalidate_manager
+   remove_expired_manager_users GET    /users/remove_expired_manager/:id(.:format)    users#remove_expired_manager
+      validate_bertholder_users GET    /users/validate_bertholder/:id(.:format)       users#validate_bertholder
+        expire_bertholder_users GET    /users/expire_bertholder/:id(.:format)         users#expire_bertholder
+    revalidate_bertholder_users GET    /users/revalidate_bertholder/:id(.:format)     users#revalidate_bertholder
+remove_expired_bertholder_users GET    /users/remove_expired_bertholder/:id(.:format) users#remove_expired_bertholder
+           remove_pending_users GET    /users/remove_pending/:id(.:format)            users#remove_pending
+                          users GET    /users(.:format)                               users#index
+                                POST   /users(.:format)                               users#create
+                       new_user GET    /users/new(.:format)                           users#new
+                      edit_user GET    /users/:id/edit(.:format)                      users#edit
+                           user GET    /users/:id(.:format)                           users#show
+                                PUT    /users/:id(.:format)                           users#update
+                                DELETE /users/:id(.:format)                           users#destroy
+     auto_complete_name_marinas POST   /marinas/auto_complete_name(.:format)          marinas#auto_complete_name
+                 search_marinas GET    /marinas/search(.:format)                      marinas#search
+                pending_marinas GET    /marinas/pending/:id(.:format)                 marinas#pending
+            create_user_marinas POST   /marinas/create_user(.:format)                 marinas#create_user
+                                GET    /marinas(.:format)                             marinas#index
+                                POST   /marinas(.:format)                             marinas#create
+                                GET    /marinas/new(.:format)                         marinas#new
+                                GET    /marinas/:id/edit(.:format)                    marinas#edit
+                                GET    /marinas/:id(.:format)                         marinas#show
+                                PUT    /marinas/:id(.:format)                         marinas#update
+                                DELETE /marinas/:id(.:format)                         marinas#destroy
