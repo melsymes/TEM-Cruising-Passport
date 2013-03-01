@@ -87,26 +87,29 @@ en:
       post_introduction: 
       subject: 
   home:
-    passport_pending: Your passport code will be available when  your marina has validated your application.
+    passport_pending: Your passport code will be available when your marina has validated your application.
     passport: Your passport code is -
-    slider1_button: Get your Free Cruising Passport!
-    slider1_header: Cruising throughout Europe just got easier
-    slider1_para: Now you can visit all your favourite TransEurope Marinas, with our simple to use, lifetime Cruising Passport Code. Sign Up for free and make the most of Europes largest Marina group.
+    slider1_button: Collect your Free Cruising Passport
+    slider1_header: Cruising throughout Europe - the simple way
+    slider1_para: Now you can visit each of our reliable TransEurope Marinas with this simple Cruising Passport Code. Sign Up for free and make the most of a friendly network of great destinations.
     download_app: Download our free Cruising Passport App Today
-    download_app_text: Manage your Code, access information about all 54 of our friendly and helpful members, check the Tides and keep an eye on the Weather.
+    download_app_text: Manage your Code, access information about each of our friendly members, check the Tides and keep an eye on the Weather.
     download_app_button: Download for Free!
-    search_users: Search users
-    signed_in_home_title: Welcome to your passport app
-    signed_in_text: You are signed in as an admin or manager, you can search user in the search window below.
+    search_users: Code (or name) here
+    signed_in_home_title: ! 'Welcome to your Cruising Passport App
+
+'
+    signed_in_text: To check a berth holder, just enter their 6 digit code in the search window below.
     signed_in:
-      invite_to_join: Sent someone an invitation to join the TEM cruising passport.
+      invite_to_join: Send a berth holder an invitation to join the TEM Cruising Passport App.
+      invite_user: Invite berth holder
     features:
       title: How to get your Cruising Passport
-      f1_body: Become a berth holder at any of the 54 TransEurope Marinas spread across Europe.
+      f1_body: To make the most of the Cruising Passport App, you'll need to become a berth-holder at one of the many TransEurope Marinas connected across Europe.
       f1_title: Berth with us
-      f2_body: Copy
+      f2_body: It doesn't cost anything to create your unique Cruising Passport code. Enjoy more time sailing with a 50% berthing discount for up to 5 days a year in each location.
       f2_title: Sign up for Free
-      f3_body: Copy
+      f3_body: Just use the button below to get your free Cruising Passport from the App store. You'll not only get the amazing benefits of TEM membership but also a whole host of tools such as weather & tides.
       f3_title: Download the App
     testimonials:
       body: We hope you enjoy the easy-of-use and convenience of our new Cruising Passport App, we hope to see you soon in one of our 54 friendly marinas.
@@ -117,10 +120,11 @@ en:
       main: Latest news from TransEurope Marinas
       title_main: TransEurope Marinas News
       title_sub: Find out about our most recent member marinas
-    search_users_label: Search the TEM database
+    search_users_label: Search
     boat_name_is_now_registered: is now registered
     get_started_connect_with_marina: Get started - connect with your marina
     get_started_boat_name: 
+    your_current_status: 
   user:
     show:
       boat_name: ! 'Boat name:'
@@ -192,16 +196,8 @@ en:
       destroy_button_title: Remove marina
       edit_button_label: Edit
       edit_button_title: Edit
-      intro_para: ! 'A list of marinas in Transeurope Marinas Group, if you are a berth holder please connect with your marina.
-
-        <br>
-
-        Add this line
-
-        <br><br>
-
-'
-      listing_marinas_title: List of Marinas
+      intro_para: Scroll down to see the complete list of marinas who are part of the Cruising Passport App, if you are a berth holder please connect with your marina below.
+      listing_marinas_title: TransEurope Marinas
       name: Name
       search_label: Search
       show_button_label: Show

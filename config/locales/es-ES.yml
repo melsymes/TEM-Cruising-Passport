@@ -135,6 +135,7 @@ es-ES:
     search_users: 
     signed_in:
       invite_to_join: 
+      invite_user: 
     signed_in_home_title: 
     signed_in_text: 
     slider1_button: Obtenga su Pasaporte Cruising Gratis!
@@ -148,6 +149,7 @@ es-ES:
     boat_name_is_now_registered: 
     get_started_connect_with_marina: 
     get_started_boat_name: 
+    your_current_status: 
   layouts:
     navigation:
       admin_list: 

@@ -12,7 +12,7 @@
 production: 
   app: tem
   stack: cedar
-  tag: production/*
+  tag: production
   config:
     BUNDLE_WITHOUT: "development:test"
     GOOGLE_ANALYTICS: "UA-12345678-1"
