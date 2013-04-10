@@ -1,29 +1,29 @@
 es-ES:
   devise:
     confirmations:
-      confirmed: 
-      send_instructions: 
-      send_paranoid_instructions: 
+      confirmed: ! 'Su cuenta ha sido correctamente creada. Ya está registrado. '
+      send_instructions: Recibira un email en pocos minutos con instrucciones sobre como validar la cuenta.
+      send_paranoid_instructions: Si su dirección de correo existe en nuestra base de datos, recibirá un email en pocos minutos con instrucciones sobre como validar la cuenta.
     failure:
-      already_authenticated: 
-      inactive: 
-      invalid: 
-      invalid_token: 
-      locked: 
-      timeout: 
-      unauthenticated: 
-      unconfirmed: 
+      already_authenticated: Usted ya está identificado.
+      inactive: Su cuenta aún no ha sido activada.
+      invalid: Correo o contraseña inválidos.
+      invalid_token: Código de autenticación inválido.
+      locked: Su cuenta ha sida bloqueada.
+      timeout: Su sessión ha expirado; por favor identifíquese de nuevo para continuar.
+      unauthenticated: ! 'Tiene que identificarse or registrarse para continuar. '
+      unconfirmed: Tiene que validar su cuenta para continuar.
     invitations:
       edit:
-        header: 
+        header: Escriba su contraseña.
         submit_button: 
-      invitation_token_invalid: 
+      invitation_token_invalid: El código de invitación proporcionado no es válido.
       new:
-        header: 
+        header: Enviar invitación.
         submit_button: 
-      no_invitations_remaining: 
-      send_instructions: 
-      updated: 
+      no_invitations_remaining: No quedan más invitaciones
+      send_instructions: Un correo de invitación ha sido enviado a %{email}.
+      updated: Su contraseña se ha creado correctamente. Ahora está registrado.
     mailer:
       confirmation_instructions:
         subject: 
@@ -34,12 +34,12 @@ es-ES:
       unlock_instructions:
         subject: 
     omniauth_callbacks:
-      failure: 
-      success: 
+      failure: No pudo ser autenticado desde %{kind} porque "%{reason}".
+      success: Autenticado correctamente desde la cuenta %{kind}.
     passwords:
-      no_token: 
-      send_instructions: 
-      send_paranoid_instructions: 
+      no_token: No puede acceder a esta página sin venir desde un correo de reestablecer contraseña. Si ha venido desde un correo de reestablecer contraseña, por favor asegúrese de que ha usado la URL completa.
+      send_instructions: Recibirá un correo con instrucciones sobre como reestablecer su contraseña en unos pocos minutos.
+      send_paranoid_instructions: Si su dirección de correo existe en nuestra base de datos, recibirá en pocos minutos en su dirección de correo un vínculo para recuperar su contraseña.
       updated: 
       updated_not_active: 
     registrations:
@@ -114,40 +114,40 @@ es-ES:
       admin_role_removed: 
   hello: 
   home:
-    download_app: Descarga nuestra aplicación gratuita Passport Cruising Hoy
-    download_app_button: 
-    download_app_text: 
+    download_app: ! 'Descarga hoy nuestra app gratuita "Cruising Passport"  '
+    download_app_button: ¡Descargarla Gratis!
+    download_app_text: Gestiona tu Código de socio, accede a informacion sobre cada una de nuestras marinas afiliadas, mira las mareas y échale un ojo al tiempo.
     features:
       f1_body: Conviértete en un soporte plaza en cualquiera de los 54 puertos deportivos Transeurope repartidas por toda Europa.
-      f1_title: Litera con nosotros
+      f1_title: 
       f2_body: 
       f2_title: 
       f3_body: 
       f3_title: Descargue la aplicación
-      title: Cómo obtener el Pasaporte de crucero
+      title: Cómo obtener su Cruising Passport
     footer:
       contact_us: 
       main: 
       title_main: 
       title_sub: 
-    passport: 
-    passport_pending: 
-    search_users: 
+    passport: ! 'Su código Passport es - '
+    passport_pending: Su código Passport será disponible una vez que la marina haya validado su solicitud.
+    search_users: Código (o nombre) aquí
     signed_in:
       invite_to_join: 
       invite_user: 
-    signed_in_home_title: 
-    signed_in_text: 
-    slider1_button: Obtenga su Pasaporte Cruising Gratis!
+    signed_in_home_title: Bienvenido a su Cruising Passport App
+    signed_in_text: Para acceder a un cliente, entra su codigo de 6 dígitos en el campo abajo
+    slider1_button: ! 'Obtenga su Free Cruising Passport '
     slider1_header: Cruising en Europa ahora es más fácil
-    slider1_para: Ahora  se puede visitar todos los Puertos Transeurope favoritas, con nuestro sencillo de utilizar, toda la vida de crucero Código Passport. Regístrate gratis y sacar el máximo partido de grupo más grande de Europa Marina.
+    slider1_para: Ahora se puede visitar todos los Puertos Transeurope favoritas, con nuestro sencillo de utilizar, toda la vida de crucero Código Passport. Regístrate gratis y sacar el máximo partido de grupo más grande de Europa Marina.
     testimonials:
       body: 
       name: 
       position: 
-    search_users_label: 
-    boat_name_is_now_registered: 
-    get_started_connect_with_marina: 
+    search_users_label: Buscar
+    boat_name_is_now_registered: ya está registrado
+    get_started_connect_with_marina: ! 'Empecemos: conecte con su marina.'
     get_started_boat_name: 
     your_current_status: 
   layouts:
@@ -277,11 +277,11 @@ es-ES:
     delete_user_admin: 
   admin:
     user_list:
-      intro: 
-      title: 
-      are_you_sure: 
-      full_list_intro: 
-      full_list_title: 
+      intro: ! 'Solo los usuarios solicitando entrar en marinas que no tienen managers serán mostrados aquí; es probable que estos sean managers solicitando una cuenta de manager. '
+      title: ! 'Listado de Usuarios Admin. '
+      are_you_sure: ¿Está usted seguro?
+      full_list_intro: Debajo figuran todos los usuarios.
+      full_list_title: Listado de todos los usuarios
   manager:
     search:
       title: 

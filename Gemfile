@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem "rails", "~> 3.2.11"
+gem "rails", "~> 3.2.13"
 #gem 'rails', '3.2.8' -> currently showing
 #gem 'rails', '3.2.9'
 #gem 'sqlite3'
@@ -27,7 +27,10 @@ gem "hpricot", ">= 0.8.6", :group => :development
 gem "ruby_parser", ">= 2.3.1", :group => :development
 gem "rspec-rails", ">= 2.11.4", :group => [:development, :test]
 gem "capybara", ">= 1.1.2", :group => :test
-gem "email_spec", ">= 1.2.1", :group => :test
+gem 'database_cleaner', :group => :test
+gem "cucumberator", :require => false, :group => :development
+gem "selenium-webdriver", "~> 2.31.0", :group => :development
+gem "email_spec", ">= 1.2.1", :group => [:development, :test ]
 gem "factory_girl_rails", ">= 4.1.0", :group => [:development, :test]
 gem "bootstrap-sass", ">= 2.1.0.1"
 gem "devise", ">= 2.1.2"
@@ -41,4 +44,5 @@ gem 'localeapp'
 gem 'sexp_processor', '~> 4.1'
 gem "country_select", "~> 1.0.1"
 gem "twitter-bootstrap-rails", "~> 2.0rc0"
+
 

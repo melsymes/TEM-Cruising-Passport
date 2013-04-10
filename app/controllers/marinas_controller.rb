@@ -17,6 +17,8 @@ class MarinasController < ApplicationController
     @marina = Marina.find(params[:id])
     @user = current_user
     puts 'in connect'
+    puts @user.name
+    puts current_user
     @marina.pending_users << @user
     @user.marina_state = "PENDING"
     @marina.users << @user
