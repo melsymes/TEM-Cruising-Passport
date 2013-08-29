@@ -1,239 +1,36 @@
 en:
-  hello: Hello world
-  simple_form:
-    required:
-      html: <abbr title="required">*</abbr>
-      mark: ! '*'
-      text: required
-    error_notification:
-      default_message: ! 'Please review the problems below:'
-    'no': 'No'
-    'yes': 'Yes'
-  subject: Manager accepted
-  layouts:
-    navigation:
-      edit: Edit
-      home: TEM Passport
-      logout: Logout
-      marinas: Marinas
-      welcome: Welcome
-      login: Login
-      sign_up: Sign up
-      admin_list: Admin
-  errors:
-    messages:
-      pending: Your application has been sent to the marina and is currently pending their approval
-      remove_pending: Bertholder and marina have been removed. a notification email has been sent.
-      already_confirmed: was already confirmed, please try signing in
-      expired: has expired, please request a new one
-      not_found: not found
-      not_locked: was not locked
-      not_saved:
-        one: ! '1 error prohibited this %{resource} from being saved:'
-        other: ! '%{count} errors prohibited this %{resource} from being saved:'
-      manager_and_marina_now_connected: 
-      not_authorized_as_admin: 
-      not_authorized_as_manager: 
-      admin_validated: 
-      manager_validated: 
-      user_updated: 
-      admin_role_removed: 
-    confirm:
-      are_you_sure: Are you sure?
-  email:
-    user_pending_notification:
-      footer: 
-      greeting: Hi %{name}
-      introduction: Thank you for connecting with %{marina_name}.  We have been notified and one of our managers will validate your account shortly.
-      post_introduction: Sent by Transeurope Marinas on behalf of %{marina_name}
-      subject: Connect request sent
-    transeurope_marinas_footer: ! 'Best Wishes,
+  admin:
+    user_list:
+      are_you_sure: ! 'Are you sure?
 
-
-      The TransEurope Team
-
-      http://www.transeuropemarinas.com
-
-      http://www.cruisingpassport.com
-
-      If you received this message in error and do not have a cruising passport account, you can simply ignore it or let us know at support@transeuropemarinas.com and we''ll investigate.'
-    user_remove_pending:
-      subject: USER removed - sorry
-    expired_manager:
-      greeting: 
-      subject: 
-      introduction: 
-      post_introduction: 
-    manager_accepted:
-      greeting: 
-      introduction: 
-      post_introduction: 
-      subject: 
-    new_initial_user:
-      subject: 
-    accepted:
-      greeting: 
-      introduction: 
-      post_introduction: 
-      subject: 
-    expired_user:
-      greeting: 
-      introduction: 
-      post_introduction: 
-      subject: 
-    validate_admin:
-      greeting: 
-      introduction: 
-      post_introduction: 
-      subject: 
-  home:
-    passport_pending: Your passport code will be available when your marina has validated your application.
-    passport: Your passport code is -
-    slider1_button: Collect your Free Cruising Passport
-    slider1_header: Cruising throughout Europe - the simple way
-    slider1_para: Now you can visit each of our reliable TransEurope Marinas with this simple Cruising Passport Code. Sign Up for free and make the most of a friendly network of great destinations.
-    download_app: Download our free Cruising Passport App Today
-    download_app_text: Manage your Code, access information about each of our friendly members, check the Tides and keep an eye on the Weather.
-    download_app_button: Download for Free!
-    search_users: Code (or name) here
-    signed_in_home_title: ! 'Welcome to your Cruising Passport App
 
 '
-    signed_in_text: To check a berth holder, just enter their 6 digit code in the search window below.
-    signed_in:
-      invite_to_join: Send a berth holder an invitation to join the TEM Cruising Passport App.
-      invite_user: Invite berth holder
-    features:
-      title: How to collect your Cruising Passport
-      f1_body: To make the most of the Cruising Passport App, you'll need to become a berth-holder at one of the many TransEurope Marinas connected across Europe.
-      f1_title: Berth with us
-      f2_body: It doesn't cost anything to create your unique Cruising Passport code. Enjoy more time sailing with a 50% berthing discount for up to 5 days a year in each location.
-      f2_title: Sign up for Free
-      f3_body: Just use the button below to get your free Cruising Passport from the App store. You'll not only get the amazing benefits of TEM membership but also a whole host of tools such as weather & tides.
-      f3_title: Download the App
-    testimonials:
-      body: We hope you enjoy the easy-of-use and convenience of our new Cruising Passport App, we hope to see you soon in one of our 54 friendly marinas.
-      name: Melanie Symes
-      position: TransEurope Marinas Chairperson
-    footer:
-      contact_us: Contact us
-      main: Latest news from TransEurope Marinas
-      title_main: TransEurope Marinas News
-      title_sub: Find out about our most recent member marinas
-    search_users_label: Search
-    boat_name_is_now_registered: is now registered
-    get_started_connect_with_marina: Get started - connect with your marina
-    get_started_boat_name: 
-    your_current_status: 
-  user:
-    show:
-      boat_name: ! 'Boat name:'
-      connect_to_your_marina: Connect to your marina
-      current_marina_status: ! 'Current marina status:'
-      marina_get_started: ! 'Get started - connect to your marina:'
-      marina_state: ! 'Your current state is:'
-      passport_code: ! 'Your passport code is:'
-      user_email: ! 'Email: '
-      user_header: ! '%{name}: account details'
-      user_name: ! 'Name:'
-      name: ! 'Name:'
-      current_marina_state: Current Marina State
-      marina_get_stated: 
-    search:
-      advise_on_non_found: This is loads of very usefull advise on how to deal with no matching users found.
-    signed_in: Signed in
-    charge_role: Change role?
-    email: Email
-    manager_count: Manager count
-    marina_name: Marina name
-    name: Name
-    registered_date: Registered date
-    role: Current role
-    username: Username
-    registered: Registered Date
-    boat_name: Boat name
-    marina_state: Marina State
-    passport_code: Passport code
-    role_admin: ! 'Click to remove role:'
-    add_role_admin: ! 'Click to add role:'
-    delete_user_admin: Delete user
-  marinas:
-    pending:
-      remove: 
-    management:
-      action: Action
-      active_berth_holders: Current Active Berth Holders
-      email: Email
-      expire_date: Expiry Date
-      registered_date: Registered Date
-      role: Role
-      username: Name
-      active_managers: Current Active Managers
-      expire_manager: Expire manager
-      action_alternative: Alternative action
-      expired_berth_holders: Expired berth holders
-      expired_managers: Expired managers
-      is_berth_holder: is a berth holder?
-      is_manager: is a manager?
-      pending_berth_holders: Pending berth holders
-      remove_user: Remove boatowner
-      action_remove_user: Remove request
-      validate_berth_holder: Validate berth holder
-      validate_manager: Validate new manager account
-      expire_berth_holder: Expire berth holder
-      re_validate_berth_holder: Re-validate berth holder
-      remove_berth_holder: Remove berth holder record
-      re_validate_manager: Re-validate manager
-      remove_manager: Remove manager from list
-    index:
-      address: Address
-      connect_button_label: Connect
-      connect_button_title: Connect
-      country: Country
-      county: County
-      create_new_marina: Create new marina
-      destroy_button_label: ! 'Remove '
-      destroy_button_title: Remove marina
-      edit_button_label: Edit
-      edit_button_title: Edit
-      intro_para: Scroll down to see the complete list of marinas who are part of the Cruising Passport App, if you are a berth holder please connect with your marina below.
-      listing_marinas_title: TransEurope Marinas
-      name: Name
-      search_label: Search
-      show_button_label: Show
-      show_button_title: Show
-      town: Town
-    form:
-      address_label: ! 'Address:'
-      counry_label: ! 'County:'
-      country_label: ! 'Country:'
-      create_label: ! 'Create:'
-      name_label: ! 'Name:'
-      postcode_label: ! 'Postcode:'
-      street_label: ! 'Street:'
-      town_label: ! 'Town:'
-    new:
-      back_label: 
-      intro_para: 
-      label: 
-    show:
-      back_label: Back
-      edit_label: Edit
-      intro_para: This is the details of the show
-      invite: Invite user
-      title: Marina details
-      intro_to_managers_page: 
-      intro_to_managers_pane: Managers can review and accept potential bertholders or add managers and manage your berth holders.
-      title_to_managers_pane: Manager's Admin Pane
-    Back: 
-    edit:
-      back: Back
-      show: Show
-      title: Edit your Marina Profile
+      full_list_intro: ! 'Below are listed all the users.
+
+
+'
+      full_list_title: ! 'List of all users
+
+
+'
+      intro: ! 'Only users applying for marinas with no managers will show here - it is likely that these are managers applying for a management account.
+
+
+'
+      title: ! 'Admin User List
+
+
+'
   devise:
     confirmations:
-      confirmed: Your account was successfully confirmed. You are now signed in.
-      send_instructions: You will receive an email with instructions about how to confirm your account in a few minutes.
+      confirmed: ! 'Your account was successfully confirmed. You are now signed in.
+
+
+'
+      send_instructions: ! 'You will receive an email with instructions about how to confirm your account in a few minutes.
+
+
+'
       send_paranoid_instructions: If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes.
     failure:
       already_authenticated: You are already signed in.
@@ -288,17 +85,248 @@ en:
       send_instructions: You will receive an email with instructions about how to unlock your account in a few minutes.
       send_paranoid_instructions: If your account exists, you will receive an email with instructions about how to unlock it in a few minutes.
       unlocked: Your account has been unlocked successfully. Please sign in to continue.
-  admin:
-    user_list:
-      intro: ! 'Only users applying for marinas with no managers will show here - it is likely that these are managers applying for a management account.
+  email:
+    accepted:
+      greeting: Dear
+      introduction: Welcome to the TEM application.
+      post_introduction: Please use your given code to present to your mooring manager on arrival to claim all the benefits of being a member of TEM.
+      subject: TEM Membership Accepted
+    expired_manager:
+      greeting: Dear
+      introduction: Your manager account has been expired.
+      post_introduction: Please feel free to re-apply.
+      subject: TEM Account Expired
+    expired_user:
+      greeting: Dear
+      introduction: You have received this email because your TEM account has expired.
+      post_introduction: If this is not the case, please re-apply or see your mooring manager.
+      subject: TEM Account Expired
+    manager_accepted:
+      greeting: Dear
+      introduction: ! 'We are glad to accept your application manager of the TEM application '
+      post_introduction: Please see the user guide to familiarise yourself with this application.
+      subject: TEM Manager Account Accepted
+    new_initial_user:
+      subject: TEM user registration
+    transeurope_marinas_footer: ! 'Best Wishes,
+
+
+      The TransEurope Team
+
+      http://www.transeuropemarinas.com
+
+      http://www.cruisingpassport.com
+
+      If you received this message in error and do not have a cruising passport account, you can simply ignore it or let us know at support@transeuropemarinas.com and we''ll investigate.'
+    user_pending_notification:
+      footer: ! 'Best Wishes,
+
+
+        The TransEurope Team
+
+        http://www.transeuropemarinas.com
+
+        http://www.cruisingpassport.com
+
+        If you received this message in error and do not have a cruising passport account, you can simply ignore it or let us know at support@transeuropemarinas.com and we''ll investigate.'
+      greeting: Hi %{name}
+      introduction: Thank you for connecting with %{marina_name}.  We have been notified and one of our managers will validate your account shortly.
+      post_introduction: Sent by TransEurope Marinas on behalf of %{marina_name}
+      subject: Connect request sent
+    user_remove_pending:
+      subject: USER removed - sorry
+    validate_admin:
+      greeting: Dear
+      introduction: Congratulation, your requeste for a TEM admin account has been approved.
+      post_introduction: Please refer to the user guide for instructions of use.
+      subject: TEM Admin Accepted
+  errors:
+    confirm:
+      are_you_sure: Are you sure?
+    messages:
+      admin_role_removed: Your admin role has been removed
+      admin_validated: Admin validated
+      already_confirmed: was already confirmed, please try signing in
+      expired: has expired, please request a new one
+      manager_and_marina_now_connected: Marina and manager are not connected
+      manager_validated: Manager validated
+      not_authorized_as_admin: You are not an authorised administrator
+      not_authorized_as_manager: You are not an authorised manager
+      not_found: not found
+      not_locked: was not locked
+      not_saved:
+        one: ! '1 error prohibited this %{resource} from being saved:'
+        other: ! '%{count} errors prohibited this %{resource} from being saved:'
+      pending: Your application has been sent to the marina and is currently pending their approval
+      remove_pending: Bertholder and marina have been removed. a notification email has been sent.
+      user_updated: User updated
+  hello: Hello world
+  home:
+    boat_name_is_now_registered: is now registered
+    download_app: Download our free Cruising Passport App Today
+    download_app_button: Download for Free!
+    download_app_text: Manage your Code, access information about each of our friendly members, check the Tides and keep an eye on the Weather.
+    features:
+      f1_body: To make the most of the Cruising Passport App, you'll need to become a berth-holder at one of the many TransEurope Marinas connected across Europe.
+      f1_title: Berth with us
+      f2_body: It doesn't cost anything to create your unique Cruising Passport code. Enjoy more time sailing with a 50% berthing discount for up to 5 days a year in each location.
+      f2_title: Sign up for Free
+      f3_body: Just use the button below to get your free Cruising Passport from the App store. You'll not only get the amazing benefits of TEM membership but also a whole host of tools such as weather & tides.
+      f3_title: Download the App
+      title: How to collect your Cruising Passport
+    footer:
+      contact_us: Contact us
+      main: Latest news from TransEurope Marinas
+      title_main: TransEurope Marinas News
+      title_sub: Find out about our most recent member marinas
+    get_started_boat_name: Get started today - Add your boat name.
+    get_started_connect_with_marina: Get started - connect with your marina
+    passport: Your passport code is -
+    passport_pending: Your passport code will be available when your marina has validated your application.
+    search_users: Code (or name) here
+    search_users_label: Search
+    signed_in:
+      invite_to_join: Send a berth holder an invitation to join the TEM Cruising Passport App.
+      invite_user: Invite berth holder
+    signed_in_home_title: ! 'Welcome to your Cruising Passport App
 
 '
-      title: Admin User List
-      are_you_sure: Are you sure?
-      full_list_intro: Below are listed all the users.
-      full_list_title: List of all users
+    signed_in_text: To check a berth holder, just enter their 6 digit code in the search window below.
+    slider1_button: Collect your Free Cruising Passport
+    slider1_header: Schmoozing throughout Europe - the simple way
+    slider1_para: Now you can visit each of our reliable TransEurope Marinas with this simple Cruising Passport Code. Sign Up for free and make the most of a friendly network of great destinations.
+    testimonials:
+      body: We hope you enjoy the ease-of-use and convenience of our new Cruising Passport App, we hope to see you soon in one of our friendly marinas.
+      name: Melanie Symes
+      position: TransEurope Marinas Chairperson
+    your_current_status: Your current status is
+  layouts:
+    navigation:
+      admin_list: Admin
+      edit: Edit
+      home: TEM Passport
+      login: Login
+      logout: Logout
+      marinas: Marinas
+      sign_up: Sign up
+      welcome: Welcome
   manager:
     search:
       title: Search results for berth holders
+  marinas:
+    Back: Back
+    edit:
+      back: Back
+      show: Show
+      title: Edit your Marina Profile
+    form:
+      address_label: ! 'Address:'
+      counry_label: ! 'County:'
+      country_label: ! 'Country:'
+      create_label: ! 'Create:'
+      name_label: ! 'Name:'
+      postcode_label: ! 'Postcode:'
+      street_label: ! 'Street:'
+      town_label: ! 'Town:'
+    index:
+      address: Address
+      connect_button_label: Connect
+      connect_button_title: Connect
+      country: Country
+      county: County
+      create_new_marina: Create new marina
+      destroy_button_label: ! 'Remove '
+      destroy_button_title: Remove marina
+      edit_button_label: Edit
+      edit_button_title: Edit
+      intro_para: Scroll down to see the complete list of marinas who are part of the Cruising Passport App, if you are a berth holder please connect with your marina below.
+      listing_marinas_title: TransEurope Marinas
+      name: Name
+      search_label: Search
+      show_button_label: Show
+      show_button_title: Show
+      town: Town
+    management:
+      action: Action
+      action_alternative: Alternative action
+      action_remove_user: Remove request
+      active_berth_holders: Current Active Berth Holders
+      active_managers: Current Active Managers
+      email: Email
+      expire_berth_holder: Expire berth holder
+      expire_date: Expiry Date
+      expire_manager: Expire manager
+      expired_berth_holders: Expired berth holders
+      expired_managers: Expired managers
+      is_berth_holder: is a berth holder?
+      is_manager: is a manager?
+      pending_berth_holders: Pending berth holders
+      re_validate_berth_holder: Re-validate berth holder
+      re_validate_manager: Re-validate manager
+      registered_date: Registered Date
+      remove_berth_holder: Remove berth holder record
+      remove_manager: Remove manager from list
+      remove_user: Remove boatowner
+      role: Role
+      username: Name
+      validate_berth_holder: Validate berth holder
+      validate_manager: Validate new manager account
+    new:
+      back_label: Back to current marina list
+      intro_para: Add your new TEM member marina details here.
+      label: New TEM Member Marina details
+    pending:
+      remove: Remove pending
+    show:
+      back_label: Back
+      edit_label: Edit
+      intro_para: This is the details of the show
+      intro_to_managers_page: An introduction text for marina managers
+      intro_to_managers_pane: Managers can review and accept potential bertholders or add managers and manage your berth holders.
+      invite: Invite user
+      title: Marina details
+      title_to_managers_pane: Manager's Admin Page
+  simple_form:
+    error_notification:
+      default_message: ! 'Please review the problems below:'
+    'no': 'No'
+    required:
+      html: <abbr title="required">*</abbr>
+      mark: ! '*'
+      text: required
+    'yes': 'Yes'
+  subject: Manager accepted
   unauthorized:
     default: You are not authorized to access this page.
+  user:
+    add_role_admin: ! 'Click to add role:'
+    boat_name: Boat name
+    charge_role: Change role?
+    delete_user_admin: Delete user
+    email: Email
+    manager_count: Manager count
+    marina_name: Marina name
+    marina_state: Marina State
+    name: Name
+    passport_code: Passport code
+    registered: Registered Date
+    registered_date: Registered date
+    role: Current role
+    role_admin: ! 'Click to remove role:'
+    search:
+      advise_on_non_found: This is loads of very useful advice on how to deal with no matching users found.
+    show:
+      boat_name: ! 'Boat name:'
+      connect_to_your_marina: Connect to your marina
+      current_marina_state: Current Marina State
+      current_marina_status: ! 'Current marina status:'
+      marina_get_started: ! 'Get started - connect to your marina:'
+      marina_get_stated: Get started, register with your marina today.
+      marina_state: ! 'Your current state is:'
+      name: ! 'Name:'
+      passport_code: ! 'Your passport code is:'
+      user_email: ! 'Email: '
+      user_header: ! '%{name}: account details'
+      user_name: ! 'Name:'
+    signed_in: Signed in
+    username: Username
