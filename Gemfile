@@ -29,7 +29,7 @@ gem "rspec-rails", ">= 2.11.4", :group => [:development, :test]
 gem "capybara", ">= 1.1.2", :group => :test
 gem 'database_cleaner', :group => :test
 gem "cucumberator", :require => false, :group => :development
-gem "selenium-webdriver", "~> 2.31.0", :group => :development
+gem "selenium-webdriver", "~> 2.35.1", :group => :development
 gem "email_spec", ">= 1.2.1", :group => [:development, :test ]
 gem "factory_girl_rails", ">= 4.1.0", :group => [:development, :test]
 gem "bootstrap-sass", ">= 2.1.0.1"
@@ -45,4 +45,5 @@ gem 'sexp_processor', '~> 4.1'
 gem "country_select", "~> 1.0.1"
 gem "twitter-bootstrap-rails", "~> 2.0rc0"
 gem 'newrelic_rpm'
+gem 'rubyzip', :require => 'zip/zip'
 

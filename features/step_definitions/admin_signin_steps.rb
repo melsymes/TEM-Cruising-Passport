@@ -1,7 +1,7 @@
 Given(/^One admin user$/) do
-  user = User.create! :name => 'admin User', :email => 'user@example.com', :password => 'please', :password_confirmation => 'please'
-  user.confirm!
-  user.add_role :admin
+  @admin = User.create! :name => 'admin User', :email => 'user@example.com', :password => 'please', :password_confirmation => 'please'
+  @admin.confirm!
+  @admin.add_role :admin
 
 end
 
@@ -10,12 +10,13 @@ Then(/^I login with email "(.*?)" and password "(.*?)"$/) do |email, password|
   click_on "Login"
   #sleep 2
   #within ('#container') do
-    fill_in 'Login', :with => email
+    fill_in 'Login with email', :with => email
     fill_in 'Password', :with => password
     #sleep 20
     click_on 'Sign in'
   #end
   page.should have_content 'Signed in successfully.'
+  sleep 5
   #pending # express the regexp above with the code you wish you had
 end
 
@@ -39,32 +40,29 @@ Then(/^user logs out$/) do
   sleep 5
 end
 
-Given(/^one user and one marina$/) do
-  @marina = Marina.create! :name => 'newlands marina'
-  @user = User.create! :name => 'New User', :email => 'new@example.com', :password => 'please', :password_confirmation => 'please'
-  @user.confirm!
-
-end
 
 Then(/^verify I'm on the home page$/) do
   current_path.should == root_path << 'en'
+  sleep 5
 end
 
-Then(/^I connect with "(.*?)"$/) do |arg1|
+Then(/^I connect with the marina$/) do
   click_on 'Connect'
-  save_and_open_page
+  #save_and_open_page
   sleep 5
 end
 
 Then(/^verify that I am pending with "(.*?)"$/) do |arg1|
   @marina.pending_users.first.name.should == @user.name
-
+  sleep 5
 end
 
 Then(/^verify my status is pending$/) do
   visit(user_path(I18n.locale, @user))
   page.should have_content 'PENDING'
+  sleep 5
   save_and_open_page
+  sleep 5
   #pending # getting user_path right
   #@user.marina_state.should == 'PENDING'
   #pending

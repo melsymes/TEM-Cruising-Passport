@@ -9,18 +9,18 @@ Scenario: Admin User signs in
   Then I go to "Admin"
   Then user logs out
 
-@javascript
-Scenario: User connects with a marina
-  Given one user and one marina
-  Then I login with email "new@example.com" and password "please"
-  And verify I'm on the home page
-  And "new@example.com" should have 1 email
-  Then I go to "Marinas"
-  Then I connect with "newlands marina"
+#@javascript
+#Scenario: User connects with a marina
+#  Given one user and one marina
+#  Then I login with email "new@example.com" and password "please"
+#  And verify I'm on the home page
+#  And "new@example.com" should have 1 email
+#  Then I go to "Marinas"
+#  Then I connect with "newlands marina"
   #And verify that I am pending with "newlands marina"
-  And "new@example.com" should have 2 email
-  And verify my status is pending
-  Then user logs out
+#  And "new@example.com" should have 2 email
+#  And verify my status is pending
+#  Then user logs out
 
 
 
