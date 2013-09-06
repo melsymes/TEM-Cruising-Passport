@@ -133,6 +133,10 @@ en:
       introduction: Thank you for connecting with %{marina_name}.  We have been notified and one of our managers will validate your account shortly.
       post_introduction: Sent by TransEurope Marinas on behalf of %{marina_name}
       subject: Connect request sent
+    new_user_to_manager:
+      greeting: Hi %{name}
+      introduction: On of your bertholders, %{user_name}, has tried to connect with %{marina_name}.  Please review your pending bertholders page.
+      post_introduction: Sent by TransEurope Marinas on behalf of %{marina_name}
     user_remove_pending:
       subject: USER removed - sorry
     validate_admin:

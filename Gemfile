@@ -26,7 +26,7 @@ gem "haml-rails", ">= 0.3.5", :group => :development
 gem "hpricot", ">= 0.8.6", :group => :development
 gem "ruby_parser", ">= 2.3.1", :group => :development
 gem "rspec-rails", ">= 2.11.4", :group => [:development, :test]
-gem "capybara", ">= 1.1.2", :group => :test
+gem "capybara", ">= 2.1.0", :group => :test
 gem 'database_cleaner', :group => :test
 gem "cucumberator", :require => false, :group => :development
 gem "selenium-webdriver", "~> 2.35.1", :group => :development
@@ -34,7 +34,7 @@ gem "email_spec", ">= 1.2.1", :group => [:development, :test ]
 gem "factory_girl_rails", ">= 4.1.0", :group => [:development, :test]
 gem "bootstrap-sass", ">= 2.1.0.1"
 gem "devise", ">= 2.1.2"
-gem "devise_invitable", "~> 1.1.1"
+gem "devise_invitable", "~> 1.2.1"
 gem "cancan", ">= 1.6.8"
 gem "rolify", ">= 3.2.0"
 gem "simple_form", ">= 2.0.4"

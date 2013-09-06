@@ -31,8 +31,12 @@
         = t('home.get_started_boat_name')
         =link_to 'Finish registration', edit_user_registration_path
       - else
-        = @user.boat_name
-        = t('home.boat_name_is_now_registered')
+        - if @user.boat_name.empty?
+          = t('home.get_started_boat_name')
+          =link_to 'Finish registration', edit_user_registration_path
+        - else
+          = @user.boat_name
+          = t('home.boat_name_is_now_registered')
     %p
       - if @user.marina_state.nil?
         = t('home.get_started_connect_with_marina')
