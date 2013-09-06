@@ -1,8 +1,8 @@
 UserNotifier#new_user_to_manager
 %p
-  = t('email.new_user_to_manager.greeting', :name => @user.name)
+  = t('email.new_user_to_manager.greeting', :name => @manager.name)
 %p
-  = t('email.new_user_to_manager.introduction', :marina_name => @marina.name)
+  = t('email.new_user_to_manager.introduction', :user_name => @user.name, :marina_name => @marina.name)
 %p
   = t('email.new_user_to_manager.post_introduction', :marina_name => @marina.name)
 %p

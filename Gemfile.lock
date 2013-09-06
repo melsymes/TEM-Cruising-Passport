@@ -245,7 +245,7 @@ DEPENDENCIES
   activerecord-postgresql-adapter
   bootstrap-sass (>= 2.1.0.1)
   cancan (>= 1.6.8)
-  capybara (>= 1.1.2)
+  capybara (>= 2.1.0)
   coffee-rails (~> 3.2.1)
   country_select (~> 1.0.1)
   cucumberator

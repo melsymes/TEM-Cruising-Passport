@@ -2,9 +2,7 @@ class MarinasController < ApplicationController
   # GET /marinas
   # GET /marinas.json
   def index
-    #@marinas = Marina.all
-    puts 'in index'
-    #@marinas = Marina.all
+
     @marinas = Marina.search(params[:search])
     #@users = User.find_by_marina_id(@marina)
     respond_to do |format|
@@ -16,15 +14,13 @@ class MarinasController < ApplicationController
   def pending
     @marina = Marina.find(params[:id])
     @user = current_user
-    puts 'in connect'
-    puts @user.name
-    puts current_user
     @marina.pending_users << @user
     @user.marina_state = "PENDING"
     @marina.users << @user
 
     @marina.save!
     @user.save!
+
     if @marina.count_managers == 0
       # email all admins if there are no manager
       @admins = User.with_role :admin
@@ -34,11 +30,9 @@ class MarinasController < ApplicationController
     else
       # email all managers fro the appropriate user
       @managers = @marina.active_managers
-      puts "in managers"
-      if !@managers.count == 0
+      if !(@managers.count == 0)
         @managers.each do |manager|
-          UserNotifier.new_user_to_manager(manager).deliver unless manager.nil?
-
+          UserNotifier.new_user_to_manager(manager, @user).deliver unless manager.nil?
         end
       end
     end

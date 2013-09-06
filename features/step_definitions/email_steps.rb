@@ -68,6 +68,20 @@ Then /^(?:I|they|"([^"]*?)") should receive an email with the following body:$/ 
   open_email(address, :with_text => expected_body)
 end
 
+Then(/^it should send me a "(.*?)" email$/) do |subject|
+  @email = ActionMailer::Base.deliveries.last
+  @email.to.should include @user.email
+  @email.subject.should include(subject)
+end
+
+Then(/^it should send "(.*?)" a "(.*?)" email$/) do |email, subject|
+  @email = ActionMailer::Base.deliveries.last
+  @email.to.should include email
+  @email.subject.should include(subject)
+end
+
+
+
 #
 # Accessing emails
 #
