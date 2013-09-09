@@ -6,7 +6,17 @@
 
 require 'cucumber/rails'
 require 'cucumberator'
+require 'email_spec'
 require 'email_spec/cucumber'
+
+#for ihpone see http://blog.plataformatec.com.br/2011/03/configuring-user-agents-with-capybara-selenium-webdriver/
+#  Capybara.register_driver :iphone do |app|
+#  require 'selenium/webdriver'
+#  profile = Selenium::WebDriver::Firefox::Profile.new
+#  profile['general.useragent.override'] = "iPhone"
+#
+#  Capybara::Driver::Selenium.new(app, :profile => profile)
+#end
 
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any

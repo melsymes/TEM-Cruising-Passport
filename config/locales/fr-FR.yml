@@ -89,6 +89,9 @@ fr-FR:
       subject: 
     new_initial_user:
       subject: 
+      greeting: 
+      introduction: 
+      post_introduction: 
     transeurope_marinas_footer: ! "Bienvenue !\n\nL'équipe TransEurope \nhttp://www.transeuropemarinas.com\nhttp://www.cruisingpassport.com\nSi vous avez reçu ce message par erreur et que vous n'avez pas de compte \"passeport croisières\", vous pouvez, soit ignorer ce message, soit nous en informer à: support@transeuropemarinas.com et nous en rechercherons la cause"
     user_pending_notification:
       footer: 
@@ -102,6 +105,8 @@ fr-FR:
       greeting: 
       introduction: 
       post_introduction: 
+      subject: 
+    user_pending_to_manager:
       subject: 
   errors:
     confirm:

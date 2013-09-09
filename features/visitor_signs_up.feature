@@ -1,9 +1,12 @@
 Feature: A visitor signs up
 
-  As a visitor to the TEM passport site I want to be able to sign up
+  As a visitor to the TEM passport site I want to be able to sign up,
+  Fill out my berth details, find my marina and connect with them.
+  I then want to see a response from my marina manager and see that
+  I have been accepted.
+
 
 @email
-@javascript
 Scenario: A visitor signs up
   Given a visitor to the site
   Then I go to "Sign up"
@@ -19,7 +22,22 @@ Scenario: A visitor signs up
   Then verify "Get started today - Add your boat name" on page
   Then verify "Get started - connect with your marina" on page
 
-@javascript
+
+Scenario: An admin validates a manager for a marina
+  Given One admin user
+  Given one marinas
+  Given A user "Mel" with email "mel@example.com" and password "spanish"
+  Then "user@example.com" should have 1 email
+  Then they open the email
+  Then I login with email "mel@example.com" and password "spanish"
+  Then I go to "Marinas"
+  Then I go to "Connect"
+  Then "user@example.com" should have 2 email
+  Then "mel@example.com" should have 2 email
+  Then I open the email
+  Then they should see "Hi Mel" in the email body
+  Then save and open all text emails
+
 Scenario: The new user updates their boat name in the account
   Given A user "Charles" with email "charles@example.com" and password "shockwave"
   Then I login with email "charles@example.com" and password "shockwave"
@@ -30,7 +48,7 @@ Scenario: The new user updates their boat name in the account
   Then verify "You updated your account successfully." on page
   Then verify "Shockwave is now registered" on page
 
-  @javascript
+
 Scenario: User connects with marina
   Given A user "Charles" with email "charles@example.com" and password "shockwave"
   Given marina "Puerto Calero Marina" with manager "Mel" at "mel@example.com" with password "spainish"
@@ -38,14 +56,28 @@ Scenario: User connects with marina
   Then I login with email "charles@example.com" and password "shockwave"
   And verify I'm on the home page
   And "charles@example.com" should have 1 email
-  And "mel@example.com" should have 1 email
   Then I open the email
+  Then I should see "Hi Charles" in the email body
+  Then I should not see "en," in the email subject
+  Then I should not see "en," in the email body
+  And "mel@example.com" should have 1 email
+  Then they open the email
+  Then they should see "Hi Mel" in the email body
+  Then they should not see "en," in the email subject
+  Then they should not see "en," in the email body
   Then I go to "Marinas"
   Then I connect with the marina
   And "charles@example.com" should have 2 email
-  And "mel@example.com" should have 2 email
-  And verify my status is pending
   Then I open the email
+  Then I should see "Hi Charles" in the email body
+  Then I should not see "en," in the email subject
+  Then I should not see "en," in the email body
+  And "mel@example.com" should have 2 email
+  Then they open the email
+  Then they should see "Hi Mel" in the email body
+  Then they should not see "en," in the email subject
+  Then they should not see "en," in the email body
+  And verify my status is pending
   Then verify "Your passport code will be available when your marina has validated your application." on page
   Then verify "Current marina status: PENDING" on page
   Then verify "Name: Charles" on page
@@ -53,6 +85,7 @@ Scenario: User connects with marina
   Then verify "Boat name:" on page
   Then save "user_home.html"
   Then user logs out
+
   Then I login with email "mel@example.com" and password "spainish"
   And verify I'm on the home page
   Then save and open "Mel's home page"
@@ -69,6 +102,7 @@ Scenario: User connects with marina
   Then verify "Your passport code is - " on page
   Then save and open all text emails
   Then save and open "User connected and setup"
+
 
 
 

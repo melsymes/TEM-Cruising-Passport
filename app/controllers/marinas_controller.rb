@@ -12,6 +12,8 @@ class MarinasController < ApplicationController
   end
 
   def pending
+    #authorize! :update, @user, :message => t('errors.messages.not_authorized_as_manager')
+    #users access this
     @marina = Marina.find(params[:id])
     @user = current_user
     @marina.pending_users << @user
@@ -25,7 +27,7 @@ class MarinasController < ApplicationController
       # email all admins if there are no manager
       @admins = User.with_role :admin
       @admins.each do |admin|
-        UserNotifier.new_initial_user(admin).deliver
+        UserNotifier.new_initial_user(admin, @user).deliver
       end
     else
       # email all managers fro the appropriate user
@@ -48,6 +50,7 @@ class MarinasController < ApplicationController
 
   # Create a linked user
   def create_user
+    authorize! :update, @user, :message => t('errors.messages.not_authorized_as_manager')
     #@marina = Marina.find(params[:id])
     @marina = current_user.marina  #  try this
     anemail = params[:user_email]
@@ -64,6 +67,7 @@ class MarinasController < ApplicationController
   # GET /marinas/1
   # GET /marinas/1.json
   def show
+
     @marina = Marina.find(params[:id])
     @marina.active_managers.each do |manager|
       if manager == current_user
@@ -89,6 +93,7 @@ class MarinasController < ApplicationController
 
   # GET /marinas/1/edit
   def edit
+    authorize! :update, @user, :message => t('errors.messages.not_authorized_as_manager')
     @marina = Marina.find(params[:id])
   end
 
@@ -111,6 +116,7 @@ class MarinasController < ApplicationController
   # PUT /marinas/1
   # PUT /marinas/1.json
   def update
+    authorize! :update, @user, :message => t('errors.messages.not_authorized_as_manager')
     @marina = Marina.find(params[:id])
 
     respond_to do |format|

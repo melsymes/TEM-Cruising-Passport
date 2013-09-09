@@ -2,7 +2,7 @@ Feature: Admin user logs in
 
   As an admin I want to be able to sign in and be on the Admin page
 
-@javascript
+
 Scenario: Admin User signs in
   Given One admin user
   Then I login with email "user@example.com" and password "please"

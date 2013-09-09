@@ -108,6 +108,9 @@ en:
       subject: TEM Manager Account Accepted
     new_initial_user:
       subject: TEM user registration
+      greeting: Hi %{name}
+      introduction: ! '%{name} has connected to %{marina_name}.  Can you please verify that they are a manager.'
+      post_introduction: 
     transeurope_marinas_footer: ! 'Best Wishes,
 
 
@@ -144,6 +147,8 @@ en:
       introduction: Congratulation, your requeste for a TEM admin account has been approved.
       post_introduction: Please refer to the user guide for instructions of use.
       subject: TEM Admin Accepted
+    user_pending_to_manager:
+      subject: 
   errors:
     confirm:
       are_you_sure: Are you sure?

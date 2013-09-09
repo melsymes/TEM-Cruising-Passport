@@ -61,7 +61,7 @@ Given(/^all marinas$/) do
 end
 
 Given(/^one marinas$/) do
-  marina1 = Marina.create! :name => 'Alcaidesa Marina'
+  marina1 = Marina.create! :name => 'Puerto Calero Marina'
 end
 
 When(/^I click login$/) do

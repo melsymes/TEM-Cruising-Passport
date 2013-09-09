@@ -91,6 +91,9 @@ es-ES:
       subject: Cuenta de TEM aceptada
     new_initial_user:
       subject: Registro de usuario de TEM
+      greeting: 
+      introduction: 
+      post_introduction: 
     transeurope_marinas_footer: ! "Con los mejores deseos, \n \nEl equipo de TransEurope\nhttp://www.transeuropeamarinas.com\nhttp://www.cruisingpassport.com\nSi ha recibido este mensaje por error  y no tiene una cuenta de \"cruising passport\",  puede simplemente ignorarlo o comunicárnoslo  en support@transeuropemarinas.com para poder investigarlo."
     user_pending_notification:
       footer: ! 'Con los mejores deseos,
@@ -114,6 +117,8 @@ es-ES:
       introduction: ! 'Enhorabuena, su solicitud para adquirir una cuenta de TEM ha sido aproboda.  '
       post_introduction: ! 'Por favor, consulte la guía del usuario para instrucciones de uso. '
       subject: Cuenta de TEM aceptada
+    user_pending_to_manager:
+      subject: 
   errors:
     confirm:
       are_you_sure: ¿Está usted seguro?
