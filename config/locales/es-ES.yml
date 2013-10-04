@@ -36,6 +36,10 @@ es-ES:
     mailer:
       confirmation_instructions:
         subject: Instrucciones de confirmación
+        first_paragraph: 
+        greeting: 
+        second_paragraph: 
+        validation_link: 
       invitation_instructions:
         subject: Instrucciones de invitación
       reset_password_instructions:
@@ -68,7 +72,7 @@ es-ES:
       unlocked: Su cuenta ha sido desbloqueada correctamente. Por favor, registrése para continuar
   email:
     accepted:
-      greeting: Estimado
+      greeting: Estimado %{name}
       introduction: Bienvenido a TEM
       post_introduction: ! 'Utilice su código a la llegada cuando solicite su atraque para obtener todos los beneficios que conlleva ser un miembro de TEM.
 
@@ -94,13 +98,7 @@ es-ES:
       greeting: 
       introduction: 
       post_introduction: 
-    transeurope_marinas_footer:
-      <p>Con los mejores deseos,<br>
-      El equipo de TransEurope<br>
-      http://www.transeuropeamarinas.com<br>
-      http://www.cruisingpassport.com<br>
-      Si ha recibido este mensaje por error y no tiene una cuenta de \"cruising passport\",  puede simplemente ignorarlo o comunicárnoslo  en support@transeuropemarinas.com para poder investigarlo.
-      </p>
+    transeurope_marinas_footer: ! "<p>Con los mejores deseos, \n<br><br>\nEl equipo de TransEurope<br>\nhttp://www.transeuropeamarinas.com<br>\nhttp://www.cruisingpassport.com<br>\nSi ha recibido este mensaje por error  y no tiene una cuenta de \"cruising passport\",  puede simplemente ignorarlo o comunicárnoslo  en support@transeuropemarinas.com para poder investigarlo.<br>\n</p>"
     user_pending_notification:
       footer: ! 'Con los mejores deseos,
 
@@ -127,6 +125,10 @@ es-ES:
       subject: 
     new_user_to_manager:
       subject: 
+    general:
+      greeting: 
+      para_1: 
+      para_2: 
   errors:
     confirm:
       are_you_sure: ¿Está usted seguro?

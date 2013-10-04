@@ -55,6 +55,10 @@ en:
     mailer:
       confirmation_instructions:
         subject: Confirmation instructions
+        first_paragraph: ! 'Please take a second to confirm your email address by clicking this link: %{validation_link}'
+        greeting: ! 'Dear '
+        second_paragraph: 
+        validation_link: Confirm my account
       invitation_instructions:
         subject: Invitation instructions
       reset_password_instructions:
@@ -111,12 +115,19 @@ en:
       greeting: Hi %{name}
       introduction: ! '%{name} has connected to %{marina_name}.  Can you please verify that they are a manager.'
       post_introduction: ! ' '
-    transeurope_marinas_footer:
-      Best Wishes,
-      The TransEurope Team
-      http://www.transeuropemarinas.com
-      http://www.cruisingpassport.com
-      If you received this message in error and do not have a cruising passport account, you can simply ignore it or let us know at support@transeuropemarinas.com and we''ll investigate.
+    transeurope_marinas_footer: ! '<p>Best Wishes,
+
+      <br><br>
+
+      The TransEurope Team<br>
+
+      http://www.transeuropemarinas.com<br>
+
+      http://www.cruisingpassport.com<br>
+
+      If you received this message in error and do not have a cruising passport account, you can simply ignore it or let us know at support@transeuropemarinas.com and we''ll investigate.<br>
+
+      </br>'
     user_pending_notification:
       footer: ! 'Best Wishes,
 
@@ -146,6 +157,10 @@ en:
       introduction: On of your berth holders, %{user_name}, has tried to connect with %{marina_name}.  Please review your pending berth holders on your management page.
       subject: One of your berth holders has registered for a Cruising Passport.
       post_introduction: Sent by TransEurope Marinas on behalf of %{marina_name}
+    general:
+      greeting: 
+      para_1: 
+      para_2: 
   errors:
     confirm:
       are_you_sure: Are you sure?

@@ -36,6 +36,10 @@ fr-FR:
     mailer:
       confirmation_instructions:
         subject: Instructions de confirmation
+        first_paragraph: 
+        greeting: 
+        second_paragraph: 
+        validation_link: 
       invitation_instructions:
         subject: Instructions d'invitation.
       reset_password_instructions:
@@ -92,11 +96,7 @@ fr-FR:
       greeting: 
       introduction: 
       post_introduction: 
-    transeurope_marinas_footer:
-      Bienvenue!
-      L'équipe TransEurope
-      http://www.transeuropemarinas.com
-      http://www.cruisingpassport.com\nSi vous avez reçu ce message par erreur et que vous n'avez pas de compte \"passeport croisières\", vous pouvez, soit ignorer ce message, soit nous en informer à support@transeuropemarinas.com et nous en rechercherons la cause
+    transeurope_marinas_footer: ! "<p>Bienvenue !\n<br><br>\nL'équipe TransEurope<br> \nhttp://www.transeuropemarinas.com<br>\nhttp://www.cruisingpassport.com<br>\nSi vous avez reçu ce message par erreur et que vous n'avez pas de compte \"passeport croisières\", vous pouvez, soit ignorer ce message, soit nous en informer à: support@transeuropemarinas.com et nous en rechercherons la cause\n<br><p>"
     user_pending_notification:
       footer: 
       greeting: Bonjour %{name}
@@ -114,6 +114,10 @@ fr-FR:
       subject: 
     new_user_to_manager:
       subject: 
+    general:
+      greeting: 
+      para_1: 
+      para_2: 
   errors:
     confirm:
       are_you_sure: Etes-vous sûr ?
