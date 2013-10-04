@@ -1,0 +1,7 @@
+<p></p>Hi <%= @resource.name %>!</p>
+
+<p>Please take a second to confirm <%= @resource.email %> as your new email address by clicking this link: </p>
+
+<p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+
+<p><%= raw t('email.transeurope_marinas_footer') %></p>
