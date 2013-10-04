@@ -36,7 +36,7 @@
           %td
             - if current_user.has_role? :admin
               - user.roles.each do |role|
-                = link_to(role.name, remove_role_users_path(user, role: role.name))
+                = link_to(("remove " + role.name), remove_role_users_path(user, role: role.name))
                 %br
             - else
               - user.roles.each do |role|

@@ -4,10 +4,19 @@
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
 
+
 require 'cucumber/rails'
 require 'cucumberator'
 require 'email_spec'
 require 'email_spec/cucumber'
+require 'watir-webdriver'
+
+
+
+#require 'rubygems'
+#require 'selenium-webdriver'
+#driver = Selenium::WebDriver
+
 
 #for ihpone see http://blog.plataformatec.com.br/2011/03/configuring-user-agents-with-capybara-selenium-webdriver/
 #  Capybara.register_driver :iphone do |app|
@@ -21,9 +30,9 @@ require 'email_spec/cucumber'
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
 # selectors in your step definitions to use the XPath syntax.
-# Capybara.default_selector = :xpath
+Capybara.default_selector = :xpath
 
-#Capybara.default_driver = :selenium
+Capybara.default_driver = :selenium
 
 # By default, any exception happening in your Rails application will bubble up
 # to Cucumber so that your scenario will fail. This is a different from how 

@@ -26,8 +26,10 @@ gem "haml-rails", ">= 0.3.5", :group => :development
 gem "hpricot", ">= 0.8.6", :group => :development
 gem "ruby_parser", ">= 2.3.1", :group => :development
 gem "rspec-rails", ">= 2.11.4", :group => [:development, :test]
+gem "poltergeist", "~> 1.4.1", :group => :test
 gem "capybara", ">= 2.1.0", :group => :test
 gem 'database_cleaner', :group => :test
+gem 'watir-webdriver', :group => :test
 gem "cucumberator", :require => false, :group => :development
 gem "selenium-webdriver", "~> 2.35.1", :group => :development
 gem "email_spec", ">= 1.2.1", :group => [:development, :test ]
@@ -46,4 +48,5 @@ gem "country_select", "~> 1.0.1"
 gem "twitter-bootstrap-rails", "~> 2.0rc0"
 gem 'newrelic_rpm'
 gem 'rubyzip', :require => 'zip/zip'
+#gem "cucumber-rails", :require => false, :group => [:development, :test]
 

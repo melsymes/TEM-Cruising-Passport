@@ -13,7 +13,11 @@
   %tbody
     - @marina.pending_users.each do |user|
       %tr
-        %td= link_to user.name, user
+        %td
+          - if !user.name
+            = link_to t('marinas.management.set_name'), user
+          - else
+            = link_to user.name , user
         %td= user.email
         %td= user.created_at.to_date
         %td= link_to t('marinas.management.validate_berth_holder'), validate_bertholder_users_path(user, :marina => @marina)

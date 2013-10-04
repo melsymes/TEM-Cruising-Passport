@@ -1,107 +1,78 @@
 Feature: A visitor signs up
 
-  As a visitor to the TEM passport site I want to be able to sign up,
-  Fill out my berth details, find my marina and connect with them.
-  I then want to see a response from my marina manager and see that
-  I have been accepted.
-
+  As a new user to the Transeurope cruising passport I want to be able to sign up
+  for the service in English, Spanish and French, and see all the communication
+  in my language.
 
 @email
+@javascript
+
 Scenario: A visitor signs up
   Given a visitor to the site
   Then I go to "Sign up"
-  Then I sign up with name "Charles", email "charles@example.com" and password "please"
+    And save snapshot "English_signup_page.png"
+    And save and open "English_signup_page.html"
+  Then I sign up with name "charles", email "charles@example.com" and password "please"
+    And  verify "A message with a confirmation link" on page
   Then verify I'm on the home page
-  And  verify "A message with a confirmation link" on page
-  Then verify I'm on the home page
-  And it should send "charles@example.com" a "Confirmation instructions" email
+    And it should send "charles@example.com" a "Confirmation instructions" email
   Then "charles@example.com" should have 1 email
   Then I open the email
   Then I follow "Confirm my account" in the email
   Then verify I'm on the home page
   Then verify "Get started today - Add your boat name" on page
   Then verify "Get started - connect with your marina" on page
-
-
-Scenario: An admin validates a manager for a marina
-  Given One admin user
-  Given one marinas
-  Given A user "Mel" with email "mel@example.com" and password "spanish"
-  Then "user@example.com" should have 1 email
-  Then they open the email
-  Then I login with email "mel@example.com" and password "spanish"
-  Then I go to "Marinas"
-  Then I go to "Connect"
-  Then "user@example.com" should have 2 email
-  Then "mel@example.com" should have 2 email
-  Then I open the email
-  Then they should see "Hi Mel" in the email body
-  Then save and open all text emails
-
-Scenario: The new user updates their boat name in the account
-  Given A user "Charles" with email "charles@example.com" and password "shockwave"
-  Then I login with email "charles@example.com" and password "shockwave"
-  Then I go to "Finish registration"
-  Then I fill in "Boat name" "Shockwave"
-  Then I fill in "Current password" "shockwave"
-  Then I go to "Update"
-  Then verify "You updated your account successfully." on page
-  Then verify "Shockwave is now registered" on page
-
-
-Scenario: User connects with marina
-  Given A user "Charles" with email "charles@example.com" and password "shockwave"
-  Given marina "Puerto Calero Marina" with manager "Mel" at "mel@example.com" with password "spainish"
-  Then marina "Puerto Calero Marina" should have "1" manager
-  Then I login with email "charles@example.com" and password "shockwave"
-  And verify I'm on the home page
-  And "charles@example.com" should have 1 email
-  Then I open the email
-  Then I should see "Hi Charles" in the email body
-  Then I should not see "en," in the email subject
-  Then I should not see "en," in the email body
-  And "mel@example.com" should have 1 email
-  Then they open the email
-  Then they should see "Hi Mel" in the email body
-  Then they should not see "en," in the email subject
-  Then they should not see "en," in the email body
-  Then I go to "Marinas"
-  Then I connect with the marina
-  And "charles@example.com" should have 2 email
-  Then I open the email
-  Then I should see "Hi Charles" in the email body
-  Then I should not see "en," in the email subject
-  Then I should not see "en," in the email body
-  And "mel@example.com" should have 2 email
-  Then they open the email
-  Then they should see "Hi Mel" in the email body
-  Then they should not see "en," in the email subject
-  Then they should not see "en," in the email body
-  And verify my status is pending
-  Then verify "Your passport code will be available when your marina has validated your application." on page
-  Then verify "Current marina status: PENDING" on page
-  Then verify "Name: Charles" on page
-  Then verify "Email: charles@example.com" on page
-  Then verify "Boat name:" on page
-  Then save "user_home.html"
+    And save snapshot "01_charles_homepage_en.png"
+    And save and open "01_charles_homepage_en.html"
+  Then select spanish
+    And reload page
+    And save snapshot "02_charles_homepage_es.png"
+    And save and open "02_charles_homepage_es.html"
+  Then select french
+    And reload page
+    And save snapshot "03_charles_homepage_fr.png"
+    And save and open "03_charles_homepage_fr.html"
+  Then select english
+    And reload page
+    And save and open all text emails
   Then user logs out
 
-  Then I login with email "mel@example.com" and password "spainish"
-  And verify I'm on the home page
-  Then save and open "Mel's home page"
-  Then I go to "Puerto Calero Marina"
-  Then verify "Manager's Admin Page" on page
-  Then I go to "Validate berth holder"
-  Then verify "Bertholder and marina are now connected. a notification email has been sent" on page
-  And "charles@example.com" should have 3 email
-  And "mel@example.com" should have 2 email
-  Then user logs out
-  Then I login with email "charles@example.com" and password "shockwave"
-  Then verify "Signed in successfully." on page
-  Then verify "Your current status is VALIDATED-BERTHOLDER" on page
-  Then verify "Your passport code is - " on page
+@email
+@javascript
+Scenario: A spanish visitor signs up
+  Given a visitor to the site
+  Then select spanish
+    And reload page
+
+    And I go to "Registrarse"
+    And save snapshot "Spanish_signup_page.png"
+    And save and open "Spanish_signup_page.html"
+  Then I sign up with name "mel", email "mel@example.com" and password "spanish"
+  Then "mel@example.com" should have 1 email
+    And I open the email
+    And I follow "Confirm my account" in the email
   Then save and open all text emails
-  Then save and open "User connected and setup"
+  Then select english
+  Then user logs out
+
+@email
+@javascript
+Scenario: A French visitor signs up
+  Given a visitor to the site
+  Then select french
+    And reload page
+
+    And I go to "Signer"
+    And save snapshot "French_signup_page.png"
+    And save and open "French_signup_page.html"
+  Then I sign up with name "mel", email "mel@example.com" and password "french"
+  Then "mel@example.com" should have 1 email
+    And I open the email
+    And I follow "Confirm my account" in the email
+  Then save and open all text emails
+  Then select english
+  Then user logs out
+
 
 
 

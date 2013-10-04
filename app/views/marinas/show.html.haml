@@ -2,7 +2,8 @@
 %br
 %h3
   = t('marinas.show.title')
-%br
+%h2
+  = @marina.name
 %br
 = raw t('marinas.show.intro_para')
 %br
@@ -30,6 +31,12 @@
   %b= t('marinas.form.postcode_label')
   = @marina.postcode
 
+- if current_user.has_role? :admin
+  %h3 Current managers
+  - @marina.active_managers.each do |manager|
+    = link_to manager.name, manager
+    %br
+
 
 
 - if !@manager.nil?
@@ -38,10 +45,11 @@
     %h4
       = raw t('marinas.show.title_to_managers_pane')
     %br
-    = raw t('marinas.show.intro_to_managers_pane')
+    = raw t('marinas.show.intro_to_managers_pane', :edit_link => (link_to t('marinas.show.edit_label'), edit_marina_path(@marina)))
     %br
     %br
     =form_tag create_user_marinas_path do
+      =label_tag(:user_email, t('marinas.show.invite'))
       =text_field_tag :user_email, params[:user_email]
       =submit_tag t('marinas.show.invite')
     = render 'pending'

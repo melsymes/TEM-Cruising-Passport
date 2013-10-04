@@ -60,7 +60,7 @@ Given(/^all marinas$/) do
   marina54 = Marina.create! :name => 'Whitehaven Marina'
 end
 
-Given(/^one marinas$/) do
+Given(/^one marina$/) do
   marina1 = Marina.create! :name => 'Puerto Calero Marina'
 end
 

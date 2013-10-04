@@ -120,7 +120,7 @@ class UserNotifier < ActionMailer::Base
     @manager = manager
     @marina = user.marina
     @user = user
-    mail to: @manager.email, subject: t('email.user_pending_to_manager.subject')
+    mail to: @manager.email, subject: t('email.new_user_to_manager.greeting')
   end
 
 end

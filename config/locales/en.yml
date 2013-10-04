@@ -87,9 +87,9 @@ en:
       unlocked: Your account has been unlocked successfully. Please sign in to continue.
   email:
     accepted:
-      greeting: Dear
+      greeting: Dear %{name}
       introduction: Welcome to the TEM application.
-      post_introduction: Please use your given code to present to your mooring manager on arrival to claim all the benefits of being a member of TEM.
+      post_introduction: Please use your given code to present to your mooring manager on arrival to claim all the benefits of being a member of TEM. With more stuff.
       subject: TEM Membership Accepted
     expired_manager:
       greeting: Dear
@@ -102,25 +102,21 @@ en:
       post_introduction: If this is not the case, please re-apply or see your mooring manager.
       subject: TEM Account Expired
     manager_accepted:
-      greeting: Dear
-      introduction: ! 'We are glad to accept your application manager of the TEM application '
+      greeting: Dear %{name}
+      introduction: We are glad to accept your application for a management account of the TEM application.
       post_introduction: Please see the user guide to familiarise yourself with this application.
       subject: TEM Manager Account Accepted
     new_initial_user:
       subject: TEM user registration
       greeting: Hi %{name}
       introduction: ! '%{name} has connected to %{marina_name}.  Can you please verify that they are a manager.'
-      post_introduction: 
-    transeurope_marinas_footer: ! 'Best Wishes,
-
-
+      post_introduction: ! ' '
+    transeurope_marinas_footer:
+      Best Wishes,
       The TransEurope Team
-
       http://www.transeuropemarinas.com
-
       http://www.cruisingpassport.com
-
-      If you received this message in error and do not have a cruising passport account, you can simply ignore it or let us know at support@transeuropemarinas.com and we''ll investigate.'
+      If you received this message in error and do not have a cruising passport account, you can simply ignore it or let us know at support@transeuropemarinas.com and we''ll investigate.
     user_pending_notification:
       footer: ! 'Best Wishes,
 
@@ -136,10 +132,6 @@ en:
       introduction: Thank you for connecting with %{marina_name}.  We have been notified and one of our managers will validate your account shortly.
       post_introduction: Sent by TransEurope Marinas on behalf of %{marina_name}
       subject: Connect request sent
-    new_user_to_manager:
-      greeting: Hi %{name}
-      introduction: On of your bertholders, %{user_name}, has tried to connect with %{marina_name}.  Please review your pending bertholders page.
-      post_introduction: Sent by TransEurope Marinas on behalf of %{marina_name}
     user_remove_pending:
       subject: USER removed - sorry
     validate_admin:
@@ -149,6 +141,11 @@ en:
       subject: TEM Admin Accepted
     user_pending_to_manager:
       subject: 
+    new_user_to_manager:
+      greeting: Hi %{name}
+      introduction: On of your berth holders, %{user_name}, has tried to connect with %{marina_name}.  Please review your pending berth holders on your management page.
+      subject: One of your berth holders has registered for a Cruising Passport.
+      post_introduction: Sent by TransEurope Marinas on behalf of %{marina_name}
   errors:
     confirm:
       are_you_sure: Are you sure?
@@ -280,6 +277,7 @@ en:
       username: Name
       validate_berth_holder: Validate berth holder
       validate_manager: Validate new manager account
+      set_name: ! '[SET MY NAME]'
     new:
       back_label: Back to current marina list
       intro_para: Add your new TEM member marina details here.
@@ -289,12 +287,15 @@ en:
     show:
       back_label: Back
       edit_label: Edit
-      intro_para: This is the details of the show
+      intro_para: ! 'The owners of yachts or motor vessels that are normally berthed at a TransEurope marina will be entitled to a 50% visitor’s berthing discount for up to five days per annum in each member marina upon production of a current TransEurope cruising passport code. Any additional benefit shall be at the discretion of the individual marina.
+
+
+        The discount is applied to the daily visitor rates charged by the marina and applicable to one or more visits corresponding to an overall total of five days per year in each of the member marinas.'
       intro_to_managers_page: An introduction text for marina managers
-      intro_to_managers_pane: Managers can review and accept potential bertholders or add managers and manage your berth holders.
+      intro_to_managers_pane: ! "Managers can review and accept potential bertholders or add managers and manage your berth holders by scrolling down to the list below.<br><br>\n\n - If you want to change the look and feel of this page, add images and other content, then contact us at \n<a href=\"http://www.transeuropemarinas.com/contact/\">Transeurope</a>.<br>\n - If you want to update your address, then go to %{edit_link}\n<br><br>\nYou can always invite a new user by adding the person's email address in the field below.  Choose if they are a berth holder or a manager.  Don't forget to update the new users name!"
       invite: Invite user
-      title: Marina details
-      title_to_managers_pane: Manager's Admin Page
+      title: Marina Details
+      title_to_managers_pane: Manager's Administration Page
   simple_form:
     error_notification:
       default_message: ! 'Please review the problems below:'
