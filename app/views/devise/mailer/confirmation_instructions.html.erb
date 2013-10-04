@@ -1,5 +1,5 @@
 <p></p>Hi <%= @resource.name %>!</p>
 
-<p><%= t("devise.mailer.confirmation_instructions.first_paragraph", :validation_link => (link_to( t('devise.mailer.confirmation_instructions.validation_link'), confirmation_url(@resource, :confirmation_token => @resource.confirmation_token)))) %></p>
+<p><%= raw t("devise.mailer.confirmation_instructions.first_paragraph", :validation_link => (link_to( t('devise.mailer.confirmation_instructions.validation_link'), confirmation_url(@resource, :confirmation_token => @resource.confirmation_token)))) %></p>
 
 <p><%= raw t('email.transeurope_marinas_footer') %></p>
