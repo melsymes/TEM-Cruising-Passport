@@ -36,10 +36,10 @@ es-ES:
     mailer:
       confirmation_instructions:
         subject: Instrucciones de confirmación
-        first_paragraph: 
-        greeting: 
+        first_paragraph: ! 'Por favor tómate un segundo para confirmar su dirección de correo electrónico haciendo clic en este enlace: %{validation_link} '
+        greeting: Querido
         second_paragraph: 
-        validation_link: 
+        validation_link: Confirmar mi cuenta
       invitation_instructions:
         subject: Instrucciones de invitación
       reset_password_instructions:

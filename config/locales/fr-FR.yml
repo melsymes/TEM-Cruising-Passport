@@ -36,10 +36,10 @@ fr-FR:
     mailer:
       confirmation_instructions:
         subject: Instructions de confirmation
-        first_paragraph: 
-        greeting: 
+        first_paragraph: ! 'S''il vous plaît prendre une seconde pour confirmer votre adresse email en cliquant sur ce lien: %{validation_link} '
+        greeting: Cher
         second_paragraph: 
-        validation_link: 
+        validation_link: Confirmer mon compte
       invitation_instructions:
         subject: Instructions d'invitation.
       reset_password_instructions:

@@ -9,6 +9,15 @@ Feature: A visitor signs up
 
 Scenario: A visitor signs up
   Given a visitor to the site
+  Then select french
+    And save snapshot "French_homepage.png"
+    And save and open "French_homepage.html"
+  Then select spanish
+    And save snapshot "Spanish_homepage.png"
+    And save and open "Spanish_homepage.html"
+  Then select english
+    And save snapshot "Enlish_homepage.png"
+    And save and open "English_homepage.html"
   Then I go to "Sign up"
     And save snapshot "English_signup_page.png"
     And save and open "English_signup_page.html"
@@ -50,7 +59,7 @@ Scenario: A spanish visitor signs up
   Then I sign up with name "mel", email "mel@example.com" and password "spanish"
   Then "mel@example.com" should have 1 email
     And I open the email
-    And I follow "Confirm my account" in the email
+    And I follow "Confirmar mi cuenta" in the email
   Then save and open all text emails
   Then select english
   Then user logs out
@@ -68,7 +77,7 @@ Scenario: A French visitor signs up
   Then I sign up with name "mel", email "mel@example.com" and password "french"
   Then "mel@example.com" should have 1 email
     And I open the email
-    And I follow "Confirm my account" in the email
+    And I follow "Confirmer mon compte" in the email
   Then save and open all text emails
   Then select english
   Then user logs out
