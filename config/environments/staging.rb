@@ -17,7 +17,7 @@ Myapp10::Application.configure do
   config.action_mailer.default_url_options = { :host => 'http://staging.cruisingpassport.com/' }
   config.action_mailer.delivery_method = :smtp
   # change to true to allow email to be sent during development
-  config.action_mailer.perform_deliveries = false
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"
 
