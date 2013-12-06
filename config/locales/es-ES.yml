@@ -129,6 +129,11 @@ es-ES:
       greeting: 
       para_1: 
       para_2: 
+    remove_pending:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
   errors:
     confirm:
       are_you_sure: ¿Está usted seguro?

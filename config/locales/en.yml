@@ -125,7 +125,7 @@ en:
 
       http://www.cruisingpassport.com<br>
 
-      If you received this message in error and do not have a cruising passport account, you can simply ignore it or let us know at mail_to(support@transeuropemarinas.com) and we''ll investigate.<br>
+      If you received this message in error and do not have a cruising passport account, you can simply ignore it or let us know at support@transeuropemarinas.com and we''ll investigate.<br>
 
       </br>'
     user_pending_notification:
@@ -161,6 +161,11 @@ en:
       greeting: 
       para_1: 
       para_2: 
+    remove_pending:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
   errors:
     confirm:
       are_you_sure: Are you sure?
@@ -214,7 +219,7 @@ en:
 '
     signed_in_text: To check a berth holder, just enter their 6 digit code in the search window below.
     slider1_button: Collect your Free Cruising Passport
-    slider1_header: Schmoozing throughout Europe - the simple way
+    slider1_header: Sailing throughout Europe - the simple way
     slider1_para: Now you can visit each of our reliable TransEurope Marinas with this simple Cruising Passport Code. Sign Up for free and make the most of a friendly network of great destinations.
     testimonials:
       body: We hope you enjoy the ease-of-use and convenience of our new Cruising Passport App, we hope to see you soon in one of our friendly marinas.
