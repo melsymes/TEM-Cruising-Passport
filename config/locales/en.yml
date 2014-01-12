@@ -89,6 +89,13 @@ en:
       send_instructions: You will receive an email with instructions about how to unlock your account in a few minutes.
       send_paranoid_instructions: If your account exists, you will receive an email with instructions about how to unlock it in a few minutes.
       unlocked: Your account has been unlocked successfully. Please sign in to continue.
+    shared:
+      forgot_password: Forgot your password?
+      no_confirmation_instructions: Didn't receive confirmation instructions?
+      no_unlock_instructions: Didn't receive unlock instructions?
+      sign_in: Sign in
+      sign_in_with: Sign in with
+      sign_up: Sign up
   email:
     accepted:
       greeting: Dear %{name}
@@ -223,7 +230,7 @@ en:
     slider1_para: Now you can visit each of our reliable TransEurope Marinas with this simple Cruising Passport Code. Sign Up for free and make the most of a friendly network of great destinations.
     testimonials:
       body: We hope you enjoy the ease-of-use and convenience of our new Cruising Passport App, we hope to see you soon in one of our friendly marinas.
-      name: Melanie Symes
+      name: Monica de Vast
       position: TransEurope Marinas Chairperson
     your_current_status: Your current status is
   layouts:
@@ -358,5 +365,33 @@ en:
       user_email: ! 'Email: '
       user_header: ! '%{name}: account details'
       user_name: ! 'Name:'
+      passport: ! 'Your Passport Code:'
+      valid_manager: VALIDATED MANAGER
+      passport_pending: 
+      valid_bertholder: VALID BERTHOLDER
     signed_in: Signed in
     username: Username
+    sign_up:
+      boat_name: Boat name
+      email: Email
+      name: Name
+      password: Password
+      password_confirmation: Password confirmation
+      signup_button: Sign up
+      submit: Submit
+    sign_in:
+      email: Log in with your email
+      password: Password
+      remember_me: Remember me
+      sign_in: Log in
+      title: Sign in
+    status: Status
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: This email has already been registered.  Please use a different email address
+            password:
+              confirmation: 

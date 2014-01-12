@@ -70,6 +70,13 @@ es-ES:
       send_instructions: ! 'Recibirá en pocos minutos un email con intrucciones sobre como desbloquear su cuenta '
       send_paranoid_instructions: ! 'Si su cuenta ya exite, recibirá en pocos minutos un email con instrucciones de como desbloquearla. '
       unlocked: Su cuenta ha sido desbloqueada correctamente. Por favor, registrése para continuar
+    shared:
+      forgot_password: 
+      no_confirmation_instructions: 
+      no_unlock_instructions: 
+      sign_in: 
+      sign_in_with: 
+      sign_up: 
   email:
     accepted:
       greeting: Estimado %{name}
@@ -189,7 +196,7 @@ es-ES:
     slider1_para: ! 'Ahora puede visitar todos los Puertos Transeurope que desee con la Cruising Passport Code. Regístrese gratis y saque el máximo partido de nuestra red de buenos destinos marinos. '
     testimonials:
       body: ! 'Esperamos que disfrute de las facilidades y comodidades de nuestra nueva Cruising Passport App, y esperamos verle pronto en cualquiera de nuestras marinas asociadas. '
-      name: Melanie Symes
+      name: Monica de Vast
       position: Presidenta de TransEurope Marinas
     your_current_status: su estado actual es
   layouts:
@@ -321,5 +328,28 @@ es-ES:
       user_email: ! 'Email:'
       user_header: ! '%{name}: datos'
       user_name: ! 'Nombre:'
+      passport: 
+      valid_manager: 
+      passport_pending: 
+      valid_bertholder: 
     signed_in: Registrarse
     username: Nombre de usuario
+    sign_up:
+      boat_name: 
+      email: 
+      password: 
+      password_confirmation: 
+      signup_button: 
+      submit: 
+    sign_in:
+      title: 
+    status: 
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: 
+            password:
+              confirmation: 

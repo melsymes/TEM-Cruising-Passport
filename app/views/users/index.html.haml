@@ -13,6 +13,7 @@
     %thead
       %tr
         %th= t('user.name')
+        %th= t('user.status')
         %th= t('user.marina_name')
         %th= t('user.email')
         %th= t('user.registered_date')
@@ -30,6 +31,7 @@
       - @users.each do |user|
         %tr
           %td= link_to user.name, user
+          %td= user.marina_state
           %td= link_to user.marina.name, user.marina unless user.marina.nil?
           %td= user.email
           %td= user.created_at.to_date
