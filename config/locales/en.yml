@@ -365,6 +365,10 @@ en:
       user_email: ! 'Email: '
       user_header: ! '%{name}: account details'
       user_name: ! 'Name:'
+      passport: ! 'Your Passport Code:'
+      valid_manager: VALIDATED MANAGER
+      passport_pending: 
+      valid_bertholder: VALID BERTHOLDER
     signed_in: Signed in
     username: Username
     sign_up:
@@ -374,12 +378,20 @@ en:
       password: Password
       password_confirmation: Password confirmation
       signup_button: Sign up
+      submit: Submit
+    sign_in:
+      email: Log in with your email
+      password: Password
+      remember_me: Remember me
+      sign_in: Log in
+      title: Sign in
+    status: Status
   activerecord:
     errors:
       models:
         user:
           attributes:
             email:
-              taken: 
+              taken: This email has already been registered.  Please use a different email address
             password:
               confirmation: 

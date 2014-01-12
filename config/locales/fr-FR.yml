@@ -317,6 +317,10 @@ fr-FR:
       user_email: ! 'Email:'
       user_header: ! '%{name}: détails du compte'
       user_name: ! 'Nom:'
+      passport: 
+      valid_manager: 
+      passport_pending: 
+      valid_bertholder: 
     signed_in: Enregistrez-vous
     username: Nom d'utilisateur
     sign_up:
@@ -325,6 +329,10 @@ fr-FR:
       password: 
       password_confirmation: 
       signup_button: 
+      submit: 
+    sign_in:
+      title: 
+    status: 
   activerecord:
     errors:
       models:

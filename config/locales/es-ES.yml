@@ -328,6 +328,10 @@ es-ES:
       user_email: ! 'Email:'
       user_header: ! '%{name}: datos'
       user_name: ! 'Nombre:'
+      passport: 
+      valid_manager: 
+      passport_pending: 
+      valid_bertholder: 
     signed_in: Registrarse
     username: Nombre de usuario
     sign_up:
@@ -336,6 +340,10 @@ es-ES:
       password: 
       password_confirmation: 
       signup_button: 
+      submit: 
+    sign_in:
+      title: 
+    status: 
   activerecord:
     errors:
       models:

@@ -87,7 +87,7 @@ nl-NL:
       post_introduction: Aarzel niet om uw managers account opnieuw aan te vragen.
       subject: TEM Account verlopen
     expired_user:
-      greeting: Beste %{name}
+      greeting: Beste %{name},
       introduction: U ontvangt deze e-mail omdat uw TEM account is verlopen.
       post_introduction: Als dit niet het geval is, probeer u opnieuw aan te melden of ga bij uw havenmeester langs.
       subject: TEM account verlopen
@@ -345,6 +345,10 @@ nl-NL:
       user_email: ! 'Email:'
       user_header: ! '%{name}: account details'
       user_name: ! 'Naam:'
+      passport: 
+      valid_manager: 
+      passport_pending: 
+      valid_bertholder: 
     signed_in: Ingeschreven
     username: Gebruikersnaam
     sign_up:
@@ -353,6 +357,10 @@ nl-NL:
       password: 
       password_confirmation: 
       signup_button: 
+      submit: 
+    sign_in:
+      title: 
+    status: 
   activerecord:
     errors:
       models:
