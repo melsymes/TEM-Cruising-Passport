@@ -70,6 +70,13 @@ fr-FR:
       send_instructions: Vous allez recevoir un email avec les instructions pour débloquer votre compte d'ici quelques minutes.
       send_paranoid_instructions: Si votre compte est existant, vous allez recevoir un email avec les instructions pour le débloquer d'ici quelques minutes.
       unlocked: Votre compte a été déverrouillé avec succès. Merci de vous identifier pour continuer.
+    shared:
+      forgot_password: 
+      no_confirmation_instructions: 
+      no_unlock_instructions: 
+      sign_in: 
+      sign_in_with: 
+      sign_up: 
   email:
     accepted:
       greeting: 
@@ -139,7 +146,7 @@ fr-FR:
       not_locked: non verrouillé
       not_saved:
         one: ! '1 erreur n''a pas permi %{resource} la sauvegarde:'
-        other: ! '%{count} erreurs n''ont pas permis %{resource} la sauvegarde'
+        other: ! '%{count} erreurs n''ont pas permis %{resource} la sauvegarde:'
       pending: Votre demande a été adressée au port de plaisance et est en cours d'instruction.
       remove_pending: Le port de plaisance et le client ont été supprimés. Un email de notification vous a été adressé.
       user_updated: 
@@ -178,7 +185,7 @@ fr-FR:
     slider1_para: 
     testimonials:
       body: 
-      name: 
+      name: Monica de Vast
       position: 
     your_current_status: 
   layouts:
@@ -312,3 +319,18 @@ fr-FR:
       user_name: ! 'Nom:'
     signed_in: Enregistrez-vous
     username: Nom d'utilisateur
+    sign_up:
+      boat_name: 
+      email: 
+      password: 
+      password_confirmation: 
+      signup_button: 
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: 
+            password:
+              confirmation: 
