@@ -1,4 +1,13 @@
 nl-NL:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: 
+            password:
+              confirmation: 
   admin:
     user_list:
       are_you_sure: Weet u het zeker?
@@ -59,15 +68,11 @@ nl-NL:
       signed_up_but_inactive: U bent geregistreerd. Maar wij konden u nog niet inschrijven omdat uw aanvraag nog niet is geactiveerd door uw jachthaven.
       signed_up_but_locked: U bent geregistreerd, Maar wij konden u nog niet inschrijven omdat uw account geblokkeerd is.
       signed_up_but_unconfirmed: Een email met een bevestigingslink is naar u verzonden. Klik op de bevestigingslink om uw account te activeren.
-      updated: U heeft uw account aangepast
       update_needs_confirmation: U heeft uw account aangevuld, maar wij moeten uw nieuwe e-mail adres verifiëren. Controleer uw e-mail en klik op de bevestigingslink om uw nieuwe e-mailadres te bevestigen.
+      updated: U heeft uw account aangepast
     sessions:
       signed_in: Ingeschreven.
       signed_out: U bent uitgeschreven.
-    unlocks:
-      send_instructions: U ontvangt binnen enkele minuten een e-mail met instructies hoe u uw account kunt openen.
-      send_paranoid_instructions: Als uw account bestaat, ontvangt u binnen enkele minuten een e-mail met instructies hoe u uw account kunt openen.
-      unlocked: Uw account is ontgrendeld. Meld u opnieuw aan.
     shared:
       forgot_password: 
       no_confirmation_instructions: 
@@ -75,6 +80,10 @@ nl-NL:
       sign_in: 
       sign_in_with: 
       sign_up: 
+    unlocks:
+      send_instructions: U ontvangt binnen enkele minuten een e-mail met instructies hoe u uw account kunt openen.
+      send_paranoid_instructions: Als uw account bestaat, ontvangt u binnen enkele minuten een e-mail met instructies hoe u uw account kunt openen.
+      unlocked: Uw account is ontgrendeld. Meld u opnieuw aan.
   email:
     accepted:
       greeting: Beste %{name}
@@ -200,10 +209,10 @@ nl-NL:
     passport_pending: Uw paspoort code komt beschikbaar zodra uw jachthaven uw aanvraag goedgekeurd heeft
     search_users: Code (of uw naam) hier
     search_users_label: Zoeken
-    signed_in_home_title: Welkom bij uw Cruising Paspoort App
     signed_in:
       invite_to_join: Stuur uw ligplaatshouder een uitnodiging om gebruik te gaan maken van de TEM Cruising Paspoort App.
       invite_user: Uitnodigen ligplaatshouder
+    signed_in_home_title: Welkom bij uw Cruising Paspoort App
     signed_in_text: Om te controleren of dit een ligplaatshouders is uit een deelnemende jachthaven, toets cijfer- lettercombinatie in het zoekscherm hieronder
     slider1_button: Vraag uw Gratis Cruising Paspoort aan
     slider1_header: Varen door Europa - op een wel heel eenvoudige wijze!
@@ -268,18 +277,18 @@ nl-NL:
       email: Email
       expire_berth_holder: Verlopen ligplaatshouder
       expire_date: Vervaldatum
+      expire_manager: Verlopen manager
       expired_berth_holders: Verlopen ligplaatshouders
       expired_managers: Verlopen maangers
-      expire_manager: Verlopen manager
       is_berth_holder: is een ligplaatshouder?
       is_manager: is een manager?
       pending_berth_holders: In afwachting zijnde ligplaatshouders
+      re_validate_berth_holder: Activeer ligplaatshouder opnieuw
+      re_validate_manager: Activeer manager opnieuw
       registered_date: Geregistreerde datum
       remove_berth_holder: Verwijder ligplaatshouders bestand
       remove_manager: Verwijder manager van lijst
       remove_user: Verwijder booteigenaar
-      re_validate_berth_holder: Activeer ligplaatshouder opnieuw
-      re_validate_manager: Activeer manager opnieuw
       role: Functie
       set_name: ! '[SET MY NAME]'
       username: Naam
@@ -341,32 +350,28 @@ nl-NL:
       marina_get_stated: Begin, meld u vandaag nog aan bij uw eigen thuishaven.
       marina_state: ! 'Uw huidige status is:'
       name: ! 'Naam:'
+      passport: 
       passport_code: ! 'Uw Paspoort code is:'
+      passport_pending: 
       user_email: ! 'Email:'
       user_header: ! '%{name}: account details'
       user_name: ! 'Naam:'
-      passport: 
-      valid_manager: 
-      passport_pending: 
       valid_bertholder: 
-    signed_in: Ingeschreven
-    username: Gebruikersnaam
+      valid_manager: 
+    sign_in:
+      email: 
+      password: 
+      remember_me: 
+      sign_in: 
+      title: 
     sign_up:
       boat_name: 
       email: 
+      name: 
       password: 
       password_confirmation: 
       signup_button: 
       submit: 
-    sign_in:
-      title: 
+    signed_in: Ingeschreven
     status: 
-  activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            email:
-              taken: 
-            password:
-              confirmation: 
+    username: Gebruikersnaam

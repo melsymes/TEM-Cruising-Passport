@@ -1,4 +1,13 @@
 fr-FR:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: 
+            password:
+              confirmation: 
   admin:
     user_list:
       are_you_sure: Etes-vous sûr ?
@@ -35,10 +44,10 @@ fr-FR:
       updated: Votre mot de passe a été accepté. Vous êtes désormais enregistré.
     mailer:
       confirmation_instructions:
-        subject: Instructions de confirmation
         first_paragraph: ! 'S''il vous plaît prendre une seconde pour confirmer votre adresse email en cliquant sur ce lien: %{validation_link} '
         greeting: Cher
         second_paragraph: 
+        subject: Instructions de confirmation
         validation_link: Confirmer mon compte
       invitation_instructions:
         subject: Instructions d'invitation.
@@ -66,10 +75,6 @@ fr-FR:
     sessions:
       signed_in: Vous êtes connecté !
       signed_out: Vous êtes maintenant déconnecté !
-    unlocks:
-      send_instructions: Vous allez recevoir un email avec les instructions pour débloquer votre compte d'ici quelques minutes.
-      send_paranoid_instructions: Si votre compte est existant, vous allez recevoir un email avec les instructions pour le débloquer d'ici quelques minutes.
-      unlocked: Votre compte a été déverrouillé avec succès. Merci de vous identifier pour continuer.
     shared:
       forgot_password: 
       no_confirmation_instructions: 
@@ -77,6 +82,10 @@ fr-FR:
       sign_in: 
       sign_in_with: 
       sign_up: 
+    unlocks:
+      send_instructions: Vous allez recevoir un email avec les instructions pour débloquer votre compte d'ici quelques minutes.
+      send_paranoid_instructions: Si votre compte est existant, vous allez recevoir un email avec les instructions pour le débloquer d'ici quelques minutes.
+      unlocked: Votre compte a été déverrouillé avec succès. Merci de vous identifier pour continuer.
   email:
     accepted:
       greeting: 
@@ -93,16 +102,30 @@ fr-FR:
       introduction: 
       post_introduction: 
       subject: 
+    general:
+      greeting: 
+      para_1: 
+      para_2: 
     manager_accepted:
       greeting: 
       introduction: 
       post_introduction: 
       subject: 
     new_initial_user:
-      subject: 
       greeting: 
       introduction: 
       post_introduction: 
+      subject: 
+    new_user_to_manager:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
+    remove_pending:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
     transeurope_marinas_footer: ! "<p>Bienvenue !\n<br><br>\nL'équipe TransEurope<br> \nhttp://www.transeuropemarinas.com<br>\nhttp://www.cruisingpassport.com<br>\nSi vous avez reçu ce message par erreur et que vous n'avez pas de compte \"passeport croisières\", vous pouvez, soit ignorer ce message, soit nous en informer à: support@transeuropemarinas.com et nous en rechercherons la cause\n<br><p>"
     user_pending_notification:
       footer: 
@@ -110,22 +133,11 @@ fr-FR:
       introduction: ! 'Merci de vous être connecté avec le port de plaisance de %{marina_name}. Nous en avons pris note et l''un de nos administrateurs va rapidement procéder à la validation de votre compte. '
       post_introduction: Envoyé par TransEurope Marinas de la part de %{marina_name}
       subject: Demande de connexion envoyée
+    user_pending_to_manager:
+      subject: 
     user_remove_pending:
       subject: 
     validate_admin:
-      greeting: 
-      introduction: 
-      post_introduction: 
-      subject: 
-    user_pending_to_manager:
-      subject: 
-    new_user_to_manager:
-      subject: 
-    general:
-      greeting: 
-      para_1: 
-      para_2: 
-    remove_pending:
       greeting: 
       introduction: 
       post_introduction: 
@@ -256,10 +268,10 @@ fr-FR:
       remove_manager: 
       remove_user: 
       role: 
+      set_name: 
       username: 
       validate_berth_holder: 
       validate_manager: 
-      set_name: 
     new:
       back_label: 
       intro_para: 
@@ -313,32 +325,28 @@ fr-FR:
       marina_get_stated: 
       marina_state: ! 'Votre situation actuelle est:'
       name: Nom
+      passport: 
       passport_code: ! 'Votre code de passeport est:'
+      passport_pending: 
       user_email: ! 'Email:'
       user_header: ! '%{name}: détails du compte'
       user_name: ! 'Nom:'
-      passport: 
-      valid_manager: 
-      passport_pending: 
       valid_bertholder: 
-    signed_in: Enregistrez-vous
-    username: Nom d'utilisateur
+      valid_manager: 
+    sign_in:
+      email: 
+      password: 
+      remember_me: 
+      sign_in: 
+      title: 
     sign_up:
       boat_name: 
       email: 
+      name: 
       password: 
       password_confirmation: 
       signup_button: 
       submit: 
-    sign_in:
-      title: 
+    signed_in: Enregistrez-vous
     status: 
-  activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            email:
-              taken: 
-            password:
-              confirmation: 
+    username: Nom d'utilisateur

@@ -1,4 +1,13 @@
 es-ES:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: 
+            password:
+              confirmation: 
   admin:
     user_list:
       are_you_sure: ¿Está usted seguro?
@@ -35,10 +44,10 @@ es-ES:
       updated: Su contraseña se ha creado correctamente. Ahora está registrado.
     mailer:
       confirmation_instructions:
-        subject: Instrucciones de confirmación
         first_paragraph: ! 'Por favor tómate un segundo para confirmar su dirección de correo electrónico haciendo clic en este enlace: %{validation_link} '
         greeting: Querido
         second_paragraph: 
+        subject: Instrucciones de confirmación
         validation_link: Confirmar mi cuenta
       invitation_instructions:
         subject: Instrucciones de invitación
@@ -66,10 +75,6 @@ es-ES:
     sessions:
       signed_in: Registrado correctamente
       signed_out: Registro de salida correcto
-    unlocks:
-      send_instructions: ! 'Recibirá en pocos minutos un email con intrucciones sobre como desbloquear su cuenta '
-      send_paranoid_instructions: ! 'Si su cuenta ya exite, recibirá en pocos minutos un email con instrucciones de como desbloquearla. '
-      unlocked: Su cuenta ha sido desbloqueada correctamente. Por favor, registrése para continuar
     shared:
       forgot_password: 
       no_confirmation_instructions: 
@@ -77,6 +82,10 @@ es-ES:
       sign_in: 
       sign_in_with: 
       sign_up: 
+    unlocks:
+      send_instructions: ! 'Recibirá en pocos minutos un email con intrucciones sobre como desbloquear su cuenta '
+      send_paranoid_instructions: ! 'Si su cuenta ya exite, recibirá en pocos minutos un email con instrucciones de como desbloquearla. '
+      unlocked: Su cuenta ha sido desbloqueada correctamente. Por favor, registrése para continuar
   email:
     accepted:
       greeting: Estimado %{name}
@@ -95,16 +104,30 @@ es-ES:
       introduction: Usted ha recibido este e-mail porque su cuenta de TEM ha caducado
       post_introduction: Si este no es el caso, por favor inténtelo de nuevo o comuníquelo al responsable de su marina
       subject: Cuenta de TEM caducada
+    general:
+      greeting: 
+      para_1: 
+      para_2: 
     manager_accepted:
       greeting: Estimado
       introduction: Estamos encantados de aceptar su solicitud de la aplicación de TEM
       post_introduction: ! 'Por favor, consulte la guía del usuario para familiarizarse con este aplicación '
       subject: Cuenta de TEM aceptada
     new_initial_user:
-      subject: Registro de usuario de TEM
       greeting: 
       introduction: 
       post_introduction: 
+      subject: Registro de usuario de TEM
+    new_user_to_manager:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
+    remove_pending:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
     transeurope_marinas_footer: ! "<p>Con los mejores deseos, \n<br><br>\nEl equipo de TransEurope<br>\nhttp://www.transeuropeamarinas.com<br>\nhttp://www.cruisingpassport.com<br>\nSi ha recibido este mensaje por error  y no tiene una cuenta de \"cruising passport\",  puede simplemente ignorarlo o comunicárnoslo  en support@transeuropemarinas.com para poder investigarlo.<br>\n</p>"
     user_pending_notification:
       footer: ! 'Con los mejores deseos,
@@ -121,6 +144,8 @@ es-ES:
       introduction: Gracias por contactar con %{marina_name}. Hemos sido informados y uno de nuestros representantes actualizará su cuenta en breve.
       post_introduction: Enviado por TransEurope Marinas de parte de %{marina_name}
       subject: Solicitud de asociación enviada
+    user_pending_to_manager:
+      subject: 
     user_remove_pending:
       subject: USUARIO borrado - lo sentimos
     validate_admin:
@@ -128,19 +153,6 @@ es-ES:
       introduction: ! 'Enhorabuena, su solicitud para adquirir una cuenta de TEM ha sido aproboda.  '
       post_introduction: ! 'Por favor, consulte la guía del usuario para instrucciones de uso. '
       subject: Cuenta de TEM aceptada
-    user_pending_to_manager:
-      subject: 
-    new_user_to_manager:
-      subject: 
-    general:
-      greeting: 
-      para_1: 
-      para_2: 
-    remove_pending:
-      greeting: 
-      introduction: 
-      post_introduction: 
-      subject: 
   errors:
     confirm:
       are_you_sure: ¿Está usted seguro?
@@ -267,10 +279,10 @@ es-ES:
       remove_manager: Eliminar manager del listado
       remove_user: Eliminar propietario del barco
       role: Cargo
+      set_name: 
       username: Nombre
       validate_berth_holder: ! 'Validar usuario '
       validate_manager: Validar cuenta para un nuevo manager
-      set_name: 
     new:
       back_label: ! 'volver a listado de marinas '
       intro_para: Añadir los datos de su nuevo asociado a TEM aquí
@@ -324,32 +336,28 @@ es-ES:
       marina_get_stated: Iniciemos, regístrese con su Marina hoy.
       marina_state: ! 'Su estado actual es:'
       name: ! 'Nombre: '
+      passport: 
       passport_code: ! 'Su código de Passport es: '
+      passport_pending: 
       user_email: ! 'Email:'
       user_header: ! '%{name}: datos'
       user_name: ! 'Nombre:'
-      passport: 
-      valid_manager: 
-      passport_pending: 
       valid_bertholder: 
-    signed_in: Registrarse
-    username: Nombre de usuario
+      valid_manager: 
+    sign_in:
+      email: 
+      password: 
+      remember_me: 
+      sign_in: 
+      title: 
     sign_up:
       boat_name: 
       email: 
+      name: 
       password: 
       password_confirmation: 
       signup_button: 
       submit: 
-    sign_in:
-      title: 
+    signed_in: Registrarse
     status: 
-  activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            email:
-              taken: 
-            password:
-              confirmation: 
+    username: Nombre de usuario
