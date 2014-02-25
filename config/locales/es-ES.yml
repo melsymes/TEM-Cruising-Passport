@@ -1,289 +1,363 @@
 es-ES:
-  devise:
-    confirmations:
-      confirmed: 
-      send_instructions: 
-      send_paranoid_instructions: 
-    failure:
-      already_authenticated: 
-      inactive: 
-      invalid: 
-      invalid_token: 
-      locked: 
-      timeout: 
-      unauthenticated: 
-      unconfirmed: 
-    invitations:
-      edit:
-        header: 
-        submit_button: 
-      invitation_token_invalid: 
-      new:
-        header: 
-        submit_button: 
-      no_invitations_remaining: 
-      send_instructions: 
-      updated: 
-    mailer:
-      confirmation_instructions:
-        subject: 
-      invitation_instructions:
-        subject: 
-      reset_password_instructions:
-        subject: 
-      unlock_instructions:
-        subject: 
-    omniauth_callbacks:
-      failure: 
-      success: 
-    passwords:
-      no_token: 
-      send_instructions: 
-      send_paranoid_instructions: 
-      updated: 
-      updated_not_active: 
-    registrations:
-      destroyed: 
-      signed_up: 
-      signed_up_but_inactive: 
-      signed_up_but_locked: 
-      signed_up_but_unconfirmed: 
-      update_needs_confirmation: 
-      updated: 
-    sessions:
-      signed_in: 
-      signed_out: 
-    unlocks:
-      send_instructions: 
-      send_paranoid_instructions: 
-      unlocked: 
-  email:
-    transeurope_marinas_footer: 
-    user_pending_notification:
-      footer: 
-      greeting: 
-      introduction: 
-      post_introduction: 
-      subject: 
-    user_remove_pending:
-      subject: 
-    expired_manager:
-      greeting: 
-      subject: 
-      introduction: 
-      post_introduction: 
-    manager_accepted:
-      greeting: 
-      introduction: 
-      post_introduction: 
-      subject: 
-    new_initial_user:
-      subject: 
-    accepted:
-      greeting: 
-      introduction: 
-      post_introduction: 
-      subject: 
-    expired_user:
-      greeting: 
-      introduction: 
-      post_introduction: 
-      subject: 
-    validate_admin:
-      greeting: 
-      introduction: 
-      post_introduction: 
-      subject: 
-  errors:
-    confirm:
-      are_you_sure: 
-    messages:
-      already_confirmed: 
-      expired: 
-      not_found: 
-      not_locked: 
-      not_saved: 
-      pending: 
-      remove_pending: 
-      manager_and_marina_now_connected: 
-      not_authorized_as_admin: 
-      not_authorized_as_manager: 
-      admin_validated: 
-      manager_validated: 
-      user_updated: 
-      admin_role_removed: 
-  hello: 
-  home:
-    download_app: Descarga nuestra aplicación gratuita Passport Cruising Hoy
-    download_app_button: 
-    download_app_text: 
-    features:
-      f1_body: Conviértete en un soporte plaza en cualquiera de los 54 puertos deportivos Transeurope repartidas por toda Europa.
-      f1_title: Litera con nosotros
-      f2_body: 
-      f2_title: 
-      f3_body: 
-      f3_title: Descargue la aplicación
-      title: Cómo obtener el Pasaporte de crucero
-    footer:
-      contact_us: 
-      main: 
-      title_main: 
-      title_sub: 
-    passport: 
-    passport_pending: 
-    search_users: 
-    signed_in:
-      invite_to_join: 
-      invite_user: 
-    signed_in_home_title: 
-    signed_in_text: 
-    slider1_button: Obtenga su Pasaporte Cruising Gratis!
-    slider1_header: Cruising en Europa ahora es más fácil
-    slider1_para: Ahora  se puede visitar todos los Puertos Transeurope favoritas, con nuestro sencillo de utilizar, toda la vida de crucero Código Passport. Regístrate gratis y sacar el máximo partido de grupo más grande de Europa Marina.
-    testimonials:
-      body: 
-      name: 
-      position: 
-    search_users_label: 
-    boat_name_is_now_registered: 
-    get_started_connect_with_marina: 
-    get_started_boat_name: 
-    your_current_status: 
-  layouts:
-    navigation:
-      admin_list: 
-      edit: 
-      home: 
-      login: Login
-      logout: 
-      marinas: 
-      sign_up: Contratar
-      welcome: 
-  marinas:
-    Back: 
-    edit:
-      back: 
-      show: 
-      title: 
-    form:
-      address_label: 
-      counry_label: 
-      country_label: 
-      create_label: 
-      name_label: 
-      postcode_label: 
-      street_label: 
-      town_label: 
-    index:
-      address: 
-      connect_button_label: 
-      connect_button_title: 
-      country: 
-      county: 
-      create_new_marina: 
-      destroy_button_label: 
-      destroy_button_title: 
-      edit_button_label: 
-      edit_button_title: 
-      intro_para: 
-      listing_marinas_title: 
-      name: 
-      search_label: 
-      show_button_label: 
-      show_button_title: 
-      town: 
-    management:
-      action: 
-      action_alternative: 
-      active_berth_holders: 
-      active_managers: 
-      email: 
-      expire_date: 
-      expire_manager: 
-      expired_berth_holders: 
-      expired_managers: 
-      is_berth_holder: 
-      is_manager: 
-      pending_berth_holders: 
-      registered_date: 
-      remove_user: 
-      role: 
-      username: 
-      action_remove_user: 
-      validate_berth_holder: 
-      validate_manager: 
-      expire_berth_holder: 
-      re_validate_berth_holder: 
-      remove_berth_holder: 
-      re_validate_manager: 
-      remove_manager: 
-    new:
-      back_label: 
-      intro_para: 
-      label: 
-    pending:
-      remove: 
-    show:
-      back_label: 
-      edit_label: 
-      intro_para: 
-      intro_to_managers_page: 
-      intro_to_managers_pane: 
-      invite: 
-      title: 
-      title_to_managers_pane: 
-  simple_form:
-    error_notification:
-      default_message: 
-    'no': 
-    required:
-      html: <abbr title="required">*</abbr>
-      mark: ! '*'
-      text: required
-    'yes': 
-  subject: 
-  user:
-    search:
-      advise_on_non_found: 
-    show:
-      boat_name: 
-      connect_to_your_marina: 
-      current_marina_state: 
-      current_marina_status: 
-      marina_get_started: 
-      marina_state: 
-      name: 
-      passport_code: 
-      user_email: 
-      user_header: 
-      user_name: 
-      marina_get_stated: 
-    signed_in: 
-    charge_role: 
-    email: 
-    manager_count: 
-    marina_name: 
-    name: 
-    registered_date: 
-    role: 
-    username: 
-    registered: 
-    boat_name: 
-    marina_state: 
-    passport_code: 
-    role_admin: 
-    add_role_admin: 
-    delete_user_admin: 
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: 
+            password:
+              confirmation: 
   admin:
     user_list:
-      intro: 
-      title: 
-      are_you_sure: 
-      full_list_intro: 
-      full_list_title: 
+      are_you_sure: ¿Está usted seguro?
+      full_list_intro: A continuación encontrará la lista de todos los usuarios
+      full_list_title: Listado de todos los usuarios
+      intro: ! '
+
+        Se mostrarán aquí solamente los usuariso que soliciten Marinas sin gerentes - es probable que éstos estén solicitando una cuenta de gestión.'
+      title: Lista de usuarios
+  devise:
+    confirmations:
+      confirmed: ! 'Su cuenta ha sido correctamente creada. Ya está usted registrado. '
+      send_instructions: Recibirá un email en pocos minutos con instrucciones sobre como validar la cuenta.
+      send_paranoid_instructions: Si su dirección de correo existe en nuestra base de datos, recibirá un email en pocos minutos con instrucciones sobre como validar la cuenta.
+    failure:
+      already_authenticated: Usted ya está registrado.
+      inactive: Su cuenta aún no ha sido activada.
+      invalid: Correo o contraseña incorrectos.
+      invalid_token: Código de autentificación incorrecto.
+      locked: Su cuenta ha sido bloqueada.
+      timeout: Su tiempo ha expirado; por favor regístrese de nuevo para continuar.
+      unauthenticated: ! 'Tiene que registrarse o inscribirse para continuar. '
+      unconfirmed: Tiene que confirmar su cuenta para continuar.
+    invitations:
+      edit:
+        header: Escriba su contraseña.
+        submit_button: Escriba su contraseña
+      invitation_token_invalid: El código de invitación proporcionado no es válido.
+      new:
+        header: Enviar invitación.
+        submit_button: Enviar invitación
+      no_invitations_remaining: No quedan más invitaciones
+      send_instructions: Un correo de invitación ha sido enviado a %{email}.
+      updated: Su contraseña se ha creado correctamente. Ahora está registrado.
+    mailer:
+      confirmation_instructions:
+        first_paragraph: ! 'Por favor tómate un segundo para confirmar su dirección de correo electrónico haciendo clic en este enlace: %{validation_link} '
+        greeting: Querido
+        second_paragraph: 
+        subject: Instrucciones de confirmación
+        validation_link: Confirmar mi cuenta
+      invitation_instructions:
+        subject: Instrucciones de invitación
+      reset_password_instructions:
+        subject: Instrucciones para reestablecer contraseña
+      unlock_instructions:
+        subject: Instrucciones para desbloquear una cuenta
+    omniauth_callbacks:
+      failure: No pude ser autentificado desde %{kind} porque "%{reason}".
+      success: Autentificado correctamente desde la cuenta %{kind}.
+    passwords:
+      no_token: Tan solo podrá acceder a esta página si su correo procede de un mail con una contraseña reconfirmada.  Si su correo procede de un mail con una contraseña reconfirmada, por favor asegúrese de que ha usado la URL completa.
+      send_instructions: Recibirá un correo con instrucciones sobre como reestablecer su contraseña en unos pocos minutos.
+      send_paranoid_instructions: Si su dirección de correo existe en nuestra base de datos, recibirá en unos pocos minutos en su dirección de correo un vínculo para recuperar su contraseña.
+      updated: Su contraseña ha sido modificada correctamente. Usted ya está registrado.
+      updated_not_active: Su contraseña ha sido modificada correctamente.
+    registrations:
+      destroyed: ! '¡Hasta luego! Su cuenta ha sido cancelada correctamente. Esperamos verle pronto. '
+      signed_up: ¡Bienvenido! Usted ya está inscrito.
+      signed_up_but_inactive: ! 'Usted ya ha sido inscrito. Aunque no podemos registrarle porque su cuenta no está aún activada. '
+      signed_up_but_locked: ! 'Usted ya está inscrito . Aunque no podemos registrarle porque su cuenta está bloqueada. '
+      signed_up_but_unconfirmed: Un mensaje con un enlace de confirmación se ha enviado a su dirección de correo electrónico. Por favor, abra el enlace para activar su cuenta.
+      update_needs_confirmation: Su cuenta se ha actualizado correctamente, pero necesitamos verificar su nueva dirección de correo electrónico. Por favor, compruebe su  email  y haga clic en el vínculo  para confirmar su nueva dirección de correo electrónico.
+      updated: Su cuenta ha sido actualizada correctamente.
+    sessions:
+      signed_in: Registrado correctamente
+      signed_out: Registro de salida correcto
+    shared:
+      forgot_password: 
+      no_confirmation_instructions: 
+      no_unlock_instructions: 
+      sign_in: 
+      sign_in_with: 
+      sign_up: 
+    unlocks:
+      send_instructions: ! 'Recibirá en pocos minutos un email con intrucciones sobre como desbloquear su cuenta '
+      send_paranoid_instructions: ! 'Si su cuenta ya exite, recibirá en pocos minutos un email con instrucciones de como desbloquearla. '
+      unlocked: Su cuenta ha sido desbloqueada correctamente. Por favor, registrése para continuar
+  email:
+    accepted:
+      greeting: Estimado %{name}
+      introduction: Bienvenido a TEM
+      post_introduction: ! 'Utilice su código a la llegada cuando solicite su atraque para obtener todos los beneficios que conlleva ser un miembro de TEM.
+
+'
+      subject: Socio de TEM aceptado
+    expired_manager:
+      greeting: Estimado
+      introduction: Su cuenta ha caducado
+      post_introduction: Por favor inténtelo de nuevo
+      subject: Cuenta de TEM caducada
+    expired_user:
+      greeting: Estimado
+      introduction: Usted ha recibido este e-mail porque su cuenta de TEM ha caducado
+      post_introduction: Si este no es el caso, por favor inténtelo de nuevo o comuníquelo al responsable de su marina
+      subject: Cuenta de TEM caducada
+    general:
+      greeting: 
+      para_1: 
+      para_2: 
+    manager_accepted:
+      greeting: Estimado
+      introduction: Estamos encantados de aceptar su solicitud de la aplicación de TEM
+      post_introduction: ! 'Por favor, consulte la guía del usuario para familiarizarse con este aplicación '
+      subject: Cuenta de TEM aceptada
+    new_initial_user:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: Registro de usuario de TEM
+    new_user_to_manager:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
+    remove_pending:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
+    transeurope_marinas_footer: ! "<p>Con los mejores deseos, \n<br><br>\nEl equipo de TransEurope<br>\nhttp://www.transeuropeamarinas.com<br>\nhttp://www.cruisingpassport.com<br>\nSi ha recibido este mensaje por error  y no tiene una cuenta de \"cruising passport\",  puede simplemente ignorarlo o comunicárnoslo  en support@transeuropemarinas.com para poder investigarlo.<br>\n</p>"
+    user_pending_notification:
+      footer: ! 'Con los mejores deseos,
+
+
+        El equipo de TransEurope
+
+        http://www.transeuropeamarinas.com
+
+        http://www.cruisingpassport.com
+
+        Si ha recibido este mensaje por error  y no tiene una cuenta de "cruising passport",  puede simplemente ignorarlo o comunicárnoslo  en support@transeuropemarinas.com para poder investigarlo.'
+      greeting: Hola %{name}
+      introduction: Gracias por contactar con %{marina_name}. Hemos sido informados y uno de nuestros representantes actualizará su cuenta en breve.
+      post_introduction: Enviado por TransEurope Marinas de parte de %{marina_name}
+      subject: Solicitud de asociación enviada
+    user_pending_to_manager:
+      subject: 
+    user_remove_pending:
+      subject: USUARIO borrado - lo sentimos
+    validate_admin:
+      greeting: Estimado
+      introduction: ! 'Enhorabuena, su solicitud para adquirir una cuenta de TEM ha sido aproboda.  '
+      post_introduction: ! 'Por favor, consulte la guía del usuario para instrucciones de uso. '
+      subject: Cuenta de TEM aceptada
+  errors:
+    confirm:
+      are_you_sure: ¿Está usted seguro?
+    messages:
+      admin_role_removed: Su cargo de administrador se ha cancelado
+      admin_validated: Administrador aceptado
+      already_confirmed: Ya estaba confirmado, por favor intente registrarse
+      expired: ha caducado, por favor, solicite una nueva
+      manager_and_marina_now_connected: Marina y gerente no están relacionados
+      manager_validated: Gerente aceptado
+      not_authorized_as_admin: No es usted un administrador autorizado
+      not_authorized_as_manager: No es usted un responsable autorizado
+      not_found: no se encuentra
+      not_locked: no estaba bloqueado
+      not_saved:
+        one: ! '1 error impidió que este %{resource} fuera guardado:'
+        other: ! '%{count} errores impiedieron que este %{resource} fuera guardado:'
+      pending: Su solicitud se ha envíado a la Marina y queda pendiente de su aprobación.
+      remove_pending: Usuario y marina han sido eliminados. Se enviará una notificación por correo.
+      user_updated: Usuario actualizado
+  hello: Hola mundo
+  home:
+    boat_name_is_now_registered: ! ' está registrado'
+    download_app: ! 'Descarga hoy nuestra aplicación gratuita de "Cruising Passport"  '
+    download_app_button: ¡Descárguela Gratis!
+    download_app_text: Gestione su Código de socio, acceda a información sobre cada una de nuestras marinas afiliadas, compruebe las mareas y el  tiempo.
+    features:
+      f1_body: Para poder disfrutar de las ventajas de la Cruising Passport App, conviértase en cliente de cualquiera de los puertos deportivos Transeurope repartidas por toda Europa.
+      f1_title: Atraque con nosotros
+      f2_body: Cree su Cruising Passport code sin coste y disfrute de más tiempo navegando con un descuento del 50% de las tarifas de atraque durante 5 días al año en cada Marina.
+      f2_title: Regístrese gratis
+      f3_body: ! 'Haga clic en el botón abajo para conseguir gratuitamente su "Cruising Passport" desde App Store. Además de las ventajas muy atractivas de ser socio de TEM, el App trae una cantidad de información útil como la previsión del tiempo y tablas de mareas locales. '
+      f3_title: Descargue la aplicación
+      title: Cómo obtener su Cruising Passport
+    footer:
+      contact_us: ! 'Contáctenos '
+      main: Noticias recientes desde TransEurope Marinas
+      title_main: Noticias desde TranEurope Marinas
+      title_sub: ! 'Descubra más sobre nuestras recientes marinas asociadas '
+    get_started_boat_name: ! 'Comenzar hoy - añada el nombre de su barco '
+    get_started_connect_with_marina: Comenzar - conecte con su marina.
+    passport: ! 'Su código de Passport es - '
+    passport_pending: Su código de Passport estará disponible una vez que su marina haya validado su solicitud.
+    search_users: Código (o nombre) aquí
+    search_users_label: Buscar
+    signed_in:
+      invite_to_join: Envie una invitación a un usuario de la marina para que acceda al TEM Cruising Passport App.
+      invite_user: Invitar a un usuario de la marina
+    signed_in_home_title: Bienvenido a su Cruising Passport App
+    signed_in_text: Para acceder a un cliente, introduzca su código de 6 dígitos en el espacio abajo
+    slider1_button: ! 'Obtenga su Free Cruising Passport '
+    slider1_header: Navegar por Europa ahora es más fácil
+    slider1_para: ! 'Ahora puede visitar todos los Puertos Transeurope que desee con la Cruising Passport Code. Regístrese gratis y saque el máximo partido de nuestra red de buenos destinos marinos. '
+    testimonials:
+      body: ! 'Esperamos que disfrute de las facilidades y comodidades de nuestra nueva Cruising Passport App, y esperamos verle pronto en cualquiera de nuestras marinas asociadas. '
+      name: Monica de Vast
+      position: Presidenta de TransEurope Marinas
+    your_current_status: su estado actual es
+  layouts:
+    navigation:
+      admin_list: Admin
+      edit: Editar
+      home: TEM Passport
+      login: Login
+      logout: Salir
+      marinas: Marinas
+      sign_up: Registrarse
+      welcome: BIenvenido
   manager:
     search:
-      title: 
+      title: Examinar los resultados para identificar a los clientes
+  marinas:
+    Back: Volver
+    edit:
+      back: Volver
+      show: Mostrar
+      title: Edite el perfil de su Marina
+    form:
+      address_label: ! 'Dirección: '
+      counry_label: ! 'Provincia:'
+      country_label: ! 'País: '
+      create_label: ! 'Crear:'
+      name_label: ! 'Nombre:'
+      postcode_label: ! 'Código postal: '
+      street_label: ! 'Calle: '
+      town_label: ! 'Localidad:'
+    index:
+      address: Dirección
+      connect_button_label: Conectar
+      connect_button_title: Conectar
+      country: País
+      county: Provincia
+      create_new_marina: Crear Marina nueva
+      destroy_button_label: Eliminar
+      destroy_button_title: Eliminar Marina
+      edit_button_label: Editar
+      edit_button_title: Editar
+      intro_para: ! 'Desplazar hacia abajo para ver el listado completo de marinas que pertenecen a la Cruising Passport App. Si usted tiene amarre habitual en una de estas marinas, conéctese con su marina. '
+      listing_marinas_title: TransEurope Marinas
+      name: Nombre
+      search_label: Buscar
+      show_button_label: Mostrar
+      show_button_title: Mostrar
+      town: Localidad
+    management:
+      action: Acción
+      action_alternative: Acción alternativa
+      action_remove_user: Eliminar petición
+      active_berth_holders: Usuarios Activos Actuales
+      active_managers: Managers Activos Actuales
+      email: Email
+      expire_berth_holder: Usuario caducado
+      expire_date: Fecha de caducidad
+      expire_manager: Manager caducado
+      expired_berth_holders: Usuarios caducados
+      expired_managers: Managers caducados
+      is_berth_holder: es usted usuario de la marina?
+      is_manager: es usted un manager?
+      pending_berth_holders: Usuarios pendientes
+      re_validate_berth_holder: Revalidar usuario
+      re_validate_manager: Revalidar manager
+      registered_date: Fecha de registro
+      remove_berth_holder: Eliminar registro del usuario
+      remove_manager: Eliminar manager del listado
+      remove_user: Eliminar propietario del barco
+      role: Cargo
+      set_name: 
+      username: Nombre
+      validate_berth_holder: ! 'Validar usuario '
+      validate_manager: Validar cuenta para un nuevo manager
+    new:
+      back_label: ! 'volver a listado de marinas '
+      intro_para: Añadir los datos de su nuevo asociado a TEM aquí
+      label: ! 'Datos de la nueva marina asociada de TEM '
+    pending:
+      remove: Eliminar pendiente
+    show:
+      back_label: Volver
+      edit_label: Editar
+      intro_para: 
+      intro_to_managers_page: Texto de presentación para los managers de la marina
+      intro_to_managers_pane: Los managers pueden revisar y acceptar usuarios potenciales o añadir managers y gestionar sus usuarios de la marina
+      invite: Invitar a un usuario
+      title: Datos de la marina
+      title_to_managers_pane: Página de administración del Manager
+  simple_form:
+    error_notification:
+      default_message: ! 'Por favor, revise los siguientes problemas: '
+    'no': 'No'
+    required:
+      html: <abbr title="requirido">*</abbr>
+      mark: ! '*'
+      text: obligatorio
+    'yes': Si
+  subject: Manager aceptado
   unauthorized:
-    default: 
+    default: Usted no está autorizado para acceder a esta página
+  user:
+    add_role_admin: ! 'Haga click para añadir el cargo:'
+    boat_name: Nombre del barco
+    charge_role: ¿Desea cambiar el cargo?
+    delete_user_admin: Eliminar usuario
+    email: Email
+    manager_count: Cuenta del administrador
+    marina_name: Nombre de la Marina
+    marina_state: Localidad de la Marina
+    name: Nombre
+    passport_code: Passport Code
+    registered: Fecha de registro
+    registered_date: Fecha de registro
+    role: Cargo actual
+    role_admin: Haga click para eliminar cargo
+    search:
+      advise_on_non_found: Consejos útiles para ocuparse de los usuarios no encontrados.
+    show:
+      boat_name: Nombre del barco
+      connect_to_your_marina: Conéctese a su marina
+      current_marina_state: Estado actual de la Marina
+      current_marina_status: Estado actual de la Marina
+      marina_get_started: Iniciemos  - conéctese a su marina
+      marina_get_stated: Iniciemos, regístrese con su Marina hoy.
+      marina_state: ! 'Su estado actual es:'
+      name: ! 'Nombre: '
+      passport: 
+      passport_code: ! 'Su código de Passport es: '
+      passport_pending: 
+      user_email: ! 'Email:'
+      user_header: ! '%{name}: datos'
+      user_name: ! 'Nombre:'
+      valid_bertholder: 
+      valid_manager: 
+    sign_in:
+      email: 
+      password: 
+      remember_me: 
+      sign_in: 
+      title: 
+    sign_up:
+      boat_name: 
+      email: 
+      name: 
+      password: 
+      password_confirmation: 
+      signup_button: 
+      submit: 
+    signed_in: Registrarse
+    status: 
+    username: Nombre de usuario

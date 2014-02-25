@@ -68,6 +68,20 @@ Then /^(?:I|they|"([^"]*?)") should receive an email with the following body:$/ 
   open_email(address, :with_text => expected_body)
 end
 
+Then(/^it should send me a "(.*?)" email$/) do |subject|
+  @email = ActionMailer::Base.deliveries.last
+  @email.to.should include @user.email
+  @email.subject.should include(subject)
+end
+
+Then(/^it should send "(.*?)" a "(.*?)" email$/) do |email, subject|
+  @email = ActionMailer::Base.deliveries.last
+  @email.to.should include email
+  @email.subject.should include(subject)
+end
+
+
+
 #
 # Accessing emails
 #
@@ -97,8 +111,13 @@ end
 # Inspect the Email Contents
 #
 
+
 Then /^(?:I|they) should see "([^"]*?)" in the email subject$/ do |text|
   current_email.should have_subject(text)
+end
+
+Then /^(?:I|they) should not see "([^"]*?)" in the email subject$/ do |text|
+  current_email.should_not have_subject(text)
 end
 
 Then /^(?:I|they) should see \/([^"]*?)\/ in the email subject$/ do |text|
@@ -108,6 +127,11 @@ end
 Then /^(?:I|they) should see "([^"]*?)" in the email body$/ do |text|
   current_email.default_part_body.to_s.should include(text)
 end
+
+Then /^(?:I|they) should not see "([^"]*?)" in the email body$/ do |text|
+  current_email.default_part_body.to_s.should_not include(text)
+end
+
 
 Then /^(?:I|they) should see \/([^"]*?)\/ in the email body$/ do |text|
   current_email.default_part_body.to_s.should =~ Regexp.new(text)

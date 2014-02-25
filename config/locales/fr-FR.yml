@@ -1,85 +1,98 @@
 fr-FR:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: 
+            password:
+              confirmation: 
+  admin:
+    user_list:
+      are_you_sure: Etes-vous sûr ?
+      full_list_intro: Liste des utilisateurs ci-dessous
+      full_list_title: Liste des utilisateurs
+      intro: Seuls les utilisateurs qui s'enregistrent sans administrateurs apparaissent ici - c'est comme si il s'agissait d'administrateurs s'enregistrant pour obtenir un compte administrateur
+      title: Liste des administrateurs
   devise:
     confirmations:
-      confirmed: 
-      send_instructions: 
-      send_paranoid_instructions: 
+      confirmed: Votre compte a été créé avec succès. Vous êtes maintenant enregistré.
+      send_instructions: Vous allez recevoir un email avec les instructions pour confirmer votre compte d'ici quelques minutes.
+      send_paranoid_instructions: Si votre email est déja enregistré dans notre base de données, vous allez recevoir un email avec les instructions pour confirmer votre compte d'ici quelques minutes.
     failure:
-      already_authenticated: 
-      inactive: 
-      invalid: 
-      invalid_token: 
-      locked: 
-      timeout: 
-      unauthenticated: 
-      unconfirmed: 
+      already_authenticated: Vous êtes déja enregistré.
+      inactive: Votre compte n'est pas encore activé.
+      invalid: Email ou mot de passe invalides.
+      invalid_token: Code d'accès invalide.
+      locked: Votre compte est verrouillé.
+      timeout: Votre session a expiré, merci de vous identifier à nouveau.
+      unauthenticated: Vous devez vous identifier pour pouvoir continuer.
+      unconfirmed: Vous devez confirmer votre compte pour pouvoir continuer.
     invitations:
       edit:
-        header: 
-        submit_button: 
-      invitation_token_invalid: 
+        header: Choisissez votre mot de passe.
+        submit_button: Assignez-moi un mot de passe.
+      invitation_token_invalid: Le code d'identification est invalide.
       new:
-        header: 
-        submit_button: 
-      no_invitations_remaining: 
-      send_instructions: 
-      updated: 
+        header: Envoyer l'invitation
+        submit_button: ! 'Envoyer une invitation.
+
+'
+      no_invitations_remaining: Aucune invitation en attente
+      send_instructions: Un email d'invitation a été adressé à %{email}.
+      updated: Votre mot de passe a été accepté. Vous êtes désormais enregistré.
     mailer:
       confirmation_instructions:
-        subject: 
+        first_paragraph: ! 'S''il vous plaît prendre une seconde pour confirmer votre adresse email en cliquant sur ce lien: %{validation_link} '
+        greeting: Cher
+        second_paragraph: 
+        subject: Instructions de confirmation
+        validation_link: Confirmer mon compte
       invitation_instructions:
-        subject: 
+        subject: Instructions d'invitation.
       reset_password_instructions:
-        subject: 
+        subject: Instructions pour renouveler votre mot de passe
       unlock_instructions:
-        subject: 
+        subject: Instructions de déverrouillage
     omniauth_callbacks:
-      failure: 
-      success: 
+      failure: Impossible de vous identifier de la %{kind} pour cette "%{reason}".
+      success: Authentification réussie %{kind} account.
     passwords:
-      no_token: 
-      send_instructions: 
-      send_paranoid_instructions: 
-      updated: 
-      updated_not_active: 
+      no_token: Vous ne pouvez pas accéder à cette page sans passer par une procédure de renouvellement de mot de passe par email. Si vous utilisez le nouveau mot de passe que vous avez reçu par email, assurez-vous d'avoir entré l'adresse URL complète.
+      send_instructions: Vous allez recevoir un email avec les instructions nécessaires au renouvellement de votre mot de passe d'ici quelques minutes.
+      send_paranoid_instructions: Si votre adresse email est déja enregistrée dans notre base de données, vous allez recevoir un lien par email vous permettant de réactiver votre mot de passe d'ici quelques minutes.
+      updated: Votre mot de passe a été modifié avec succès. Vous êtes maintenant enregistré.
+      updated_not_active: Votre mot de passe a été modifié avec succès
     registrations:
-      destroyed: 
-      signed_up: 
-      signed_up_but_inactive: 
-      signed_up_but_locked: 
-      signed_up_but_unconfirmed: 
-      update_needs_confirmation: 
-      updated: 
+      destroyed: Au revoir ! Votre compte a bien été supprimé. A bientôt !
+      signed_up: Bienvenue. Vous êtes maintenant enregistré.
+      signed_up_but_inactive: Vous êtes maintenant enregistré. Toutefois, la connexion est impossible car votre compte n'a pas encore été activé.
+      signed_up_but_locked: Vous êtes maintenant enregistré. Toutefois, la connexion est impossible car votre compte est verrouillé.
+      signed_up_but_unconfirmed: Un message avec un lien d'activation vous a été adressé par email. Cliquez sur ce lien pour activer votre compte.
+      update_needs_confirmation: Votre compte a été mis à jour avec succès, mais nous devons vérifier votre nouvelle adresse email. Regardez le mail que vous avez reçu et cliquez sur le lien afin de confirmer votre nouvelle adresse email.
+      updated: Votre compte a été mis à jour avec succès.
     sessions:
-      signed_in: 
-      signed_out: 
+      signed_in: Vous êtes connecté !
+      signed_out: Vous êtes maintenant déconnecté !
+    shared:
+      forgot_password: 
+      no_confirmation_instructions: 
+      no_unlock_instructions: 
+      sign_in: 
+      sign_in_with: 
+      sign_up: 
     unlocks:
-      send_instructions: 
-      send_paranoid_instructions: 
-      unlocked: 
+      send_instructions: Vous allez recevoir un email avec les instructions pour débloquer votre compte d'ici quelques minutes.
+      send_paranoid_instructions: Si votre compte est existant, vous allez recevoir un email avec les instructions pour le débloquer d'ici quelques minutes.
+      unlocked: Votre compte a été déverrouillé avec succès. Merci de vous identifier pour continuer.
   email:
-    transeurope_marinas_footer: 
-    user_pending_notification:
-      footer: 
+    accepted:
       greeting: 
       introduction: 
       post_introduction: 
-      subject: 
-    user_remove_pending:
       subject: 
     expired_manager:
-      greeting: 
-      subject: 
-      introduction: 
-      post_introduction: 
-    manager_accepted:
-      greeting: 
-      introduction: 
-      post_introduction: 
-      subject: 
-    new_initial_user:
-      subject: 
-    accepted:
       greeting: 
       introduction: 
       post_introduction: 
@@ -89,6 +102,41 @@ fr-FR:
       introduction: 
       post_introduction: 
       subject: 
+    general:
+      greeting: 
+      para_1: 
+      para_2: 
+    manager_accepted:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
+    new_initial_user:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
+    new_user_to_manager:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
+    remove_pending:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
+    transeurope_marinas_footer: ! "<p>Bienvenue !\n<br><br>\nL'équipe TransEurope<br> \nhttp://www.transeuropemarinas.com<br>\nhttp://www.cruisingpassport.com<br>\nSi vous avez reçu ce message par erreur et que vous n'avez pas de compte \"passeport croisières\", vous pouvez, soit ignorer ce message, soit nous en informer à: support@transeuropemarinas.com et nous en rechercherons la cause\n<br><p>"
+    user_pending_notification:
+      footer: 
+      greeting: Bonjour %{name}
+      introduction: ! 'Merci de vous être connecté avec le port de plaisance de %{marina_name}. Nous en avons pris note et l''un de nos administrateurs va rapidement procéder à la validation de votre compte. '
+      post_introduction: Envoyé par TransEurope Marinas de la part de %{marina_name}
+      subject: Demande de connexion envoyée
+    user_pending_to_manager:
+      subject: 
+    user_remove_pending:
+      subject: 
     validate_admin:
       greeting: 
       introduction: 
@@ -96,30 +144,33 @@ fr-FR:
       subject: 
   errors:
     confirm:
-      are_you_sure: 
+      are_you_sure: Etes-vous sûr ?
     messages:
+      admin_role_removed: 
+      admin_validated: 
       already_confirmed: 
-      expired: 
-      not_found: 
-      not_locked: 
-      not_saved: 
-      pending: 
-      remove_pending: 
+      expired: a expiré, merci de faire une nouvelle demande
       manager_and_marina_now_connected: 
+      manager_validated: 
       not_authorized_as_admin: 
       not_authorized_as_manager: 
-      admin_validated: 
-      manager_validated: 
+      not_found: introuvable
+      not_locked: non verrouillé
+      not_saved:
+        one: ! '1 erreur n''a pas permi %{resource} la sauvegarde:'
+        other: ! '%{count} erreurs n''ont pas permis %{resource} la sauvegarde:'
+      pending: Votre demande a été adressée au port de plaisance et est en cours d'instruction.
+      remove_pending: Le port de plaisance et le client ont été supprimés. Un email de notification vous a été adressé.
       user_updated: 
-      admin_role_removed: 
   hello: 
   home:
+    boat_name_is_now_registered: 
     download_app: 
     download_app_button: 
     download_app_text: 
     features:
-      f1_body: Devenir un porte-couchette à l'un des ports de plaisance les 54 TransEurope répartis à travers l'Europe.
-      f1_title: Berth avec nous
+      f1_body: 
+      f1_title: 
       f2_body: 
       f2_title: 
       f3_body: 
@@ -130,65 +181,67 @@ fr-FR:
       main: 
       title_main: 
       title_sub: 
+    get_started_boat_name: 
+    get_started_connect_with_marina: 
     passport: 
     passport_pending: 
     search_users: 
+    search_users_label: 
     signed_in:
       invite_to_join: 
       invite_user: 
     signed_in_home_title: 
     signed_in_text: 
-    slider1_button: Obtenez votre Passeport Cruising gratuit!
+    slider1_button: Obtenez votre Cruising Passport gratuit!
     slider1_header: Croisière à travers l'Europe est maintenant plus facile
-    slider1_para: Maintenant,  vous pouvez visiter tous vos Marinas TransEurope préférés, avec notre simple à utiliser, Code Passeport durée de vie de croisière. Inscrivez-vous gratuitement et profitez des Europes Marina groupe le plus important.
+    slider1_para: 
     testimonials:
       body: 
-      name: 
+      name: Monica de Vast
       position: 
-    search_users_label: 
-    boat_name_is_now_registered: 
-    get_started_connect_with_marina: 
-    get_started_boat_name: 
     your_current_status: 
   layouts:
     navigation:
-      admin_list: 
-      edit: 
-      home: 
+      admin_list: Admin
+      edit: Edition
+      home: TEM Passport
       login: Login
-      logout: 
-      marinas: 
+      logout: Déconnexion
+      marinas: Marinas
       sign_up: Signer
-      welcome: 
+      welcome: Bienvenu
+  manager:
+    search:
+      title: Chercher les résultats parmi les clients
   marinas:
-    Back: 
+    Back: Retour
     edit:
-      back: 
-      show: 
-      title: 
+      back: Retour
+      show: Montrer
+      title: Editez votre profil de port de plaisance
     form:
-      address_label: 
-      counry_label: 
-      country_label: 
-      create_label: 
-      name_label: 
-      postcode_label: 
-      street_label: 
-      town_label: 
+      address_label: Adresse
+      counry_label: Région, département
+      country_label: Pays
+      create_label: Créer
+      name_label: Nom
+      postcode_label: Code postal
+      street_label: Rue
+      town_label: Localité
     index:
-      address: 
-      connect_button_label: 
-      connect_button_title: 
-      country: 
-      county: 
-      create_new_marina: 
-      destroy_button_label: 
-      destroy_button_title: 
+      address: Adresse
+      connect_button_label: Connexion
+      connect_button_title: Connexion
+      country: Pays
+      county: Région, département
+      create_new_marina: Créer un nouveau port de plaisance
+      destroy_button_label: Supprimer
+      destroy_button_title: Supprimer le port de plaisance
       edit_button_label: 
       edit_button_title: 
       intro_para: 
-      listing_marinas_title: 
-      name: 
+      listing_marinas_title: TransEurope Marinas
+      name: Nom
       search_label: 
       show_button_label: 
       show_button_title: 
@@ -196,9 +249,11 @@ fr-FR:
     management:
       action: 
       action_alternative: 
+      action_remove_user: 
       active_berth_holders: 
       active_managers: 
-      email: 
+      email: Email
+      expire_berth_holder: 
       expire_date: 
       expire_manager: 
       expired_berth_holders: 
@@ -206,18 +261,17 @@ fr-FR:
       is_berth_holder: 
       is_manager: 
       pending_berth_holders: 
+      re_validate_berth_holder: 
+      re_validate_manager: 
       registered_date: 
+      remove_berth_holder: 
+      remove_manager: 
       remove_user: 
       role: 
+      set_name: 
       username: 
-      action_remove_user: 
       validate_berth_holder: 
       validate_manager: 
-      expire_berth_holder: 
-      re_validate_berth_holder: 
-      remove_berth_holder: 
-      re_validate_manager: 
-      remove_manager: 
     new:
       back_label: 
       intro_para: 
@@ -235,55 +289,64 @@ fr-FR:
       title_to_managers_pane: 
   simple_form:
     error_notification:
-      default_message: 
-    'no': 
+      default_message: ! 'Merci de vérifier les problèmes ci-dessous:'
+    'no': Non
     required:
-      html: 
-      mark: 
-      text: 
-    'yes': 
+      html: <abbr title="nécessite">*</abbr>
+      mark: ! '*'
+      text: nécessaire
+    'yes': Oui
   subject: 
-  user:
-    search:
-      advise_on_non_found: 
-    show:
-      boat_name: 
-      connect_to_your_marina: 
-      current_marina_state: 
-      current_marina_status: 
-      marina_get_started: 
-      marina_state: 
-      name: 
-      passport_code: 
-      user_email: 
-      user_header: 
-      user_name: 
-      marina_get_stated: 
-    signed_in: 
-    charge_role: 
-    email: 
-    manager_count: 
-    marina_name: 
-    name: 
-    registered_date: 
-    role: 
-    username: 
-    registered: 
-    boat_name: 
-    marina_state: 
-    passport_code: 
-    role_admin: 
-    add_role_admin: 
-    delete_user_admin: 
-  admin:
-    user_list:
-      intro: 
-      title: 
-      are_you_sure: 
-      full_list_intro: 
-      full_list_title: 
-  manager:
-    search:
-      title: 
   unauthorized:
-    default: 
+    default: Vous n'êtes pas autorisé à entrer sur cette page.
+  user:
+    add_role_admin: Cliquez pour ajouter une instruction
+    boat_name: Nom du bateau
+    charge_role: Changer l'instruction ?
+    delete_user_admin: Supprimer l'utilisateur
+    email: Email
+    manager_count: 
+    marina_name: Appellation du port de plaisance
+    marina_state: Descriptif du port de plaisance
+    name: Nom
+    passport_code: Code passeport
+    registered: Date enregistrée
+    registered_date: Date enregistrée
+    role: Situation actuelle
+    role_admin: Cliquer pour supprimer une instruction
+    search:
+      advise_on_non_found: Voici plein de conseils pour tenter de résoudre les problèmes d'utilisateurs non reconnus...
+    show:
+      boat_name: Nom du bateau
+      connect_to_your_marina: Connectez-vous à votre port de plaisance
+      current_marina_state: Situation actuelle du port de plaisance
+      current_marina_status: Etat actuel du port de plaisance
+      marina_get_started: Pour commancer - connectez-vous à votre port de plaisance
+      marina_get_stated: 
+      marina_state: ! 'Votre situation actuelle est:'
+      name: Nom
+      passport: 
+      passport_code: ! 'Votre code de passeport est:'
+      passport_pending: 
+      user_email: ! 'Email:'
+      user_header: ! '%{name}: détails du compte'
+      user_name: ! 'Nom:'
+      valid_bertholder: 
+      valid_manager: 
+    sign_in:
+      email: 
+      password: 
+      remember_me: 
+      sign_in: 
+      title: 
+    sign_up:
+      boat_name: 
+      email: 
+      name: 
+      password: 
+      password_confirmation: 
+      signup_button: 
+      submit: 
+    signed_in: Enregistrez-vous
+    status: 
+    username: Nom d'utilisateur

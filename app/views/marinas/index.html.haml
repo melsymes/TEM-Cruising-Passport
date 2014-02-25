@@ -31,7 +31,10 @@
     - @marinas.each do |marina|
       %tr
         %td= link_to t('marinas.index.connect_button_label'), pending_marinas_path(marina), :class => 'btn btn-mini'
-        %td= link_to marina.name, marina
+        - if current_user.has_role? :admin
+          %td= (link_to marina.name, marina) + " [Man = " + marina.count_managers.to_s + " & " + marina.count_users.to_s + " users]"
+        - else
+          %td= link_to marina.name, marina
         %td= marina.address
         %td= marina.town
         %td= marina.county
