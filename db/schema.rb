@@ -21,12 +21,9 @@ ActiveRecord::Schema.define(:version => 20121216092337) do
     t.string   "county"
     t.string   "country"
     t.string   "postcode"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-    t.string   "passport_code"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.string   "nation"
-    t.string   "passport"
-    t.string   "apassportcode"
     t.integer  "user_id"
   end
 
