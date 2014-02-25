@@ -1,13 +1,16 @@
 %h3
-  =t('user.show.user_header', name: @user.name)
+  - if @user.name
+    =t('user.show.user_header', name: @user.name)
+  - else
+    =t('user.show.user_header', name: @user.email)
 %p
 
   - if (current_user.has_role? :admin or current_user.has_role? :manager)
     - if current_user != @user
       = simple_form_for @user, :url => { :action => "update" } do |f|
-        = f.input :name
-        = f.input :boat_name
-        = f.button :submit
+        = f.input :name, label: t('user.sign_up.name')
+        = f.input :boat_name, label: t('user.sign_up.boat_name')
+        = f.button :submit, label: t('user.sign_up.submit')
     - else
       =t('user.show.user_name')
       = @user.name unless @user.name.nil?
@@ -18,19 +21,24 @@
   =t('user.show.user_email')
   =@user.email if @user.email
 %p
-  Boat name: #{@user.boat_name if @user.boat_name}
+  = t('user.show.boat_name')
+  #{@user.boat_name if @user.boat_name}
+  /Boat name: #{@user.boat_name if @user.boat_name}
 %p
   - if @user.marina_state.nil?
     =t('user.show.marina_get_stated')
     = link_to t('user.show.connect_to_your_marina'), marinas_path
   - else
     =t('user.show.current_marina_status')
-    = @user.marina_state
+    - if @user.marina_state == "VALIDATED-MANAGER"
+      = t('user.show.valid_manager')
+    - if @user.marina_state == "VALIDATED-BERTHOLDER"
+      = t('user.show.valid_bertholder')
     %p
       - if @user.marina_state == 'PENDING'
-        = t('home.passport_pending')
+        = t('user.show.passport_pending')
       - else
-        = t('home.passport')
+        = t('user.show.passport')
         = @user.passport_code unless @user.nil?
 
 %p

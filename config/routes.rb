@@ -4,7 +4,7 @@ Myapp10::Application.routes.draw do
 
 
 
-scope '(:locale)', :locale => /en|es-ES|fr-FR/ do
+scope '(:locale)', :locale => /en|es-ES|fr-FR|nl-NL/ do
 
   resources :marinas
   authenticated :user do

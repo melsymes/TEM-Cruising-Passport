@@ -8,8 +8,13 @@ class UsersController < ApplicationController
   end
 
   def show
+    #authorize! :update, @user, :message => t('errors.messages.not_authorized_as_manager')
     @user = User.find(params[:id])
+    if (current_user != @user) and (current_user.marina_state != "VALIDATED-MANAGER")
+      redirect_to root_path
+    end
   end
+
   
   def update
     authorize! :update, @user, :message => t('errors.messages.not_authorized_as_manager')
@@ -73,7 +78,7 @@ class UsersController < ApplicationController
     @user.add_role :manager
     @user.save
     @marina.save
-    if current_user.has_role( :admin )
+    if current_user.has_role?( :admin )
       redirect_to users_path, :notice => t('errors.messages.manager_validated')
     else
       redirect_to marina_path(@marina), :notice => t('errors.messages.manager_and_marina_now_connected')

@@ -4,3 +4,8 @@
 APP_PATH = File.expand_path('../../config/application',  __FILE__)
 require File.expand_path('../../config/boot',  __FILE__)
 require 'rails/commands'
+
+def old_action
+  headers["Status"] = "301 Moved Permanently"
+  redirect_to "http://www.cruisingpassport.com/"
+end

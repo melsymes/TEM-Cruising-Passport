@@ -85,12 +85,13 @@ class UserNotifier < ActionMailer::Base
   end
 
 
-  def new_initial_user(user)
+  def new_initial_user(admin, user)
     @user = user
+    @admin = admin
     @greeting = "Hi"
-    @marina = user.marina
+    @marina = @user.marina
 
-    mail to:  @user.email, subject: t('email.new_initial_user.subject')
+    mail to:  admin.email, subject: t('email.new_initial_user.subject')
   end
 
   def validate_admin(user)
@@ -115,5 +116,11 @@ class UserNotifier < ActionMailer::Base
     mail to: @user.email, subject: t('email.user_pending_notification.subject')
   end
 
+  def new_user_to_manager(manager, user)
+    @manager = manager
+    @marina = user.marina
+    @user = user
+    mail to: @manager.email, subject: t('email.new_user_to_manager.greeting')
+  end
 
 end

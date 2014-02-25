@@ -21,7 +21,7 @@
       %br
         =t('home.signed_in.invite_to_join')
         %p
-          = link_to( "invite user", new_user_invitation_path )
+          = link_to( t('home.signed_in.invite_user'), new_user_invitation_path )
 
 
 
@@ -31,8 +31,12 @@
         = t('home.get_started_boat_name')
         =link_to 'Finish registration', edit_user_registration_path
       - else
-        = @user.boat_name
-        = t('home.boat_name_is_now_registered')
+        - if @user.boat_name.empty?
+          = t('home.get_started_boat_name')
+          =link_to 'Finish registration', edit_user_registration_path
+        - else
+          = @user.boat_name
+          = t('home.boat_name_is_now_registered')
     %p
       - if @user.marina_state.nil?
         = t('home.get_started_connect_with_marina')
@@ -68,8 +72,7 @@
                       = t('home.slider1_header')
                     %p
                       = t('home.slider1_para')
-                    %a.btn.btn-success.btn-large{:href => "http://www.transeuropemarinas.com/"}
-                      = t('home.slider1_button')
+                    = link_to (t 'home.slider1_button'), new_user_registration_path, :class => "btn btn-success btn-large"
               / slide
               .item.slide2
                 .row
@@ -78,8 +81,7 @@
                       = t('home.download_app')
                     %p
                       = t('home.download_app_text')
-                    %a.btn.btn-success.btn-large{:href => "http://www.transeuropemarinas.com/"}
-                      = t('home.download_app_button')
+                    = link_to (t 'home.download_app_button'), new_user_registration_path, :class => "btn btn-success btn-large"
                   .span6.animated.fadeInDownBig
                     = image_tag('slide2-tem.png')
               / slide
@@ -109,7 +111,7 @@
             = t('home.features.f1_title')
           %p.description
             = t('home.features.f1_body')
-          %a.btn.btn-default{:href => "#"} more
+          /%a.btn.btn-default{:href => "#"} more
         .span4.feature
           = image_tag('imacscreen.png', class: 'thumb')
           %h3
@@ -117,7 +119,7 @@
             = t('home.features.f2_title')
           %p.description
             = t('home.features.f2_body')
-          %a.btn.btn-default{:href => "#"} more
+          /%a.btn.btn-default{:href => "#"} more
         .span4.feature
           = image_tag('IphoneSquare.png', class: 'thumb')
           %h3
@@ -125,7 +127,7 @@
             = t('home.features.f3_title')
           %p.description
             = t('home.features.f3_body')
-          %a.btn.btn-default{:href => "#"} more
+          / %a.btn.btn-default{:href => "#"} more - taken away until we have more
 
   / starts testimonial
   #testimonials
@@ -141,7 +143,7 @@
                 %span "
             .span3.offset1
               .pic
-                = image_tag('Chairperson.png', class: 'img-circle')
+                = image_tag('Monica_fotograaf2012.jpg', class: 'img-circle')
                 %span.name
                   = t('home.testimonials.name')
                 %span.position

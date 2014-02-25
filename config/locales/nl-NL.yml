@@ -1,0 +1,377 @@
+nl-NL:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: 
+            password:
+              confirmation: 
+  admin:
+    user_list:
+      are_you_sure: Weet u het zeker?
+      full_list_intro: Hieronder ziet u een lijst van alle gebruikers
+      full_list_title: ! 'Lijst van alle gebruikers '
+      intro: Gebruikers die zich hebben aangemeld voor jachthavens zonder manager zijn hier zichtbaar. Waarschijnlijk zijn dit managers die zich aanmelden voor hun management account
+      title: Admin Gebruikers lijst
+  devise:
+    confirmations:
+      confirmed: Uw aanmelding is goedgekeurd. U staat nu geregistreerd.
+      send_instructions: U zult binnen een paar minuten een email ontvangen met instructies hoe uw account te bevestigen.
+      send_paranoid_instructions: Als u emailadres in onze database staat, zult u binnen een paar minuten een email ontvangen met instructies hoe u uw account kunt bevestigen
+    failure:
+      already_authenticated: U bent al aangemeld.
+      inactive: Uw account was nog niet geactiveerd.
+      invalid: Ongeldig emailadres of paswoord
+      invalid_token: Ongeldige authenticatie
+      locked: Uw account is geblokkeerd.
+      timeout: Uw sessie is verlopen, meld u opnieuw aan om verder te gaan.
+      unauthenticated: U moet u inschrijven of aanmelden voor dat u verder gaat.
+      unconfirmed: U moet uw account bevestigen voordat u verder kan.
+    invitations:
+      edit:
+        header: Stel uw wachtwoord in
+        submit_button: Maak mijn wachtwoord aan
+      invitation_token_invalid: De identificatie code is ongeldig!
+      new:
+        header: Stuur uitnodiging
+        submit_button: Stuur een uitnodiging
+      no_invitations_remaining: Geen uitstaande uitnodigingen
+      send_instructions: Een uitnodiging is verzonden naar %{email}.
+      updated: Uw wachtwoord is succesvol ingesteld. U bent nu ingeschreven.
+    mailer:
+      confirmation_instructions:
+        first_paragraph: Neem even de tijd om uw e-mailadres te bevestigen door op deze link te klikken :%{validation_link}
+        greeting: Beste
+        second_paragraph: 
+        subject: Bevestigings instructies
+        validation_link: Bevestig mijn account
+      invitation_instructions:
+        subject: Uitnodigings instructies
+      reset_password_instructions:
+        subject: Reset wachtwoord instructies
+      unlock_instructions:
+        subject: Instructies om te openen
+    omniauth_callbacks:
+      failure: ! 'Kon u niet autoriseren van %{kind} vanwege "%{reason}". '
+      success: Succesvol geautoriseerd van %{kind} account.
+    passwords:
+      no_token: U heeft geen toegang tot deze pagina zonder een wachtwoord reset e-mail. Als u wel vanuit een wachtwoord reset e-mail komt, dan moet u ervoor zorgen dat u de volledige URL gebruikt.
+      send_instructions: U ontvangt binnen enkele minuten een email met instructies over hoe uw wachtwoord te vernieuwen.
+      send_paranoid_instructions: Als uw wachtwoord in onze database staat, ontvangt u in uw mailbox binnen enkele minuten een wachtwoord herstel koppeling.
+      updated: Uw wachtwoord is succesvol gewijzigd. U bent nu ingeschreven.
+      updated_not_active: Uw wachtwoord is succesvol gewijzigd.
+    registrations:
+      destroyed: Tot ziens! Uw account is verwijderd. Wij hopen u in de toekomst weer te mogen begroeten.
+      signed_up: Welkom! U bent ingeschreven.
+      signed_up_but_inactive: U bent geregistreerd. Maar wij konden u nog niet inschrijven omdat uw aanvraag nog niet is geactiveerd door uw jachthaven.
+      signed_up_but_locked: U bent geregistreerd, Maar wij konden u nog niet inschrijven omdat uw account geblokkeerd is.
+      signed_up_but_unconfirmed: Een email met een bevestigingslink is naar u verzonden. Klik op de bevestigingslink om uw account te activeren.
+      update_needs_confirmation: U heeft uw account aangevuld, maar wij moeten uw nieuwe e-mail adres verifiëren. Controleer uw e-mail en klik op de bevestigingslink om uw nieuwe e-mailadres te bevestigen.
+      updated: U heeft uw account aangepast
+    sessions:
+      signed_in: Ingeschreven.
+      signed_out: U bent uitgeschreven.
+    shared:
+      forgot_password: 
+      no_confirmation_instructions: 
+      no_unlock_instructions: 
+      sign_in: 
+      sign_in_with: 
+      sign_up: 
+    unlocks:
+      send_instructions: U ontvangt binnen enkele minuten een e-mail met instructies hoe u uw account kunt openen.
+      send_paranoid_instructions: Als uw account bestaat, ontvangt u binnen enkele minuten een e-mail met instructies hoe u uw account kunt openen.
+      unlocked: Uw account is ontgrendeld. Meld u opnieuw aan.
+  email:
+    accepted:
+      greeting: Beste %{name}
+      introduction: Welkom bij de TEM applicatie.
+      post_introduction: Geef uw Paspoort code door aan de havenmeester bij aankomst in de jachthaven, dit om gebruik te kunnen maken van de voordelen die uw TEM lidmaatschap biedt.
+      subject: TEM lidmaatschap is geaccepteerd
+    expired_manager:
+      greeting: Beste %{name}
+      introduction: Uw managers account is verlopen.
+      post_introduction: Aarzel niet om uw managers account opnieuw aan te vragen.
+      subject: TEM Account verlopen
+    expired_user:
+      greeting: Beste %{name},
+      introduction: U ontvangt deze e-mail omdat uw TEM account is verlopen.
+      post_introduction: Als dit niet het geval is, probeer u opnieuw aan te melden of ga bij uw havenmeester langs.
+      subject: TEM account verlopen
+    general:
+      greeting: 
+      para_1: 
+      para_2: 
+    manager_accepted:
+      greeting: Beste %{name}
+      introduction: Wij zijn verheugd met uw aanmelding voor een management account voor de TEM applicatie.
+      post_introduction: Bekijk de gebruikershandleiding om meer bekend te worden met deze applicatie.
+      subject: TEM manager Account is geaccepteerd
+    new_initial_user:
+      greeting: Hallo %{name}
+      introduction: ! '%{name} is verbonden met %{marina_name}. Kunt u bevestigen dat deze persoon een manager is.'
+      post_introduction: 
+      subject: TeM gebruiker registratie
+    new_user_to_manager:
+      greeting: Hallo %{name}
+      introduction: Eén van uw ligplaatshouders, %{user_name}, heeft contact gezocht met met %{marina_name}. Bekijk de aanvraag van uw ligplaatshouder op uw beheerspagina.
+      post_introduction: Verzonden door TransEurope Marinas uit naam van %{marina_name}
+      subject: Eén van uw ligplaatshouders heeft zich aangemeld voor een Cruising Paspoort.
+    remove_pending:
+      greeting: 
+      introduction: 
+      post_introduction: 
+      subject: 
+    transeurope_marinas_footer: ! '<p>met vriendelijke groet,
+
+      <br><br>
+
+      Het TransEurope Team<br>
+
+      http://www.transeuropemarinas.com<br>
+
+      http://www.cruisingpassport.com<br>
+
+      Mocht u deze e-mail ontvangen en u heeft geen Cruising Paspoort account. Dan kunt u deze e-mail negeren of ons informeren via support@transeuropemarinas.com en dan gaan we het uitzoeken.<br>
+
+      </br>'
+    user_pending_notification:
+      footer: ! '<p>met vriendelijke groet,
+
+        <br><br>
+
+        Het TransEurope Team<br>
+
+        http://www.transeuropemarinas.com<br>
+
+        http://www.cruisingpassport.com<br>
+
+        Mocht u deze e-mail ontvangen en u heeft geen Cruising Paspoort account. Dan kunt u deze e-mail negeren of ons informeren via support@transeuropemarinas.com en dan gaan we het uitzoeken.<br>
+
+        </br>'
+      greeting: Hallo %{name}
+      introduction: Dank u wel voor het verbinden met %{marina_name}. Wij zijn hiervan op de hoogte gesteld. Onze havenmeesters zal uw account op op korte termijn activeren.
+      post_introduction: Verstuurd door TransEurope marinas uit naam van %{marina_name}
+      subject: Verzoek tot aanmelding verzonden
+    user_pending_to_manager:
+      subject: 
+    user_remove_pending:
+      subject: GEBRUIKER verwijderd - sorry
+    validate_admin:
+      greeting: Beste
+      introduction: Gefeliciteerd, uw aanvraag voor een TEM account is goed gekeurd.
+      post_introduction: Kijk in de gebruikshandleiding voor instructies.
+      subject: TEM Admin geaccepteerd
+  errors:
+    confirm:
+      are_you_sure: Weet u het zeker?
+    messages:
+      admin_role_removed: Uw managersfunctie is verwijderd
+      admin_validated: Manager geaccepteerd
+      already_confirmed: Was reeds bevestigd, probeer opnieuw in te schrijven
+      expired: is verstreken, vraag een nieuwe aan
+      manager_and_marina_now_connected: Jachthaven en manager zijn niet verbonden
+      manager_validated: Manager goedgekeurd
+      not_authorized_as_admin: U bent geen geautoriseerde gebruiker
+      not_authorized_as_manager: U bent geen geautoriseerde manager
+      not_found: niet gevonden
+      not_locked: was niet afgesloten
+      not_saved:
+        one: ! '1 fout zorgt ervoor dat deze %{resource} niet opgeslagen kon worden:'
+        other: ! '%{count} fouten zorgden dat deze %{resource} niet opgeslagen kon worden:'
+      pending: Uw aanvraag is verzonden naar uw jachthaven en is in afwachting van goedkeuring.
+      remove_pending: Ligplaatshouder en jachthaven zijn verwijderd. Een notificatie email is verzonden
+      user_updated: Update gebruiker
+  hello: Hallo wereld
+  home:
+    boat_name_is_now_registered: is nu geregistreerd
+    download_app: ! 'Download onze gratis Cruising Paspoort App '
+    download_app_button: Download gratis!
+    download_app_text: Beheer uw code, informatie over alle deelnemende TransEurope Marinas jachthavens, controleer de getijden en hou een oogje op het weer.
+    features:
+      f1_body: Om gebruik te kunnen maken van uw Cruising Paspoort App, moet u een vaste ligplaats hebben in één van de vele TransEurope Marinas in Europe
+      f1_title: Neem een ligplaats bij een deelnemende TransEurope Marinas jachthaven
+      f2_body: Er zijn geen kosten aan verbonden om uw unieke Cruising Paspoort te krijgen. Geniet van het varen en profiteer van 50% korting voor maximaal 5 dagen per jaar bij alle deelnemende jachthavens.
+      f2_title: Gratis aanmelden
+      f3_body: Klik op de knop om uw gratis Cruising Paspoort te downloaden. U krijgt niet alleen geweldige kortingen maar ook tools om de getijden en het weer te bekijken.
+      f3_title: Download onze gratis Cruising Paspoort App
+      title: Hoe in het bezit te komen van uw Cruising Paspoort
+    footer:
+      contact_us: Contact ons
+      main: Laatste nieuws van TransEurope Marinas
+      title_main: TransEurope Marinas nieuws
+      title_sub: Ontdek meer over de jachthavens die recent tot het netwerk zijn toegetreden
+    get_started_boat_name: Begin vandaag - Voeg de bootnaam toe
+    get_started_connect_with_marina: Begin - Maak contact met uw eigen jachthaven
+    passport: Uw paspoort code is -
+    passport_pending: Uw paspoort code komt beschikbaar zodra uw jachthaven uw aanvraag goedgekeurd heeft
+    search_users: Code (of uw naam) hier
+    search_users_label: Zoeken
+    signed_in:
+      invite_to_join: Stuur uw ligplaatshouder een uitnodiging om gebruik te gaan maken van de TEM Cruising Paspoort App.
+      invite_user: Uitnodigen ligplaatshouder
+    signed_in_home_title: Welkom bij uw Cruising Paspoort App
+    signed_in_text: Om te controleren of dit een ligplaatshouders is uit een deelnemende jachthaven, toets cijfer- lettercombinatie in het zoekscherm hieronder
+    slider1_button: Vraag uw Gratis Cruising Paspoort aan
+    slider1_header: Varen door Europa - op een wel heel eenvoudige wijze!
+    slider1_para: U kunt nu bij alle TransEurope Marinas terecht met deze Cruising Paspoort Code. Meld u kosteloos aan en profiteer optimaal van dit gastvrije netwerk van jachthavens. Waarbij elke jachthaven een prachtige bestemming is!
+    testimonials:
+      body: We hopen dat u geniet van het gebruiksgemak  van onze nieuwe Cruising Paspoort App, we hopen u snel te mogen begroeten in één van onze gastvrije jachthavens.
+      name: Monica de Vast
+      position: Voorzitter TransEurope Marinas
+    your_current_status: Uw huidige status is
+  layouts:
+    navigation:
+      admin_list: Admin
+      edit: Wijzigen
+      home: TEM Paspoort
+      login: inloggen
+      logout: Uitloggen
+      marinas: Jachthavens
+      sign_up: Aanmelden
+      welcome: Welkom
+  manager:
+    search:
+      title: Zoekresultaten voor ligplaatshouders
+  marinas:
+    Back: Terug
+    edit:
+      back: Terug
+      show: Demonstreer
+      title: Wijzig uw jachthaven profiel
+    form:
+      address_label: ! 'Adres:'
+      counry_label: Provincie
+      country_label: Land
+      create_label: ! 'Creëer '
+      name_label: ! 'Naam:'
+      postcode_label: ! 'Postcode:'
+      street_label: ! 'Straat:'
+      town_label: ! 'Plaats:'
+    index:
+      address: Adres
+      connect_button_label: Verbind
+      connect_button_title: Verbind
+      country: Land
+      county: Provincie
+      create_new_marina: Maak nieuwe jachthaven aan
+      destroy_button_label: Verwijder
+      destroy_button_title: Verwijder jachthaven
+      edit_button_label: Wijzig
+      edit_button_title: Wijzig
+      intro_para: Blader omlaag naar de volledige lijst met jachthavens die deel uitmaken van de Cruising Paspoort App, als u een ligplaatshouder bent van een deelnemende jachthaven, neem dan contact op met uw jachthaven.
+      listing_marinas_title: TransEurope Marinas
+      name: Naam
+      search_label: Zoeken
+      show_button_label: Demonstreer
+      show_button_title: Demonstreer
+      town: Stad
+    management:
+      action: Actie
+      action_alternative: Alternatieve actie
+      action_remove_user: Verwijder verzoek
+      active_berth_holders: Geregistreerde ligplaatshouders
+      active_managers: ! 'Geregistreerde Managers '
+      email: Email
+      expire_berth_holder: Verlopen ligplaatshouder
+      expire_date: Vervaldatum
+      expire_manager: Verlopen manager
+      expired_berth_holders: Verlopen ligplaatshouders
+      expired_managers: Verlopen maangers
+      is_berth_holder: is een ligplaatshouder?
+      is_manager: is een manager?
+      pending_berth_holders: In afwachting zijnde ligplaatshouders
+      re_validate_berth_holder: Activeer ligplaatshouder opnieuw
+      re_validate_manager: Activeer manager opnieuw
+      registered_date: Geregistreerde datum
+      remove_berth_holder: Verwijder ligplaatshouders bestand
+      remove_manager: Verwijder manager van lijst
+      remove_user: Verwijder booteigenaar
+      role: Functie
+      set_name: ! '[SET MY NAME]'
+      username: Naam
+      validate_berth_holder: Valideer ligplaatshouder
+      validate_manager: Valideer nieuwe managers account
+    new:
+      back_label: Terug naar de lijst met jachthavens
+      intro_para: Voeg hier de details van een nieuwe TEM jachthaven toe.
+      label: Gegevens Nieuwe TEM jachthaven
+    pending:
+      remove: Verwijder aanvraag
+    show:
+      back_label: Terug
+      edit_label: Wijzig
+      intro_para: ! 'De eigenaren van zeil- en motorschepen die een vaste ligplaats hebben in een TransEurope Marinas jachthaven, hebben recht op een 50% korting voor maximaal vijf dagen per jaar bij alle deelnemende jachthavens op vertoon van hun TransEurope Marinas Cruising Paspoort code. Een eventuele aanvullende uitkering wordt overgelaten aan het oordeel van de individuele jachthaven.
+
+
+        De korting wordt toegepast op de passantentarieven van de jachthaven en is  toepassing op één of meer bezoeken met een totaal van vijf overnachtingen per jaar bij alle deelnemende jachthavens.'
+      intro_to_managers_page: Een introductietekst voor marina managers
+      intro_to_managers_pane: ! "Managers zijn in staat om aanvragen van mogelijke ligplaatshouders te beoordelen en te accepteren. Managers kunnen managers vanuit uw eigen jachthaven toe te voegen. U kunt uw ligplaatshouders overzicht beheren via deze onderstaande lijst . <br><br>\n\n - Als u de uitstraling van uw bladzijde zou willen aanpassen, foto's of ander content, neem dan contact met ons op via\n<a href=\"http://www.transeuropemarinas.com/contact/\">Transeurope</a>.<br>\n - Aks u uw adresgegevens wil aanpassen, gaan dan naar  %{edit_link}\n<br><br>\nU kunt altijd zelf iemand uitnodigen, door het e-mailadres in het veld hieronder in te voeren. Geef aan of dit een ligplaatshouder of manager is.  Vergeet alleen niet om de nieuwe gebruikersnaam te updaten!"
+      invite: Nodig gebruiker uit
+      title: Jachthaven details
+      title_to_managers_pane: Managers beheerspagina
+  simple_form:
+    error_notification:
+      default_message: ! 'Bekijk de problemen hieronder:'
+    'no': Nee
+    required:
+      html: <abbr title="required">*</abbr>
+      mark: ! '*'
+      text: noodzakelijk
+    'yes': Ja
+  subject: Manager geaccepteerd
+  unauthorized:
+    default: U bent niet gemachtigd om deze pagina te openen.
+  user:
+    add_role_admin: Klik om om je rol toe te voegen
+    boat_name: Bootnaam
+    charge_role: Rol veranderen?
+    delete_user_admin: Verwijder gebruiker
+    email: Email
+    manager_count: Manager's overzicht
+    marina_name: Jachthaven naam
+    marina_state: Locatie van de jachthaven
+    name: Naam
+    passport_code: Paspoort code
+    registered: Geregistreerde datum
+    registered_date: Geregistreerde datum
+    role: Huidige functie
+    role_admin: ! 'Klik om functie te verwijderen:'
+    search:
+      advise_on_non_found: ! 'Hier zijn tal van tips om het probleem van niet-erkende gebruikers op te lossen '
+    show:
+      boat_name: ! 'Bootnaam:'
+      connect_to_your_marina: Log in bij uw eigen jachthaven
+      current_marina_state: Huidige staat jachthaven
+      current_marina_status: ! 'Huidige jachthaven status:'
+      marina_get_started: ! 'Begin, klik uw eigen thuishaven aan:'
+      marina_get_stated: Begin, meld u vandaag nog aan bij uw eigen thuishaven.
+      marina_state: ! 'Uw huidige status is:'
+      name: ! 'Naam:'
+      passport: 
+      passport_code: ! 'Uw Paspoort code is:'
+      passport_pending: 
+      user_email: ! 'Email:'
+      user_header: ! '%{name}: account details'
+      user_name: ! 'Naam:'
+      valid_bertholder: 
+      valid_manager: 
+    sign_in:
+      email: 
+      password: 
+      remember_me: 
+      sign_in: 
+      title: 
+    sign_up:
+      boat_name: 
+      email: 
+      name: 
+      password: 
+      password_confirmation: 
+      signup_button: 
+      submit: 
+    signed_in: Ingeschreven
+    status: 
+    username: Gebruikersnaam
