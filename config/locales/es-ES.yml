@@ -211,6 +211,8 @@ es-ES:
       name: Monica de Vast
       position: Presidenta de TransEurope Marinas
     your_current_status: su estado actual es
+    Connect_to_your_marina: 
+    Finish_registration: 
   layouts:
     navigation:
       admin_list: Admin
@@ -358,6 +360,7 @@ es-ES:
       password_confirmation: 
       signup_button: 
       submit: 
+      title: 
     signed_in: Registrarse
     status: 
     username: Nombre de usuario
