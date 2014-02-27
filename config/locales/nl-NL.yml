@@ -222,6 +222,8 @@ nl-NL:
       name: Monica de Vast
       position: Voorzitter TransEurope Marinas
     your_current_status: Uw huidige status is
+    Connect_to_your_marina: 
+    Finish_registration: 
   layouts:
     navigation:
       admin_list: Admin
@@ -372,6 +374,7 @@ nl-NL:
       password_confirmation: 
       signup_button: 
       submit: 
+      title: 
     signed_in: Ingeschreven
     status: 
     username: Gebruikersnaam

@@ -221,8 +221,8 @@ en:
       main: Latest news from TransEurope Marinas
       title_main: TransEurope Marinas News
       title_sub: Find out about our most recent member marinas
-    get_started_boat_name: Get started today - Add your boat name.
-    get_started_connect_with_marina: Get started - connect with your marina
+    get_started_boat_name: Get started today - Add your boat name:....
+    get_started_connect_with_marina: Get started - connect with your marina:....
     passport: Your passport code is -
     passport_pending: Your passport code will be available when your marina has validated your application.
     search_users: Code (or name) here
@@ -242,6 +242,8 @@ en:
       name: Monica de Vast
       position: TransEurope Marinas Chairperson
     your_current_status: Your current status is
+    Connect_to_your_marina: Connect to your marina
+    Finish_registration: Finish registration
   layouts:
     navigation:
       admin_list: Admin
@@ -392,6 +394,7 @@ en:
       password_confirmation: Password confirmation
       signup_button: Sign up
       submit: Submit
+      title: Sign up - to the Transeurope Cruising App
     signed_in: Signed in
     status: Status
     username: Username

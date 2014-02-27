@@ -200,6 +200,8 @@ fr-FR:
       name: Monica de Vast
       position: 
     your_current_status: 
+    Connect_to_your_marina: 
+    Finish_registration: 
   layouts:
     navigation:
       admin_list: Admin
@@ -347,6 +349,7 @@ fr-FR:
       password_confirmation: 
       signup_button: 
       submit: 
+      title: 
     signed_in: Enregistrez-vous
     status: 
     username: Nom d'utilisateur
