@@ -353,14 +353,14 @@ es-ES:
       sign_in: 
       title: 
     sign_up:
-      boat_name: 
-      email: 
-      name: 
-      password: 
-      password_confirmation: 
-      signup_button: 
-      submit: 
-      title: 
+      boat_name: Nombre del barco
+      email: Email
+      name: Su nombre
+      password: Contraseña
+      password_confirmation: Confirme Contraseña
+      signup_button: contratar
+      submit: Presentar
+      title: Inscripción - al crucero App Transeurope
     signed_in: Registrarse
     status: 
     username: Nombre de usuario

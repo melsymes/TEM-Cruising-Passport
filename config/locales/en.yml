@@ -389,7 +389,7 @@ en:
     sign_up:
       boat_name: Boat name
       email: Email
-      name: Name
+      name: Your name
       password: Password
       password_confirmation: Password confirmation
       signup_button: Sign up
