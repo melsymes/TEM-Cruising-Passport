@@ -96,7 +96,7 @@ class UsersController < ApplicationController
       @marina.users.delete(@user)
 
       @user.marina_state= "EXPIRED-MANAGER"
-      @user.has_no_role(:manager)
+      @user.remove_role(:manager)
       @user.save
       @marina.save
       UserNotifier.expired_manager(@user).deliver

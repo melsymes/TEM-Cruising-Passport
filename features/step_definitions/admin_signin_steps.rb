@@ -56,10 +56,10 @@ Then(/^I login with email "(.*?)" and password "(.*?)"$/) do |email, password|
   visit root_path
   click_on "Login"
 
-    fill_in 'Login with email', :with => email
-    fill_in 'Password', :with => password
+    fill_in I18n.t('user.sign_in.email'), :with => email
+    fill_in I18n.t('user.sign_in.password'), :with => password
     #sleep 20
-    click_on 'Sign in'
+    click_on I18n. t('user.sign_in.sign_in')
 
   page.should have_content 'Signed in successfully.'
   #sleep 5
@@ -68,17 +68,43 @@ end
 
 
 
+#sign up in english
 Then(/^I sign up with name "(.*?)", email "(.*?)" and password "(.*?)"$/) do |name, email, password|
 
   within(:xpath, '//form[@id="new_user"]') do
-    fill_in 'Name', :with => name
-    fill_in 'Email', :with => email
-    fill_in( "Password", :with => password, :match => :prefer_exact)
-    fill_in( "Password confirmation", :with => password, :match => :prefer_exact)
-    click_on 'Sign up'
+    fill_in I18n.t('user.sign_up.name'), :with => name
+    fill_in I18n.t('user.sign_up.email'), :with => email
+    fill_in(I18n.t('user.sign_up.password'), :with => password, :match => :prefer_exact)
+    fill_in(I18n.t('user.sign_up.password_confirmation'), :with => password, :match => :prefer_exact)
+    click_on I18n.t('user.sign_up.signup_button')
   end
-
 end
+
+#sign up in english
+Then(/^"(.*?)" signs up with email "(.*?)" and password "(.*?)"$/) do |name, email, password|
+  click_on 'Sign up'
+  within(:xpath, '//form[@id="new_user"]') do
+    fill_in I18n.t('user.sign_up.name'), :with => name
+    fill_in I18n.t('user.sign_up.email'), :with => email
+    fill_in(I18n.t('user.sign_up.password'), :with => password, :match => :prefer_exact)
+    fill_in(I18n.t('user.sign_up.password_confirmation'), :with => password, :match => :prefer_exact)
+    click_on I18n.t('user.sign_up.signup_button')
+  end
+end
+
+#sign up in a locale
+Then(/^Visitor signs up with name "(.*?)", email "(.*?)" and password "(.*?)" with locale "(.*?)"$/) do |name, email, password, locale|
+  I18n.locale = locale
+  within(:xpath, '//form[@id="new_user"]') do
+    fill_in I18n.t('user.sign_up.name'), :with => name
+    fill_in I18n.t('user.sign_up.email'), :with => email
+    fill_in(I18n.t('user.sign_up.password'), :with => password, :match => :prefer_exact)
+    fill_in(I18n.t('user.sign_up.password_confirmation'), :with => password, :match => :prefer_exact)
+    click_on I18n.t('user.sign_up.signup_button')
+  end
+  I18n.locale = 'en'
+end
+
 
 Then(/^I fill in "(.*?)" "(.*?)"$/) do |key, text|
   fill_in key, :with => text
@@ -119,6 +145,14 @@ Then(/^select french$/) do
   #select(Nokogiri::HTML(Espa&ntilde;ol), :from => 'set_locale')
 end
 
+Then(/^select dutch$/) do
+
+  second_option_xpath = "//*[@id='#{'set_locale'}']/option[4]"
+  second_option = find(:xpath, second_option_xpath).text
+  select(second_option, :from => 'set_locale')
+
+  #select(Nokogiri::HTML(Espa&ntilde;ol), :from => 'set_locale')
+end
 
 
 Then(/^visit root$/) do
@@ -162,6 +196,11 @@ end
 Then(/^verify "(.*?)" is manager$/) do |name|
   @user = User.find_by_name(name)
   (@user.has_role? :manager).should == true
+end
+
+Then(/^verify "(.*?)" is not a manager$/) do |name|
+  @user = User.find_by_name(name)
+  (@user.has_role? :manager).should == false
 end
 
 Then(/^verify "(.*?)" has no role$/) do |name|

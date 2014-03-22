@@ -5,7 +5,7 @@ Feature: Admin changes the state and role of a user
   They can delete a user and change a user's role from nothing to admin or manager and back again.
 
 
-
+# Admin can change role of user to manager or admin
 @javascript
 Scenario: Admin changes state of a user
   Given One admin user
@@ -32,11 +32,14 @@ Scenario: Admin changes state of a user
   And verify "charles" is manager
   And user logs out
 
+# Admin can change user's role to manager - this only gives user the ability to invite users to connect
 @javascript
 Scenario: Manager role can only check boat owners and invite users
   Given One admin user
   Given marina "Puerto Calero Marina" with manager "Mel" at "mel@example.com" with password "spanish"
   Given A user "charles" with email "charles@example.com" and password "please"
+
+  # Admin logs in and makes Charles a manager
   Then I login with email "admin@example.com" and password "please"
   And I click "Admin"
   Then verify "charles" has no role
@@ -45,6 +48,8 @@ Scenario: Manager role can only check boat owners and invite users
   Then visit root
   Then verify "charles" is manager
   And user logs out
+
+  # charles logs in and connects with Puerto Calero
   Then I login with email "charles@example.com" and password "please"
   And I click "Marinas"
   And I click "Connect"
@@ -55,29 +60,38 @@ Scenario: Manager role can only check boat owners and invite users
   And verify "Code (or name) here" on page
   And save and open "manager home view.html"
   Then go to the page for "Mel"
+     # -- any attempt goes to home page
   And verify I'm on the home page
   Then go to the page for "admin User"
+     # -- any attempt goes to home page
   And verify I'm on the home page
   Then go to the page for "charles"
+     # -- goes to charles's home page
   And verify "charles" on page
   And user logs out
+# end
+
 
 @javascript
 Scenario: A Validated, connected manager can invite, see & edit the marina manifest
   Given marina "Puerto Calero Marina" with manager "Mel" at "mel@example.com" with password "spanish"
   Given A user "charles" with email "charles@example.com" and password "please"
   Given A user "simon" with email "simon@example.com" and password "please"
+
+  # User charles connects with Purto Calero
   Then I login with email "charles@example.com" and password "please"
   And I click "Marinas"
   And I click "Connect"
   Then user logs out
 
+  # Mel logs in and validates Charles as a manager
   Then I login with email "mel@example.com" and password "spanish"
   Then I click "Puerto Calero Marina"
   And I click "Validate new manager account"
   And I click modal ok
   And user logs out
 
+  # Charles can now opperate as a manager for Perto Calero
   Then I login with email "charles@example.com" and password "please"
   Then I click "Puerto Calero Marina"
   And verify "Manager's Administration Page" on page
@@ -86,7 +100,7 @@ Scenario: A Validated, connected manager can invite, see & edit the marina manif
   And save and open "invite user"
   And verify "[SET MY NAME]" on page
   Then I click "[SET MY NAME]"
-  And I fill in "Name" "Simon"
+  And I fill in "Your name" "Simon"
   And I fill in "Boat name" "Shockwave"
   And I click "Update User"
   Then verify "User updated" on page
