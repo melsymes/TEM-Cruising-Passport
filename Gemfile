@@ -48,6 +48,9 @@ gem "country_select", "~> 1.0.1"
 gem "twitter-bootstrap-rails", "~> 2.0rc0"
 gem 'newrelic_rpm'
 gem 'rubyzip'
+gem 'capistrano'
+
+
 #, :require => 'zip/zip'
 gem "cucumber-rails", :require => false, :group => [:development, :test]
 

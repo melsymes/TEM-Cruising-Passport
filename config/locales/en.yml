@@ -115,7 +115,7 @@ en:
       greeting: Dear %{name}
       introduction: Your manager account has been expired.
       post_introduction: Please feel free to re-apply.
-      subject: TEM Account Expired
+      subject: TEM Manager Account Expired
     expired_user:
       greeting: Dear %{name}
       introduction: You have received this email because your TEM account has expired.
@@ -190,7 +190,7 @@ en:
       admin_validated: Admin validated
       already_confirmed: was already confirmed, please try signing in
       expired: has expired, please request a new one
-      manager_and_marina_now_connected: Marina and manager are not connected
+      manager_and_marina_now_connected: Marina and manager are now connected
       manager_validated: Manager validated
       not_authorized_as_admin: You are not an authorised administrator
       not_authorized_as_manager: You are not an authorised manager

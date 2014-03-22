@@ -198,6 +198,11 @@ Then(/^verify "(.*?)" is manager$/) do |name|
   (@user.has_role? :manager).should == true
 end
 
+Then(/^verify "(.*?)" is not a manager$/) do |name|
+  @user = User.find_by_name(name)
+  (@user.has_role? :manager).should == false
+end
+
 Then(/^verify "(.*?)" has no role$/) do |name|
   @user = User.find_by_name(name)
   (@user.roles.count).should == 0
