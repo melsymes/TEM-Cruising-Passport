@@ -7,7 +7,7 @@ en:
             email:
               taken: This email has already been registered.  Please use a different email address
             password:
-              confirmation: 
+              confirmation: Confirmation
   admin:
     user_list:
       are_you_sure: ! 'Are you sure?
@@ -122,7 +122,7 @@ en:
       post_introduction: If this is not the case, please re-apply or see your mooring manager.
       subject: TEM Account Expired
     general:
-      greeting: 
+      greeting: Hi
       para_1: 
       para_2: 
     manager_accepted:
@@ -141,10 +141,10 @@ en:
       post_introduction: Sent by TransEurope Marinas on behalf of %{marina_name}
       subject: One of your berth holders has registered for a Cruising Passport.
     remove_pending:
-      greeting: 
-      introduction: 
-      post_introduction: 
-      subject: 
+      greeting: ! 'Hi '
+      introduction: We do not recognise you as a bertholder - please telephone us if you think this is incorrect.
+      post_introduction: With thanks
+      subject: TEM Pending application rejected
     transeurope_marinas_footer: ! '<p>Best Wishes,
 
       <br><br>
@@ -174,7 +174,7 @@ en:
       post_introduction: Sent by TransEurope Marinas on behalf of %{marina_name}
       subject: Connect request sent
     user_pending_to_manager:
-      subject: 
+      subject: Boat owner has applied to the TEM passport
     user_remove_pending:
       subject: USER removed - sorry
     validate_admin:
@@ -213,8 +213,8 @@ en:
       f1_title: Berth with us
       f2_body: It doesn't cost anything to create your unique Cruising Passport code. Enjoy more time sailing with a 50% berthing discount for up to 5 days a year in each location.
       f2_title: Sign up for Free
-      f3_body: Just use the button below to get your free Cruising Passport from the App store. You'll not only get the amazing benefits of TEM membership but also a whole host of tools such as weather & tides.
-      f3_title: Download the App
+      f3_body: Coming soon - your free Cruising Passport from the App store. You'll not only get the amazing benefits of TEM membership but also a whole host of tools such as weather & tides.
+      f3_title: Coming soon - mobile Apps
       title: How to collect your Cruising Passport
     footer:
       contact_us: Contact us
