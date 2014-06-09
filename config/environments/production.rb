@@ -67,7 +67,7 @@ Myapp10::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = { :host => 'www.cruisingpassport.com' }
+  config.action_mailer.default_url_options = { :host => 'www.cruisingpassport.com/' }
   # ActionMailer Config
   # Setup for production - deliveries, no errors raised
   config.action_mailer.delivery_method = :smtp
@@ -87,7 +87,7 @@ Myapp10::Application.configure do
 
   config.action_mailer.smtp_settings = {
     :address   => "smtp.mandrillapp.com",
-    :domain    => "www.cruisingpassport.com",
+    :domain    => "www.cruisingpassport.com/",
     :port      => 587,
     :user_name => 'thewaypoint',
     :password  => '4526889d-079d-41ee-ba4b-c4331cd0e409'
