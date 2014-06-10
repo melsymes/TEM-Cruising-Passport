@@ -20,6 +20,7 @@ end
 gem "activerecord-postgresql-adapter"
 gem 'pg'
 gem 'heroku'
+gem 'unicorn-rails', '~> 2.1.1'
 gem "psych", "~> 1.3.4"
 gem 'jquery-rails'
 gem "thin", ">= 1.5.0"
@@ -44,7 +45,7 @@ gem "rolify", ">= 3.2.0"
 gem "simple_form", ">= 2.0.4"
 gem "friendly_id", "~> 3.1"
 gem "ya2yaml", "~> 0.31"
-gem 'localeapp'
+#gem 'localeapp'
 gem 'sexp_processor', '~> 4.1'
 gem "country_select", "~> 1.0.1"
 gem "twitter-bootstrap-rails", "~> 2.0rc0"
