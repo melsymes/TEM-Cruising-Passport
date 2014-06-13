@@ -37,6 +37,7 @@
          </div>
        </div>
      </div>
-     <%= "Environment: #{Rails.env}" %>
-
+     <%- if Rails.env != "production" %>
+       <%= "Environment: #{Rails.env}" %>
+     <%- end %>
    </div>
