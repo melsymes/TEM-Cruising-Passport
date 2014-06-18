@@ -145,27 +145,22 @@ en:
       introduction: We do not recognise you as a bertholder - please telephone us if you think this is incorrect.
       post_introduction: With thanks
       subject: TEM Pending application rejected
-    transeurope_marinas_footer: ! '<p>Best Wishes,
+    transeurope_marinas_footer: |+
 
-      <br><br>
+      Best Wishes,
 
-      The TransEurope Team<br>
-
-      http://www.transeuropemarinas.com<br>
-
-      http://www.cruisingpassport.com<br>
+      The TransEurope Team
+      http://www.transeuropemarinas.com
+      http://www.cruisingpassport.com
 
       If you received this message in error and do not have a cruising passport account, you can simply ignore it or let us know at support@transeuropemarinas.com and we''ll investigate.<br>
 
-      </br>'
     user_pending_notification:
-      footer: ! 'Best Wishes,
-
+      footer: |+
+        Best Wishes,
 
         The TransEurope Team
-
         http://www.transeuropemarinas.com
-
         http://www.cruisingpassport.com
 
         If you received this message in error and do not have a cruising passport account, you can simply ignore it or let us know at support@transeuropemarinas.com and we''ll investigate.'
@@ -178,7 +173,7 @@ en:
     user_remove_pending:
       subject: USER removed - sorry
     validate_admin:
-      greeting: Dear
+      greeting: Dear %{name}
       introduction: Congratulation, your requeste for a TEM admin account has been approved.
       post_introduction: Please refer to the user guide for instructions of use.
       subject: TEM Admin Accepted
