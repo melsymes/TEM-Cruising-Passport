@@ -74,9 +74,9 @@ nl-NL:
       signed_in: Ingeschreven.
       signed_out: U bent uitgeschreven.
     shared:
-      forgot_password: 
-      no_confirmation_instructions: 
-      no_unlock_instructions: 
+      forgot_password: Wachtwoord vergeten?
+      no_confirmation_instructions: Heeft u geen bevestigingsinstructies ontvangen?
+      no_unlock_instructions: Heeft u geen unlock instructies ontvangen?
       sign_in: 
       sign_in_with: 
       sign_up: 
@@ -121,9 +121,9 @@ nl-NL:
       subject: Eén van uw ligplaatshouders heeft zich aangemeld voor een Cruising Paspoort.
     remove_pending:
       greeting: 
-      introduction: 
-      post_introduction: 
-      subject: 
+      introduction: Wij herkennen u niet als ligplaatshouder - bel ons als u denkt dat wij het niet correct zien
+      post_introduction: Met dank
+      subject: TEM aanvraag afgewezen
     transeurope_marinas_footer: ! '<p>met vriendelijke groet,
 
       <br><br>
@@ -156,7 +156,7 @@ nl-NL:
       post_introduction: Verstuurd door TransEurope marinas uit naam van %{marina_name}
       subject: Verzoek tot aanmelding verzonden
     user_pending_to_manager:
-      subject: 
+      subject: Boot eigenaar heeft TEM paspoort aangevraagd
     user_remove_pending:
       subject: GEBRUIKER verwijderd - sorry
     validate_admin:
@@ -222,8 +222,8 @@ nl-NL:
       name: Monica de Vast
       position: Voorzitter TransEurope Marinas
     your_current_status: Uw huidige status is
-    Connect_to_your_marina: 
-    Finish_registration: 
+    Connect_to_your_marina: Verbind met uw jachthaven
+    Finish_registration: Einde van registratie
   layouts:
     navigation:
       admin_list: Admin
@@ -352,14 +352,14 @@ nl-NL:
       marina_get_stated: Begin, meld u vandaag nog aan bij uw eigen thuishaven.
       marina_state: ! 'Uw huidige status is:'
       name: ! 'Naam:'
-      passport: 
+      passport: ! 'Uw Paspoort Code is:'
       passport_code: ! 'Uw Paspoort code is:'
       passport_pending: 
       user_email: ! 'Email:'
       user_header: ! '%{name}: account details'
       user_name: ! 'Naam:'
-      valid_bertholder: 
-      valid_manager: 
+      valid_bertholder: GELDIGE LIGPLAATSHOUDER
+      valid_manager: GELDIGE MANAGER
     sign_in:
       email: 
       password: 
@@ -374,7 +374,7 @@ nl-NL:
       password_confirmation: 
       signup_button: 
       submit: 
-      title: 
+      title: Schrijf u in - voor de Transeurope Cruising App
     signed_in: Ingeschreven
     status: 
     username: Gebruikersnaam
