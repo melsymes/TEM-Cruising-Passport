@@ -147,12 +147,11 @@ en:
       subject: TEM Pending application rejected
     transeurope_marinas_footer: |+
       <br>
-      Best Wishes,<br>
+      Best Wishes,<br><br>
 
       The TransEurope Team<br>
       http://www.transeuropemarinas.com<br>
-      http://www.cruisingpassport.com<br><br
-
+      http://www.cruisingpassport.com<br><br>
       If you received this message in error and do not have a cruising passport account, you can simply ignore it or let us know at support@transeuropemarinas.com and we''ll investigate.<br>
 
     user_pending_notification:
