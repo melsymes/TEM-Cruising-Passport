@@ -19,10 +19,11 @@
         =text_field_tag :search, params[:search]
         =submit_tag t('home.search_users_label')
       %br
-        =t('home.signed_in.invite_to_join')
-        %p
-          /= link_to( t('home.signed_in.invite_user'), new_user_invitation_path )
-          = link_to( t('home.signed_in.invite_user'), current_user.marina )
+        - if (current_user.has_role? :manager)
+          =t('home.signed_in.invite_to_join')
+          %p
+            /= link_to( t('home.signed_in.invite_user'), new_user_invitation_path )
+            = link_to( t('home.signed_in.invite_user'), current_user.marina )
 
 
   - else
