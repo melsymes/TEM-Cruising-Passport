@@ -21,8 +21,8 @@
       %br
         =t('home.signed_in.invite_to_join')
         %p
-          = link_to( t('home.signed_in.invite_user'), new_user_invitation_path )
-
+          /= link_to( t('home.signed_in.invite_user'), new_user_invitation_path )
+          = link_to( t('home.signed_in.invite_user'), current_user.marina )
 
 
   - else

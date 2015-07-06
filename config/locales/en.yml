@@ -223,8 +223,8 @@ en:
     search_users: Code (or name) here
     search_users_label: Search
     signed_in:
-      invite_to_join: Send a berth holder an invitation to join the TEM Cruising Passport App.
-      invite_user: Invite berth holder
+      invite_to_join: Send a berth holder an invitation to join the TEM Cruising Passport App - go to your management page.
+      invite_user: Your marina management page
     signed_in_home_title: ! 'Welcome to your Cruising Passport App
 
 '
