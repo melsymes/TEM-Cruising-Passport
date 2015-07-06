@@ -199,8 +199,8 @@ es-ES:
     search_users: Código (o nombre) aquí
     search_users_label: Buscar
     signed_in:
-      invite_to_join: Envie una invitación a un usuario de la marina para que acceda al TEM Cruising Passport App.
-      invite_user: Invitar a un usuario de la marina
+      invite_to_join: Enviar el titular de la litera una invitación para unirse a la TEM Cruising Pasaporte App - ir a la página de administración.
+      invite_user: Tu página de gestión marina
     signed_in_home_title: Bienvenido a su Cruising Passport App
     signed_in_text: Para acceder a un cliente, introduzca su código de 6 dígitos en el espacio abajo
     slider1_button: ! 'Obtenga su Free Cruising Passport '
