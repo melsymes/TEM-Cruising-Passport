@@ -85,14 +85,21 @@ Myapp10::Application.configure do
   #  password: ENV["GMAIL_PASSWORD"]
   #}
 
-  config.action_mailer.smtp_settings = {
-    :address   => "smtp.mandrillapp.com",
-    :domain    => "www.cruisingpassport.com/",
-    :port      => 587,
-    :user_name => 'thewaypoint',
-    :password  => '4526889d-079d-41ee-ba4b-c4331cd0e409'
-  }
+  #config.action_mailer.smtp_settings = {
+  #  :address   => "smtp.mandrillapp.com",
+  #  :domain    => "www.cruisingpassport.com/",
+  #  :port      => 587,
+  #  :user_name => 'thewaypoint',
+  #  :password  => '4526889d-079d-41ee-ba4b-c4331cd0e409'
+  #}
 
+  config.action_mailer.smtp_settings = {
+      :address   => "smtp.mandrillapp.com",
+      :domain    => "www.cruisingpassport.com/",
+      :port      => 587,
+      :user_name => 'TransEurope Marinas',
+      :password  => '4n1_8x7lRAkYgSjn7MykmA'
+  }
 
 
   # Log the query plan for queries taking more than this (works

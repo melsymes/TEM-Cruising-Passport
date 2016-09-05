@@ -30,7 +30,7 @@ gem "hpricot", ">= 0.8.6", :group => :development
 gem "ruby_parser", ">= 2.3.1", :group => :development
 gem "rspec-rails", ">= 2.11.4", :group => [:development, :test]
 gem "poltergeist", "~> 1.4.1", :group => :test
-gem "capybara", ">= 2.1.0", :group => :test
+gem "capybara", ">=2.1.0", :group => :test
 gem 'database_cleaner', :group => :test
 gem 'watir-webdriver', :group => :test
 gem "cucumberator", :require => false, :group => :development
