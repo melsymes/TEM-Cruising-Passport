@@ -31,14 +31,21 @@ Myapp10::Application.configure do
   #  password: ENV["GMAIL_PASSWORD"]
   #}
 
-  config.action_mailer.smtp_settings = {
-    :address   => "smtp.mandrillapp.com",
-    :port      => 587,
-    :domain    => "staging.cruisingpassport.com/",
-    :user_name => 'thewaypoint',
-    :password  => '4526889d-079d-41ee-ba4b-c4331cd0e409'
-  }
+  #config.action_mailer.smtp_settings = {
+  #  :address   => "smtp.mandrillapp.com",
+  #  :port      => 587,
+  #  :domain    => "staging.cruisingpassport.com/",
+  #  :user_name => 'thewaypoint',
+  #  :password  => '4526889d-079d-41ee-ba4b-c4331cd0e409'
+  #}
 
+  config.action_mailer.smtp_settings = {
+      :address   => "smtp.mandrillapp.com",
+      :port      => 587,
+      :domain    => "staging.cruisingpassport.com/",
+      :user_name => 'TransEurope Marinas',
+      :password  => '4n1_8x7lRAkYgSjn7MykmA'
+  }
 
 
   # Print deprecation notices to the Rails logger
