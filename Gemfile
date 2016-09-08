@@ -37,7 +37,8 @@ gem "cucumberator", :require => false, :group => :development
 gem "selenium-webdriver", "~> 2.40.0", :group => :development
 gem "email_spec", ">= 1.2.1", :group => [:development, :test ]
 gem "factory_girl_rails", ">= 4.1.0", :group => [:development, :test]
-gem "bootstrap-sass", ">= 2.1.0.1"
+#gem "bootstrap-sass", ">= 2.1.0.1"
+gem "bootstrap-sass", "= 2.1.0.1"
 gem "devise", ">= 2.1.2"
 gem "devise_invitable", "~> 1.2.1"
 gem "cancan", ">= 1.6.8"
