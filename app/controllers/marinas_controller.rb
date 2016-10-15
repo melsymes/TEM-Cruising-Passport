@@ -55,12 +55,16 @@ class MarinasController < ApplicationController
     @marina = current_user.marina  #  try this
     anemail = params[:user_email]
 
-    if anemail =~ /@/
-      @marina.create_user(anemail)
-      redirect_to @marina, notice: 'User created and notified'
+    if User.exists?(email: anemail)
+      redirect_to @marina, :alert => 'User has already registered'
     else
-      redirect_to @marina, :alert => 'User was not created - probably bad email.'
-    end
+      if anemail =~ /@/
+        @marina.create_user(anemail)
+        redirect_to @marina, notice: 'User created and notified'
+      else
+        redirect_to @marina, :alert => 'User was not created - probably bad email.'
+      end
+    end  
   end
 
 

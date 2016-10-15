@@ -10,22 +10,10 @@ en:
               confirmation: Confirmation
   admin:
     user_list:
-      are_you_sure: ! 'Are you sure?
-
-
-'
-      full_list_intro: ! 'Below are listed all the users.
-
-
-'
-      full_list_title: ! 'List of all users
-
-
-'
-      intro: ! 'Only users applying for marinas with no managers will show here - it is likely that these are managers applying for a management account.
-
-
-'
+      are_you_sure: ! 'Are you sure?'
+      full_list_intro: ! 'Below are listed all the users.'
+      full_list_title: ! 'List of all users'
+      intro: ! 'Only users applying for marinas with no managers will show here - it is likely that these are managers applying for a management account.'
       title: ! 'Admin User List
 
 
@@ -224,9 +212,9 @@ en:
     signed_in:
       invite_to_join: Send a berth holder an invitation to join the TEM Cruising Passport App - go to your management page.
       invite_user: Your marina management page
-    signed_in_home_title: ! 'Welcome to your Cruising Passport App
+    signed_in_home_title: ! 'Welcome to your Cruising Passport App'
 
-'
+
     signed_in_text: To check a berth holder, just enter their 6 digit code in the search window below.
     slider1_button: Collect your Free Cruising Passport
     slider1_header: Sailing throughout Europe - the simple way
