@@ -14,20 +14,11 @@ en:
       full_list_intro: ! 'Below are listed all the users.'
       full_list_title: ! 'List of all users'
       intro: ! 'Only users applying for marinas with no managers will show here - it is likely that these are managers applying for a management account.'
-      title: ! 'Admin User List
-
-
-'
+      title: ! 'Admin User List'
   devise:
     confirmations:
-      confirmed: ! 'Your account was successfully confirmed. You are now signed in.
-
-
-'
-      send_instructions: ! 'You will receive an email with instructions about how to confirm your account in a few minutes.
-
-
-'
+      confirmed: ! 'Your account was successfully confirmed. You are now signed in.'
+      send_instructions: ! 'You will receive an email with instructions about how to confirm your account in a few minutes.'
       send_paranoid_instructions: If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes.
     failure:
       already_authenticated: You are already signed in.
@@ -178,6 +169,9 @@ en:
       not_authorized_as_manager: You are not an authorised manager
       not_found: not found
       not_locked: was not locked
+      User_already_registered: User has already registered
+      User_created_and_notified: User created and notified
+      User_not_created_bad_email: User was not created - probably bad email.
       not_saved:
         one: ! '1 error prohibited this %{resource} from being saved:'
         other: ! '%{count} errors prohibited this %{resource} from being saved:'
