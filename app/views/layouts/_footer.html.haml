@@ -12,12 +12,10 @@
             .span2
               = image_tag('Hull.png', class: 'img-circle')
             .span4
-              %a.title{:href => "blog.html"}
+              %a.title{:href => "http://www.transeuropemarinas.com/news-events/"}
                 =t('home.footer.title_sub')
-              .intro
-                =t('home.footer.main')
-              .date
-                Oct 22. 2012
+
+
 
     %hr/
     .row.copyright
@@ -28,9 +26,11 @@
         %a.social.tw{:href => "https://twitter.com/Trans_Europe"}
           %i.i_twitter
         %a.social.yt{:href => "http://pinterest.com/transeurope/"}
-          %i.i_youtube
+
       .span2.offset5.copy
         %p
-          2013 - The Waypoint
-
+          .date
+            ="(c) "
+            =Time.now.strftime("%Y")
+            ="- The Waypoint"
 

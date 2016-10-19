@@ -44,7 +44,7 @@ en:
       confirmation_instructions:
         first_paragraph: ! 'Please take a second to confirm your email address by clicking this link: %{validation_link}'
         greeting: ! 'Dear '
-        second_paragraph: 
+        second_paragraph: If you're marina manager has created your account, it will have a temporary password of 'password'. When you log in for the first time, please follow the "Forgot your password?" link at the bottom of the page to reset your password.
         subject: Confirmation instructions
         validation_link: Confirm my account
       invitation_instructions:
@@ -196,7 +196,7 @@ en:
       contact_us: Contact us
       main: Latest news from TransEurope Marinas
       title_main: TransEurope Marinas News
-      title_sub: Find out about our most recent member marinas
+      title_sub: Find out about our most recent member marinas and latest news from TransEurope Marinas
     get_started_boat_name: Get started today - Add your boat name:....
     get_started_connect_with_marina: Get started - connect with your marina:....
     passport: Your passport code is -
