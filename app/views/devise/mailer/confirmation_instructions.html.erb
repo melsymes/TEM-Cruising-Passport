@@ -1,4 +1,9 @@
-<p></p>Hi <%= @resource.name %>!</p>
+<%-if( @resource.name.blank?) %>
+  <p></p>Hi bertholder </p>
+  <p></p><%= current_user.marina.name %></p>
+<%- else%>
+  <p></p>Hi <%= @resource.name %>!</p>
+<%- end %>
 
 <p><%= raw t("devise.mailer.confirmation_instructions.first_paragraph", :validation_link => (link_to( t('devise.mailer.confirmation_instructions.validation_link'), confirmation_url(@resource, :confirmation_token => @resource.confirmation_token)))) %></p>
 
