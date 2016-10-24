@@ -45,7 +45,7 @@ class Marina < ActiveRecord::Base
 
   if anemail =~ /@/
       new_user = User.create :email => anemail.to_s, :password => 'password', :password_confirmation => 'password'
-      #new_user.confirm!
+      new_user.confirm!
       #new_user.skip_confirmation_notification!  let the user confirm the account
       new_user.save!
       self.pending_users<< new_user
