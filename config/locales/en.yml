@@ -44,7 +44,20 @@ en:
       confirmation_instructions:
         first_paragraph: ! 'Please take a second to confirm your email address by clicking this link: %{validation_link}'
         greeting: ! 'Dear '
-        second_paragraph: If you're marina manager has created your account, it will have a temporary password of 'password'. When you log in for the first time, please follow the "Forgot your password?" link at the bottom of the page to reset your password.
+        second_paragraph: ! 'Welcome to the TransEurope Marinas Cruising Password.<br><br>'
+        subject: Confirmation instructions
+        validation_link: Confirm my account
+        greeting: ! 'Dear '
+        second_paragraph: |+
+          'Welcome to the TransEurope Marinas Cruising
+          You have been invited to use this system by your marina manager.<br><br>
+          Once you have completed registration and this has been approved by your marina manager, you will be assigned a Cruising Passport Code
+          which you can use when visiting other TransEurope Marinas.<br><br>
+          When you login to the Cruising Passport your details are as follows:<br><br>
+          Login -  [your email]<br>
+          Password - [password] – this is a temporarily assigned password. You should be change by selecting the Change my password link.<br><br>
+          Follow this link to Complete registration'<br><br>'
+
         subject: Confirmation instructions
         validation_link: Confirm my account
       invitation_instructions:
