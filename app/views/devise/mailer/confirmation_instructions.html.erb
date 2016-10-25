@@ -2,7 +2,9 @@
   <p></p>Hi Bertholder </p>
   <p><%= raw t("devise.mailer.confirmation_instructions.second_paragraph") %></p></p>
 
-  <%= link_to "Rest your password now please?",   edit_user_password_path %></b></p>
+  <%= link_to "Rest your password now please?",   edit_password_url(@resource, reset_password_token: @resource.reset_password_token) %></b></p>
+
+
 
 <%- else%>
   <p></p>Hi <%= @resource.name %>!</p>
