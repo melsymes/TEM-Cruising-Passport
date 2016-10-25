@@ -1,7 +1,14 @@
-<p></p>Hi <%= @resource.name %>!</p>
+<%-if( @resource.name.blank?) %>
+  <p></p>Hi Bertholder </p>
+  <p><%= raw t("devise.mailer.confirmation_instructions.second_paragraph") %></p></p>
 
-<p><%= raw t("devise.mailer.confirmation_instructions.first_paragraph", :validation_link => (link_to( t('devise.mailer.confirmation_instructions.validation_link'), confirmation_url(@resource, :confirmation_token => @resource.confirmation_token)))) %></p>
+  <%= link_to "Rest your password now please?",   edit_user_password_path %></b></p>
 
-<p><%= raw t("devise.mailer.confirmation_instructions.second_paragraph") %></p>
+<%- else%>
+  <p></p>Hi <%= @resource.name %>!</p>
+  <p><%= raw t("devise.mailer.confirmation_instructions.first_paragraph", :validation_link => (link_to( t('devise.mailer.confirmation_instructions.validation_link'), confirmation_url(@resource, :confirmation_token => @resource.confirmation_token)))) %></p>
+  <p><%= link_to 'Please continue and set up your account', edit_user_registration_path(@resource) %></p>
+
+<%- end %>
 
 <p><%= raw t('email.transeurope_marinas_footer') %></p>
