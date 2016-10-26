@@ -1,15 +1,13 @@
 <%-if( @resource.name.blank?) %>
-  <p></p>Hi Bertholder </p>
+  <p></p>Welcome Bertholder </p>
   <p><%= raw t("devise.mailer.confirmation_instructions.second_paragraph") %></p></p>
-
-  <%= link_to "Rest your password now please?",   edit_password_url(@resource, reset_password_token: @resource.reset_password_token) %></b></p>
-
+  <p><%= link_to 'Change my password', new_password_url(@resource, :reset_password_token => @resource.reset_password_token) %></p>
 
 
 <%- else%>
   <p></p>Hi <%= @resource.name %>!</p>
   <p><%= raw t("devise.mailer.confirmation_instructions.first_paragraph", :validation_link => (link_to( t('devise.mailer.confirmation_instructions.validation_link'), confirmation_url(@resource, :confirmation_token => @resource.confirmation_token)))) %></p>
-  <p><%= link_to 'Please continue and set up your account', edit_user_registration_path(@resource) %></p>
+
 
 <%- end %>
 

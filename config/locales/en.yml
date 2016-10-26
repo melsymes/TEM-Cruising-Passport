@@ -56,7 +56,7 @@ en:
           When you login to the Cruising Passport your details are as follows:<br><br>
           Login -  [your email]<br>
           Password - [password] – this is a temporarily assigned password. You should be change by selecting the Change my password link.<br><br>
-          Follow this link to Complete registration'<br><br>'
+          Please reset your password and complete registration'<br><br>'
 
         subject: Confirmation instructions
         validation_link: Confirm my account
