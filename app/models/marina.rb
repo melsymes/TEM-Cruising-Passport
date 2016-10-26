@@ -45,6 +45,7 @@ class Marina < ActiveRecord::Base
 
   if anemail =~ /@/
       new_user = User.create :email => anemail.to_s, :password => 'password', :password_confirmation => 'password'
+      #new_user.reset_password_token = User.reset_password_token
       #new_user.skip_confirmation_notification!  let the user confirm the account
       new_user.confirm!
       new_user.save!
@@ -52,6 +53,7 @@ class Marina < ActiveRecord::Base
       new_user.marina_state = "PENDING"
       #why!
       self.users << new_user
+
       #self.save!
       #new_user.save!
   end
